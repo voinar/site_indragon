@@ -1,0 +1,252 @@
+.navbar {
+    // visibility: hidden;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    padding-top: 10rem;
+
+    .nav-contents {
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        
+        font-family: 'Nunito', sans-serif;
+
+        .nav-header {
+            font-family: 'Iceberg', cursive;
+            font-size: 2.1rem;
+            margin: 0 auto 0 8rem;
+
+            a {
+                color: $primaryColor;
+                text-decoration: none;
+            }
+        }
+        
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        .nav-item a {
+            color: $offWhite;
+            padding: 0 40px 0 48px;
+            font-size: 2rem;
+            text-decoration: none;
+            animation: fadeIn 500ms ease-in-out forwards;
+            transform-origin: top center;
+            transition: 0.3s;
+        }
+
+        .nav-item:hover a {
+            color: $secondaryColor;
+            padding: 0px 44px 0px 44px;
+        }
+
+        .cta-btn {
+            font-weight: bold;
+            border: 0;
+            cursor: pointer;
+            background-color: inherit;
+            color: $primaryColor;
+            transition: 0.3s;
+            font-size: 2rem;
+            width: 160px;
+            outline: 2px solid $primaryColor;
+            border-radius: 8px;
+            margin: 0 8rem 0 auto;
+        }
+
+        .cta-btn:hover {
+            color: $secondaryColor;
+        }
+    }
+}
+
+.navbar-solid {
+    // background-color: $offBlack;
+    background: linear-gradient(180deg, rgb(7, 10, 17) 20%, rgba(0,0,0,0) 90%);
+}
+
+.navbar-alt {
+    padding-top: 3rem;
+    background-color:rgba($offBlack, 0.2);
+    backdrop-filter: blur(5px);
+    transition: 1s;
+}
+
+.nav-toggle {
+    visibility: hidden;
+    color: $offWhite;
+}
+
+.nav-toggle:hover {
+    outline: 1px solid $primaryColor;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+.nav-toggle i {
+    font-size: 2.8rem;
+}
+
+.nav-toggle i:hover {
+    transform: rotate(10deg);
+    -webkit-transform: rotate(180deg);
+}
+
+.hide-container {
+    visibility: hidden;
+}
+
+.show-container {
+    visibility: visible;
+}
+
+.modal-overlay {
+    background-color:rgba($primaryColor, 0.75);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+}
+
+@media (max-width: 1000px) {
+
+    .navbar {
+
+        .nav-contents {
+
+            .nav-item a {
+                padding: 0px 10px 0px 12px;
+            }
+        
+            .nav-item:hover a {
+                padding: 0px 11px 0px 11px;
+            }
+
+            .cta-btn {
+                width: 120px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .navbar {
+        height: auto;
+        align-items: left;
+        height: 9rem;
+        min-width: 400px;
+    }
+    
+    .nav-contents {
+
+        .nav-links {
+            color: $offBlack;
+            font-family: $headingFont;
+    
+            flex-direction: column;
+            align-items: left;
+            position: fixed;
+            background-color: inherit;
+            height: auto;
+            margin-top: 9rem;
+    
+            .nav-item {
+                padding-bottom: 3rem;
+                width: 100vw;
+                text-align: left;
+            }
+            
+            .nav-item a {
+                // border: 1px solid red;
+                color: $offBlack;
+                font-size: 3rem;
+            }
+
+            .nav-item:hover a {
+                background-color: $offBlack;
+                width: 100vw;
+                
+            }
+            
+        }
+        
+    }
+
+
+    .nav-toggle {
+        // outline: 1px solid white;
+        visibility: visible;
+        border: 0px;
+        background-color: inherit;
+        cursor: pointer;
+        transition: 0.8s;
+        position: absolute;
+        top: 9rem;
+        right: 8rem;
+         
+        i {
+        font-size: 5rem;
+        }
+    }
+
+    .cta-btn {
+        display: none;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: rotateX(-90deg);
+    }
+    50% {
+      transform: rotateX(-20deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateX(0deg);
+    }
+}
+
+
+// .topnav {
+//     float: left;
+//     font-size: 3.2rem;
+
+//     .logo {
+//         p {
+//             font-size: 2rem;
+//             font-family: 'Iceberg', cursive;
+//             color: $primaryColor;
+//         }
+//     }
+
+//     li {
+//     list-style-type: none;
+//     border: 1px solid red;
+//     border-radius: 1rem;
+    
+//     &:hover {
+//         background: $primaryColor;
+//         }
+//     }
+    
+//     a {
+//     text-decoration: none;
+//     color: $offWhite;
+//     font-family: 'Nunito';
+    
+//     }
+// }

@@ -1,0 +1,68 @@
+.section-hero {
+    z-index: 1;
+    height: 1000px;
+    background-image: url("/img/hero-bkg.jpg");
+    width: 100%; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    // position: relative;
+    // background-attachment: fixed;
+
+}
+
+.hero-copy-wrapper {
+    position: relative;
+    width: 75%;
+    height: 60%;
+    left: 0px;
+    top: 250px;
+}
+
+.background-glass {
+    background-color:rgba($offBlack, 0.75);
+    backdrop-filter: blur(5px);
+    transition: 1s;
+    min-width: 800px;
+}
+
+.hero-copy {
+    position: absolute;
+    // outline: 1px solid red;
+    margin-left: 40%;
+    margin-top: 100px;
+    // padding: 3rem;
+    width: 60rem;
+
+    p {
+        font-size: 3.4rem;
+    }
+
+    h1 {
+        font-size: 10rem;
+    }
+}
+
+.hero-asset {
+    // outline: 1px solid teal;
+    margin-left: 70%;
+    height: 125%;
+    width: 300px;
+    
+    img {
+        min-height: 100%;
+    }
+}
+
+.arrow-down {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30rem;
+    width: 16rem;
+    height: 6rem;
+
+    img {
+        margin: 0 auto;
+    }
+}
