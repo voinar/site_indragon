@@ -14,6 +14,7 @@ const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 const navHeader = document.querySelector('.nav-header');
 const modalOverlay = document.querySelector('.modal-overlay');
+const bodyScroll = document.querySelector('body');
 
 var menuVisibility = false;
 var intViewportWidth = window.innerWidth;
@@ -39,6 +40,7 @@ function reportWindowSize() {
         navLinks.style.display = 'flex';
         navToggle.style.visibility = 'visible';        
         navToggle.style.transition = '0.3s';
+        navToggle.style.top = '2rem';
     }
   }
 
@@ -57,6 +59,7 @@ function showMenu(){
     navHeader.style.visibility = 'hidden';    
     modalOverlay.classList.remove('hide-container');
     menuVisibility = true;
+    bodyScroll.style.position = 'fixed';
     // console.log(menuVisibility);
 }
 
@@ -65,6 +68,7 @@ function hideMenu(){
     navHeader.style.visibility = 'visible';
     modalOverlay.classList.add('hide-container');
     menuVisibility = false;
+    bodyScroll.style.position = 'relative';
     // console.log(menuVisibility);
 }
 

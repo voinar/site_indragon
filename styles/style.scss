@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background: #03060e;
+    background: $offBlack;
     color: $offWhite;
     font-family: $paragraphFont;
     margin: 0;
@@ -22,14 +22,8 @@ body {
     border-radius: $border-radius;
 }
 
-.ruler {
-    left: 50%;
-    border: 2px solid pink;
-    z-index: 2000;
-}
-
 .background-container {
-    height: 6678px;
+    // height: 6678px;
     background-color: rgb(84, 101, 122);
 }
 
@@ -37,8 +31,9 @@ body {
     font-family: $headingFont;
     font-size: 4.8rem;
     line-height: 100%;
-    max-width: 660px;
+    max-width: 640px;
     font-weight: normal;
+    // border: 2px solid magenta;
 
     strong {
         color: $primaryColor;
@@ -54,9 +49,33 @@ body {
     }
 }
 
-.section-services {
-    z-index: 2;
+
+.leading-text {
+
+    display: flex;
+    
+    .accent {
+        min-width: 1rem;
+
+        border-radius: $border-radius;
+        margin-right: 4rem;
+
+        h1 {
+            // margin-left: 14rem;
+        }
+    }
+
+    .accent-primary {
+        background-color: $primaryColor;
+    }
+
+    .accent-secondary {
+        background-color: $secondaryColor;
+    }
+
 }
+
+
 
 // .hero-text {
 //     position: absolute;
@@ -82,17 +101,26 @@ body {
 }
 
 
+@media (max-width: 767px) {
 
-// header {
-//     background: $secondaryColor;
-//     display: flex;
-//     justify-content: center;
-//     font-size: 1.6rem;
 
-//     button {
-//         background: $primaryColor;
-//         &:hover {
-//             background: $secondaryColor;
-//         }
-//     }
-// }
+    .background-container {
+        // display: block;
+    }
+
+    .leading-text {
+        .accent {
+            min-width: 1rem;
+            margin-right: 3rem;
+        }
+    }
+
+    .heading-font {
+        font-size: 3.8rem;
+    }
+}
+
+@media (max-width: 500px) {
+
+
+}

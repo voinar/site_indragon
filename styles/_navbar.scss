@@ -74,9 +74,14 @@
 
 .navbar-alt {
     padding-top: 3rem;
-    background-color:rgba($offBlack, 0.2);
+    background-color:rgba($offBlack, 0.6);
     backdrop-filter: blur(5px);
     transition: 1s;
+
+    .nav-toggle {
+        top: 2rem;
+        color: $offWhite;
+    }
 }
 
 .nav-toggle {
@@ -116,6 +121,7 @@
     margin: 0;
     padding: 0;
     z-index: 2;
+    
 }
 
 @media (max-width: 1000px) {
@@ -187,6 +193,7 @@
 
     .nav-toggle {
         // outline: 1px solid white;
+        color: $primaryColor;
         visibility: visible;
         border: 0px;
         background-color: inherit;
