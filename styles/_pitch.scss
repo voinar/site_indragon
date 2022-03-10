@@ -1,0 +1,36 @@
+.section-why-go-online {
+    // // background: red;
+    // opacity: .4; 
+    
+    // background: rgba(76, 175, 80, 0.3); /* Green background with 30% opacity */
+
+    // height: 100rem;
+
+
+    background: url("/img/bkg_why_online.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 100%;
+    // opacity: .3;
+
+    
+}
+
+.section-why-go-online .background-glass {
+    // border: 1px solid red;
+    width: 90%;
+    // margin-left: 5%;
+    padding: 5rem;
+
+
+    .fa-caret-right {
+        margin-right: 1rem;
+
+    }
+}
+
+
+// .background-glass li:before {
+//     content: '+ ';
+//     display: inline-block;
+//   }

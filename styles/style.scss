@@ -3,6 +3,8 @@
 @import 'navbar.scss';
 @import 'hero.scss';
 @import 'services.scss';
+@import 'pitch.scss';
+@import 'workflow.scss';
 
 html {
     font-size: 62.5%;
@@ -16,6 +18,16 @@ body {
     font-family: $paragraphFont;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+.section-container {
+    margin: 0 auto;
+    padding: 0 0 6rem 0;
+    width: 90rem;
+    // height: 130rem;
+    // border: 3px solid lightcoral;
+    // background: red;
 }
 
 .rounded-corners {
@@ -53,7 +65,9 @@ body {
 .leading-text {
 
     display: flex;
-    
+    margin: 0 auto;
+    padding: 12rem 15rem 6rem 0rem;
+
     .accent {
         min-width: 1rem;
 
