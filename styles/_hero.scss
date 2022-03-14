@@ -62,11 +62,18 @@
     margin-top: 30rem;
     width: 16rem;
     height: 6rem;
+    padding: 2rem;
+    transition: 0.3s;
 
     img {
         margin: 0 auto;
     }
 
+}
+
+.arrow-down:hover {
+    border: 1px solid red;
+    margin-top: 31rem;
 }
 
 

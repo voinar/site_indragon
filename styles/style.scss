@@ -5,6 +5,8 @@
 @import 'services.scss';
 @import 'pitch.scss';
 @import 'workflow.scss';
+@import 'portfolio.scss';
+@import 'calltoaction.scss';
 
 html {
     font-size: 62.5%;
@@ -36,13 +38,14 @@ body {
 
 .background-container {
     // height: 6678px;
-    background-color: rgb(84, 101, 122);
+    // background-color: rgb(84, 101, 122);
 }
 
 .heading-font {
     font-family: $headingFont;
     font-size: 4.8rem;
     line-height: 100%;
+    letter-spacing: -.1rem ;
     max-width: 640px;
     font-weight: normal;
     // border: 2px solid magenta;
@@ -97,22 +100,7 @@ body {
 //     margin-top: 8rem;
 // }
 
-.section-why-go-online {
-
-    h2 {
-        font-size: 2.8rem;
-    }
-
-    li {
-        font-size: 2rem;
-        list-style-type: none;
-    }
-
-    strong {
-        color: $primaryColor;
-        font-weight: normal;
-        }
-}
+// 
 
 
 @media (max-width: 767px) {

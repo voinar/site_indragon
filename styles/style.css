@@ -340,10 +340,18 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-top: 30rem;
   width: 16rem;
   height: 6rem;
+  padding: 2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .arrow-down img {
   margin: 0 auto;
+}
+
+.arrow-down:hover {
+  border: 1px solid red;
+  margin-top: 31rem;
 }
 
 @media (max-width: 1000px) {
@@ -746,6 +754,21 @@ p, h1, h2, h3, h4, h5, h6 {
   background-size: 100%;
 }
 
+.section-why-go-online h2 {
+  font-size: 2.8rem;
+  letter-spacing: -.1rem;
+}
+
+.section-why-go-online li {
+  font-size: 2rem;
+  list-style-type: none;
+}
+
+.section-why-go-online strong {
+  color: #1EF1BF;
+  font-weight: normal;
+}
+
 .section-why-go-online .background-glass {
   width: 90%;
   padding: 5rem;
@@ -758,6 +781,227 @@ p, h1, h2, h3, h4, h5, h6 {
 .section-workflow {
   position: relative;
   background: #ECEBF2;
+  height: 70rem;
+  border: 3px solid rebeccapurple;
+}
+
+.workflow-tiles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2rem;
+}
+
+.workflow-tile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 280px;
+  height: 280px;
+  border-radius: 8px;
+  opacity: .8;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  padding: 3rem;
+}
+
+.workflow-tile .workflow-tile-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 50%;
+  font-size: 8rem;
+  font-family: "Nunito";
+  font-weight: 100;
+}
+
+.workflow-tile .workflow-tile-bottom {
+  height: 50%;
+}
+
+.workflow-tile .workflow-tile-bottom h1 {
+  font-family: "Dela Gothic One", "Dela Gothic", Times, serif;
+  font-weight: 400;
+  font-size: 2.6rem;
+  margin-top: 1rem;
+}
+
+.workflow-tile .workflow-tile-bottom p {
+  height: 50%;
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 110%;
+  text-align: left;
+  margin: 1rem 0 0 0;
+}
+
+.workflow-tile .workflow-tile-icon {
+  width: 5.6rem;
+  height: 5.6rem;
+  margin: 3rem 0 0 .8rem;
+}
+
+.workflow-tile .workflow-tile-icon img {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.workflow-tile:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  opacity: 1;
+}
+
+.workflow-tile:hover h2 {
+  color: #7B61FF;
+}
+
+.workflow-tile:hover p {
+  color: #ECEBF2;
+}
+
+.background-pattern-workflow {
+  position: relative;
+  background: url("/img/dots-pattern.png");
+  background-size: cover;
+  opacity: 0.1;
+}
+
+.dots-workflow {
+  width: 20rem;
+  height: 20rem;
+  right: -80%;
+  top: -50rem;
+  opacity: 0.1;
+}
+
+.section-portfolio {
+  background: #1A172F;
+}
+
+.portfolio-container {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+  width: 90rem;
+  height: 60rem;
+}
+
+.navigation-arrows {
+  position: absolute;
+  z-index: 3;
+  margin-top: 24rem;
+  padding: 2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navigation-arrows:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.border-accent {
+  border: 1px solid pink;
+}
+
+.navigation-left {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-left: -12rem;
+  opacity: .3;
+}
+
+.navigation-left:hover {
+  margin-left: -13rem;
+}
+
+.navigation-right {
+  margin-left: 89rem;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.navigation-right:hover {
+  margin-left: 90rem;
+}
+
+.portfolio-projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+  margin-left: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.portfolio-projects li {
+  list-style-type: none;
+  margin: 0 2rem 0 0;
+  cursor: pointer;
+}
+
+.portfolio-projects img {
+  width: 28rem;
+  border-radius: 8px;
+  opacity: .7;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-projects li:hover img {
+  opacity: 1;
+}
+
+.portfolio-projects li:hover h2 {
+  margin-top: -9.6rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-projects h2 {
+  position: relative;
+  width: 28rem;
+  text-align: center;
+  vertical-align: middle;
+  color: #1A172F;
+  font-size: 2.4rem;
+  margin-top: -9rem;
+  line-height: 110%;
+  padding: 0 4rem;
+}
+
+.section-call-to-action {
+  position: relative;
+  background: #ECEBF2;
+  height: 44rem;
 }
 
 html {
@@ -786,14 +1030,11 @@ body {
   border-radius: 8px;
 }
 
-.background-container {
-  background-color: #54657a;
-}
-
 .heading-font {
   font-family: "Dela Gothic One", "Dela Gothic", Times, serif;
   font-size: 4.8rem;
   line-height: 100%;
+  letter-spacing: -.1rem;
   max-width: 640px;
   font-weight: normal;
 }
@@ -832,20 +1073,6 @@ body {
 
 .leading-text .accent-secondary {
   background-color: #7B61FF;
-}
-
-.section-why-go-online h2 {
-  font-size: 2.8rem;
-}
-
-.section-why-go-online li {
-  font-size: 2rem;
-  list-style-type: none;
-}
-
-.section-why-go-online strong {
-  color: #1EF1BF;
-  font-weight: normal;
 }
 
 @media (max-width: 767px) {

@@ -111,3 +111,44 @@ window.onresize = reportWindowSize; //watch for viewport change & adjust navbar 
 window.addEventListener("scroll", navbarBackgroundHandler); //apply blur effect to navbar on scroll beyond default position
 
 modalOverlay.addEventListener('click', toggleMenu); //hide mobile menu on click outside the menu container
+
+
+//------------------------
+// PORTFOLIO NAVIGATION SCROLL
+//------------------------
+
+const navigationLeft = document.querySelector('.navigation-left');
+const navigationRight = document.querySelector('.navigation-right');
+const navigationArrows = document.querySelector('.navigation-arrows');
+const portfolioProjects = document.querySelector('.portfolio-projects');
+const scrollOffset = 30; //number of rem to move the container's contents to either side
+// var currentMarginOffset = parseInt(portfolioProjects.style.marginLeft, 10);
+var currentMarginOffset = parseInt(window.getComputedStyle(portfolioProjects).getPropertyValue('margin-left'));
+var newMarginOffset = 0;
+
+function scrollLeft() {
+    navigationRight.style.opacity = "1";
+    navigationLeft.style.opacity = "1";
+
+    if (currentMarginOffset < 0) {
+        currentMarginOffset += scrollOffset;
+        portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
+    } else {
+        navigationLeft.style.opacity = ".3";
+    }
+}
+
+function scrollRight() {
+    navigationRight.style.opacity = "1";
+    navigationLeft.style.opacity = "1";
+
+    if (currentMarginOffset >= -30) {
+        currentMarginOffset -= scrollOffset;
+        portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
+    } else if (currentMarginOffset <= -30) {
+        navigationRight.style.opacity = ".3";
+    }
+}
+
+navigationLeft.addEventListener('click', scrollLeft);
+navigationRight.addEventListener('click', scrollRight);
