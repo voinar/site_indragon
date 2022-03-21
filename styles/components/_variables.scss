@@ -1,0 +1,31 @@
+// fonts import
+
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Iceberg&family=Nunito:wght@200;300;400;500;700&display=swap');
+
+// fonts variable names
+$headingFont: 'Dela Gothic One', 'Dela Gothic', Times, serif;
+$paragraphFont: 'Nunito';
+
+// solid colors
+$offBlack: #1A172F;
+$offWhite: #ECEBF2;
+$primaryColor: #1EF1BF;
+$secondaryColor: #7B61FF;
+$transparentColor: #ff000000;
+
+// gradients
+$gradientPrimaryStart: #00fabb;
+$gradientPrimaryEnd: #00ffc838;
+
+$gradientSecondaryStart: #280042;
+$gradientSecondaryEnd: #2f00ff5d;
+
+// border styles
+$border-radius: 8px;
+
+// transitions
+$transition-default: all .3s ease-in-out;
+
+
+// fonts
+$smallParagraph: 1.8rem;

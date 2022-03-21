@@ -1,0 +1,14 @@
+.section-call-to-action {
+    position: relative;
+    background: $offWhite;
+    height: 44rem;
+    // border: 3px solid rebeccapurple;
+    // z-index: 5;
+}
+
+@media (max-width: 1000px) {
+    .section-call-to-action {
+        // padding-bottom: 0rem;
+        height: 44rem;
+    }
+}

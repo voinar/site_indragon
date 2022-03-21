@@ -1,12 +1,19 @@
-@import 'cssReset.scss';
-@import 'variables.scss';
-@import 'navbar.scss';
-@import 'hero.scss';
-@import 'services.scss';
-@import 'pitch.scss';
-@import 'workflow.scss';
-@import 'portfolio.scss';
-@import 'calltoaction.scss';
+// -------------------------- //
+// main stylesheet
+// -------------------------- //
+
+@import './components/cssReset.scss', 
+'./components/variables.scss', 
+'./components/navbar.scss', 
+'./sections/hero.scss',
+'./sections/services.scss',
+'./sections/pitch.scss',
+'./sections/workflow.scss',
+'./sections/portfolio.scss',
+'./sections/calltoaction.scss',
+'./sections/contactForm.scss',
+'./sections/footer.scss';
+
 
 html {
     font-size: 62.5%;
@@ -28,7 +35,7 @@ body {
     padding: 0 0 6rem 0;
     width: 90rem;
     // height: 130rem;
-    // border: 3px solid lightcoral;
+    // outline: 2px solid hotpink;
     // background: red;
 }
 
@@ -66,9 +73,7 @@ body {
 
 
 .leading-text {
-
     display: flex;
-    margin: 0 auto;
     padding: 12rem 15rem 6rem 0rem;
 
     .accent {
@@ -92,37 +97,19 @@ body {
 
 }
 
-
-
-// .hero-text {
-//     position: absolute;
-//     outline: 5px solid red;
-//     margin-top: 8rem;
-// }
-
-// 
-
-
-@media (max-width: 767px) {
-
-
-    .background-container {
-        // display: block;
+@media (max-width: 1000px) {
+    .section-container {
+        padding: 0 0 6rem 6rem;
+        // border: 1px solid red;
     }
 
-    .leading-text {
-        .accent {
-            min-width: 1rem;
-            margin-right: 3rem;
-        }
-    }
+}
 
-    .heading-font {
-        font-size: 3.8rem;
+@media (max-width: 768px) {
+
+    .section-container {
+        padding: 0 0 10rem 6rem;
+        // border: 1px solid red;
     }
 }
 
-@media (max-width: 500px) {
-
-
-}

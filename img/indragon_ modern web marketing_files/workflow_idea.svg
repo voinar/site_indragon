@@ -1,0 +1,40 @@
+<svg width="738" height="720" viewBox="0 0 738 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M343 706.5H406.5L295.5 652H456L295.5 608H456M198 498L119 577M119 322H86M69 322H45.5M30.5 322H0M198 145L119 66M373.5 66V34.5M373.5 15.5V0.5M548 145L628.5 66M624 322H644M656 322H688M707 322H738M548 498L628.5 577M245 299C258 219.5 316 184 373.5 190.5M277.5 568.5H468C477.5 407.5 544.5 441 548 322C548 73.9999 193.5 75.5 198 322C199.871 424.5 272.5 434.5 277.5 568.5Z" stroke="#ECEBF2" stroke-width="27"/>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></svg>

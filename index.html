@@ -28,15 +28,15 @@
                     <a href="#portfolio">projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#how-we-work">about</a>
+                    <a href="#workflow">about</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact-form">contact</a>
+                    <a href="#contact">contact</a>
                 </li>
             </ul>
             
-            <button class="cta-btn">get a quote</button>
-            
+            <a href="#contact"><button class="cta-btn">get a quote</button></a>
+
             <button class="nav-toggle">
                 <i class="fas fa-bars"></i>
             </button>
@@ -47,8 +47,6 @@
 
 
 <div class="background-container">
-
-
 
 <section aria-labelledby="hero-title" id="home" class="section-hero">
     <div class="hero-copy-wrapper background-glass rounded-corners">
@@ -174,7 +172,7 @@
 
     <div class="leading-text">
         <div class="accent accent-secondary"></div>
-        <h1 id="workflow" class="heading-font heading-dark">
+        <h1 class="heading-font heading-dark">
             <br>
             <strong>How</strong> we work:
             <br><br>
@@ -182,7 +180,7 @@
     </div>
 
     <div class="workflow-tiles">
-        <div class="div1 workflow-tile">
+        <div class="div1 workflow-tile workflow-tile-1">
             <div class="workflow-tile-top">
                 <div class="workflow-tile-number">1</div>
                 <div class="workflow-tile-icon">
@@ -195,7 +193,7 @@
             </div>
         </div>
 
-        <div class="div1 workflow-tile">
+        <div class="div5 workflow-tile workflow-tile-2">
             <div class="workflow-tile-top">
                 <div class="workflow-tile-number">2</div>
                 <div class="workflow-tile-icon">
@@ -208,7 +206,7 @@
             </div>
         </div>
 
-        <div class="div1 workflow-tile">
+        <div class="div7 workflow-tile workflow-tile-3">
             <div class="workflow-tile-top">
                 <div class="workflow-tile-number">3</div>
                 <div class="workflow-tile-icon">
@@ -267,7 +265,8 @@
             <h2>Law Firm</h2>
         </li>
     </ul>
-
+    <div class="portfolio-overflow-mask"></div>
+    
     <div class="navigation-arrows navigation-right"><img alt="portfolio right" src="/img/arrow.svg"></div>
 
     </div>
@@ -287,85 +286,93 @@
 </section>
 
 <section aria-labelledby="contact-form" class="section-contact-form">
-    <h1 id="contact-form" class="heading-font">
-        Contact us:
-    </h1>
-    <h2>Fill out this form</h2>
-    <form class="" method="post" id="contactForm" name="contactForm" novalidate="novalidate">
-        <div class="form-group">
-        <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
+    <div class="section-container" id="call-to-action">
+        <div class="leading-text">
+            <div class="accent accent-primary"></div>
+            <h1 id="contact" class="heading-font heading-bright">
+                <br>
+                Contact us:
+                <br><br>
+            </h1>
         </div>
-        <div class="row">
-        <div class="form-group">
-        <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+
+
+        <h2>Fill out this form...</h2>
+        <div class="contact-methods">
+
+            <form class="contact1 background-glass rounded-corners" method="POST" id="contactForm" name="contactForm" novalidate="novalidate">
+
+                <input type="text" class="form-control" name="name" id="name" placeholder="your name / company">
+
+                <input type="text" class="form-control" name="email" id="email" placeholder="email / phone">
+
+                <textarea class="form-control" name="message" id="message" cols="10" rows="7" placeholder="write your message:"></textarea>
+
+                <input type="submit" value="Let's get started" class="send-btn">
+
+                <span class="submitting"></span>
+
+            </form>
+            <div class="contact2 background-glass rounded-corners">
+               <h2>...e-mail:</h2>
+                <p>hello@indragon.pl</p>
+            </div>
+            <div class="contact3 background-glass rounded-corners">
+                <h2>...or call:</h2>
+                <p>+48-609-481-787</p> 
+            </div>
         </div>
+
+
         </div>
-        <div class="row">
-        <div class="form-group">
-        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
-        </div>
-        </div>
-        <div class="row">
-        <div class="col-md-12 form-group">
-        <textarea class="form-control" name="message" id="message" cols="30" rows="7" placeholder="Write your message"></textarea>
-        </div>
-        </div>
-        <div class="row">
-        <div class="col-12">
-        <input type="submit" value="Send Message" class="btn btn-primary">
-        <span class="submitting"></span>
-        </div>
-        </div>
-        </form>
 </section>
 
-<section aria-labelledby="footer" class="section-footer">
-    <div class="navlinks">
-        <div class="footer-column">
-            <div class="logo">
-                <p>indragon</p>
+<section aria-labelledby="footer" class="section-footer" id="footer">
+
+    <div class="section-container">
+
+
+        <div class="footer-container">
+            <div class="footer-column footer-col-1">
+                <div class="footer-logo">
+                    indragon
+                </div>
+                <div class="footer-social">
+                    <li><a href="#home"><img src="/img/social/icon-facebook.svg" alt=""></a></li>
+                    <li><a href="#home"><img src="/img/social/icon-instagram.svg" alt=""></a></li>
+                    <li><a href="#home"><img src="/img/social/icon-twitter.svg" alt=""></a></li>
+                </div>
             </div>
-            <h3>Follow:</h3>
-            <li><a class="active" href="#home">FB</a></li>
-            <li><a href="#news">ig</a></li>
-            <li><a href="#contact">tt</a></li>
-        </div>
-        <div class="footer-column">
-            <h3>Services</h3>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
-        </div>
-        <div class="footer-column">
-            <h3>Contact</h3>
-            <li><a class="active" href="#home">Home</a></li>
-            <li><a href="#news">News</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
+            <div class="footer-column footer-col-2">
+                <h1>Services</h1>
+                <li><a href="#services">Webdesign</a></li>
+                <li><a href="#services">Social Media</a></li>
+                <li><a href="#services">Online Ads</a></li>
+                <li><a href="#services">E-commerce</a></li>
+                <li><a href="#services">Social Media</a></li>
+                <li><a href="#services">Branding</a></li>
+                <li><a href="#services">Content Marketing</a></li>
+                <li><a href="#services">Visuals</a></li>
+            </div>
+            <div class="footer-column footer-col-3">
+                <h1>Contact</h1>
+                <p>hello@indragon.pl<br>
+                    (48) 609481787<br>
+                    al. Warszawska 227B<br>
+                    39-400 Tarnobrzeg<br>
+                    Poland</p>
+            </div>
         </div>
     </div>
+
     <div class="copyright">
-        <p>copyright © 2022 indragon</p>
+        copyright © 2022 indragon
     </div>
 </section>
 
     
 </div>
 
-    <!-- <div>    
-        <header>
-        <h1>hello my dear</h1>
-        <button>hello</button>
-    </header>
-    <div class="contact">
-        <button>submit</button>
-        <div class="info">
-            <h1>our contact info</h1>
-            <p>this is our contact info</p>
-        </div>
-    </div>
-    </div> -->
 
 <script src="./js/main.js"></script>
 <noscript>Hey, JavaScript execution on your device seems to be disabled. Some parts of this page might work a little funky.</noscript>

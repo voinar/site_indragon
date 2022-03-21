@@ -1,8 +1,10 @@
 //------------------------
 // MAIN JAVASCRIPT FILE
+//---------------------
+// CONTENTS:
+// - navbar behavior
+// - portfolio section scroll
 //------------------------
-
-
 
 
 //------------------------
@@ -17,7 +19,6 @@ const modalOverlay = document.querySelector('.modal-overlay');
 const bodyScroll = document.querySelector('body');
 
 var menuVisibility = false;
-var intViewportWidth = window.innerWidth;
 
 //watch for viewport change & adjust navbar functionality accordingly, reset mobile menu on viewport change
 function reportWindowSize() {
@@ -72,7 +73,7 @@ function hideMenu(){
     // console.log(menuVisibility);
 }
 
-//show-hide modal overlay
+//toggle modal overlay
 function showModalOverlay() {
     modalOverlay.classList.remove('hide-container');
     modalOverlay.classList.add('show-container');
@@ -126,27 +127,49 @@ const scrollOffset = 30; //number of rem to move the container's contents to eit
 var currentMarginOffset = parseInt(window.getComputedStyle(portfolioProjects).getPropertyValue('margin-left'));
 var newMarginOffset = 0;
 
+
+
 function scrollLeft() {
+    var intViewportWidth = window.innerWidth;
     navigationRight.style.opacity = "1";
     navigationLeft.style.opacity = "1";
 
-    if (currentMarginOffset < 0) {
-        currentMarginOffset += scrollOffset;
-        portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
-    } else {
-        navigationLeft.style.opacity = ".3";
+    if (intViewportWidth >= 1000) { //scroll behavior for viewport width over 1000px
+        if (currentMarginOffset < 0) {
+            currentMarginOffset += scrollOffset;
+            portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
+        } else {
+            navigationLeft.style.opacity = ".3";
+        }
+    } else if (intViewportWidth < 1000) { //scroll behavior for viewport width under 1000px
+        if (currentMarginOffset < 0) {
+            currentMarginOffset += (scrollOffset + 50);
+            portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
+        } else {
+            navigationLeft.style.opacity = ".3";
+        }
     }
 }
 
 function scrollRight() {
+    var intViewportWidth = window.innerWidth;
     navigationRight.style.opacity = "1";
     navigationLeft.style.opacity = "1";
 
-    if (currentMarginOffset >= -30) {
-        currentMarginOffset -= scrollOffset;
-        portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
-    } else if (currentMarginOffset <= -30) {
-        navigationRight.style.opacity = ".3";
+    if (intViewportWidth >= 1000) { //scroll behavior for viewport width over 1000px
+        if (currentMarginOffset >= -30) {
+            currentMarginOffset -= scrollOffset;
+            portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
+        } else if (currentMarginOffset <= -30) {
+            navigationRight.style.opacity = ".3";
+        }
+    } else if (intViewportWidth < 1000) { //scroll behavior for viewport width under 1000px
+        if (currentMarginOffset >= -30) {
+            currentMarginOffset -= (scrollOffset + 50);
+            portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
+        } else if (currentMarginOffset <= -30) {
+            navigationRight.style.opacity = ".3";
+        }
     }
 }
 

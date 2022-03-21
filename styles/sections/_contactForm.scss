@@ -1,0 +1,121 @@
+.section-contact-form {
+    background: url("/img/bkg_contact-form.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    padding: 0rem 0 12rem 0;
+    box-sizing: border-box;
+
+    .send-btn {
+        color: $offBlack;
+        background-color: $primaryColor;
+        font-size: 2rem;
+        font-weight: bold;
+        border: none;
+        border-radius: $border-radius;
+        padding: 1rem 3rem;
+        margin: 0 0 1rem 1rem;
+    }
+}
+
+input, select, textarea {
+    all: unset;
+    color: $offWhite;
+    border-left: 4px solid $primaryColor;
+    padding: 1rem 2rem 1rem;
+    // width: 100%;
+    margin: 0 0 1rem 0;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    // line-height: 120%;
+}
+
+input[type=text]:focus, textarea:focus {
+    /* ...existing styles */
+    // border: 3px solid red;
+    background: rgb(16, 16, 120);
+    transition: .3s ease-in-out;
+    outline: 1px solid rgba(rgb(100, 60, 170), 1);
+}
+
+textarea {
+    min-height: 12rem;
+    padding: 2rem 2rem;
+}
+
+::placeholder {
+    color: rgba(100, 200, 160, 0.8);
+    font-size: 1.3em;
+    // padding-left: 2rem;
+}
+
+.contact-methods {
+    // border: 1px solid hotpink;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    // margin-top: 1rem;
+}
+
+.form-control {
+    display: block;
+    height: 3rem;
+    width: 86%;
+    // border-radius: $border-radius;
+    background: rgb(0, 5, 20);
+    // color: $primaryColor;
+    // border: 1px solid red;
+    margin: 1rem;
+}
+
+.contact1 { grid-area: 1 / 1 / 3 / 2; }
+.contact2 { grid-area: 1 / 2 / 2 / 3; }
+.contact3 { grid-area: 2 / 2 / 3 / 3; }
+
+.contact1 {
+// background: blue;
+// max-width: 80%;
+}
+
+.contact2, .contact3 {
+// background: green;
+    padding: 4rem;
+}
+
+h2 {
+    color: $primaryColor;
+    font-size: 2.6rem;
+}
+
+.contact2 p, .contact3 p {
+    font-family: $headingFont;
+    font-size: 2.4rem;
+}    
+
+@media (max-width: 1000px) {
+    
+    .contact-methods { 
+        display: flex;
+        flex-direction: column;
+        max-width: 80vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-contact-form {
+        padding: 0 0 6rem 0;
+
+    }
+    .contact-methods {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact2, .contact3 {
+        padding: 3rem;
+        height: 14rem;
+        // display:none;
+        }
+}

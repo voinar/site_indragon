@@ -1,0 +1,180 @@
+.section-portfolio {
+    background: $offBlack;
+}
+
+.portfolio-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 104rem;
+    padding-left: 7rem;
+    height: 60rem;
+}
+
+.portfolio-overflow-mask {
+    position: absolute;
+    width: 12rem; // used to adjust the overflow shadow mask
+    margin: 0 88rem; // as above, both need to add up to 100
+    height: 54rem;
+    background: 2rem linear-gradient(to left, $offBlack, transparent);
+    background-repeat: no-repeat;
+}
+
+.navigation-arrows {
+    position: absolute;
+    z-index: 3;
+    margin-top: 24rem;
+    padding: 2rem;
+    transition: 0.3s;
+    user-select: none; 
+    // border: 1px solid pink;
+}
+
+.navigation-arrows:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+
+.navigation-left {
+    transform: rotate(90deg);
+    margin-left: -12rem;
+    opacity: .3;
+}
+
+.navigation-left:hover {
+    margin-left: -13rem;
+}
+
+.navigation-right {
+    margin-left: 98rem;
+    transform: rotate(270deg);
+}
+
+.navigation-right:hover {
+    margin-left: 100rem;
+}
+
+.portfolio-projects {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin-left: 0;
+    transition: .3s;
+
+    li {
+        list-style-type: none;
+        margin: 0 2rem 0 0;
+        cursor: pointer;
+    }
+    
+    img {
+        width: 28rem;
+        border-radius: $border-radius;
+        opacity: .7;
+        transition: $transition-default;
+    }
+
+    li:hover {
+        
+        img {
+            opacity: 1;
+        }
+        h2 {
+            margin-top: -9.6rem;        
+            transition: $transition-default;
+        }
+    }
+
+    h2 {
+        position: relative;
+        width: 28rem;
+        text-align: center;
+        vertical-align: middle;        
+        color: $offBlack;
+        font-size: 2.4rem;
+        margin-top: -9rem;
+        line-height: 110%;
+        padding: 0 4rem;
+        // border: 1px solid pink;
+    }
+}
+
+
+@media (max-width: 1350px) {
+
+    .navigation-arrows {
+        filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, .4));
+    }
+
+    .navigation-left {
+        margin-left: -4rem;
+        z-index: 3;
+    }
+    
+    .navigation-right {
+        margin-left: 79rem;
+    }
+
+    .navigation-left:hover {
+        margin-left: -6rem;
+    }
+    
+    .navigation-right:hover {
+        margin-left: 81rem;
+    }
+}
+
+
+@media (max-width: 1000px) {
+
+    .portfolio-container {
+        width: 70rem;
+        // border: 1px solid red;
+        padding-left: 0rem;
+    }
+
+    .navigation-left {
+        margin-left: -4rem;
+    }
+    
+    .navigation-right {
+        margin-left: 60rem;
+    }
+
+    .navigation-left:hover {
+        margin-left: -5rem;
+    }
+    
+    .navigation-right:hover {
+        margin-left: 61rem;
+    }
+
+    .portfolio-overflow-mask {
+        margin: 0 60rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .portfolio-container {
+        width: 70vw;
+        // border: 1px solid red;
+        padding-left: 0rem;
+    }
+
+    .navigation-right {
+        margin-left: 55vw;
+        z-index: 3;
+    }
+    
+    .navigation-right:hover {
+        margin-left: 55vw;
+    }
+
+    .portfolio-overflow-mask {
+        margin: 0 70vw;
+    }
+}
+
