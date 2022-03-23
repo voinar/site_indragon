@@ -68,6 +68,7 @@
             <img alt="Learn more" src="/img/arrow.svg">
         </a>
     </div>
+    
 </section>
 
 <section aria-labelledby="services" class="section-services">
@@ -180,7 +181,7 @@
     </div>
 
     <div class="workflow-tiles">
-        <div class="div1 workflow-tile workflow-tile-1">
+        <div class="workflow-tile workflow-tile-1">
             <div class="workflow-tile-top">
                 <div class="workflow-tile-number">1</div>
                 <div class="workflow-tile-icon">
@@ -193,7 +194,7 @@
             </div>
         </div>
 
-        <div class="div5 workflow-tile workflow-tile-2">
+        <div class="workflow-tile workflow-tile-2">
             <div class="workflow-tile-top">
                 <div class="workflow-tile-number">2</div>
                 <div class="workflow-tile-icon">
@@ -206,7 +207,7 @@
             </div>
         </div>
 
-        <div class="div7 workflow-tile workflow-tile-3">
+        <div class="workflow-tile workflow-tile-3">
             <div class="workflow-tile-top">
                 <div class="workflow-tile-number">3</div>
                 <div class="workflow-tile-icon">
@@ -299,15 +300,19 @@
 
         <h2>Fill out this form...</h2>
         <div class="contact-methods">
+            <!--   -->
+            <form action="https://formsubmit.co/f8624a75233df840300727616e713bb8" method="POST" class="contact1 background-glass rounded-corners" id="contactForm" name="contactForm">
 
-            <form class="contact1 background-glass rounded-corners" method="POST" id="contactForm" name="contactForm" novalidate="novalidate">
+            <input type="hidden" name="_captcha" value="false">
+                
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/thankyou.html">
 
-                <input type="text" class="form-control" name="name" id="name" placeholder="your name / company">
+                <input type="text" class="form-control" name="name" id="name" placeholder="your name / company" required>
 
-                <input type="text" class="form-control" name="email" id="email" placeholder="email / phone">
+                <input type="email" class="form-control" name="email" id="email" placeholder="email / phone" required>
 
-                <textarea class="form-control" name="message" id="message" cols="10" rows="7" placeholder="write your message:"></textarea>
-
+                <textarea class="form-control" name="message" id="message" cols="10" rows="7" minlength="10" maxlength="3000" placeholder="write your message:" required></textarea>
+                
                 <input type="submit" value="Let's get started" class="send-btn">
 
                 <span class="submitting"></span>

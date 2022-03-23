@@ -75,8 +75,8 @@
 
 .navbar-alt {
     padding-top: 3rem;
-    background-color:rgba($offBlack, 0.6);
-    backdrop-filter: blur(5px);
+    background-color:rgba($offBlack, 0.7);
+    backdrop-filter: blur($standardBlur);
     transition: 1s;
 
     .nav-toggle {
@@ -115,13 +115,13 @@
 
 .modal-overlay {
     background-color:rgba($primaryColor, 0.75);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur($standardBlur);
     position: absolute;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    z-index: 9;
+    z-index: 10;
 }
 
 @media (max-width: 1000px) {

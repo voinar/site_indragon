@@ -15,6 +15,7 @@
         border-radius: $border-radius;
         padding: 1rem 3rem;
         margin: 0 0 1rem 1rem;
+        cursor: pointer;
     }
 }
 
@@ -74,19 +75,21 @@ textarea {
 .contact2 { grid-area: 1 / 2 / 2 / 3; }
 .contact3 { grid-area: 2 / 2 / 3 / 3; }
 
-.contact1 {
-// background: blue;
-// max-width: 80%;
-}
-
 .contact2, .contact3 {
 // background: green;
     padding: 4rem;
+}
+.contact1, .contact2, .contact3 {
+    border: 2px solid rgba(200, 50, 255, 0.1);
 }
 
 h2 {
     color: $primaryColor;
     font-size: 2.6rem;
+}
+
+h2 a {
+    color: $primaryColor;
 }
 
 .contact2 p, .contact3 p {

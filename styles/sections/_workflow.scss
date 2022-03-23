@@ -93,6 +93,20 @@
     }
 }
 
+.workflow-tile-1 {
+    background-image: linear-gradient(to top, $gradientSecondaryStart, $gradientSecondaryEnd), url("/img/tile_6.jpeg");
+    background-size: 250%;
+}
+
+.workflow-tile-2 {
+    background-image: linear-gradient(to top, $gradientSecondaryStart, $gradientSecondaryEnd), url("/img/tile_5.jpeg");    
+}
+
+.workflow-tile-3 {
+    background-image: linear-gradient(to top, $gradientSecondaryStart, $gradientSecondaryEnd), url("/img/tile_1.jpeg");
+    background-size: 220%;
+}
+
 .background-pattern-workflow {
     position: relative;
     background: url("/img/dots-pattern.png");
@@ -131,6 +145,16 @@
         height: 280px;
     }
 
+
+}
+
+@media (max-width: 768px) {
+
+    .workflow-tile {
+        width: 80vw;
+        height: 280px;
+    }
+
     .workflow-tile-1 {
 
     }
@@ -142,13 +166,4 @@
     .workflow-tile-3 {
         
     }
-}
-
-@media (max-width: 768px) {
-
-    .workflow-tile {
-        width: 80vw;
-        height: 280px;
-    }
-
 }

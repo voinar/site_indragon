@@ -3,6 +3,7 @@
     height: 1000px;
     width: 100%; /* You must set a specified height */
     background-image: url("/img/hero-bkg.jpg");
+    // background: url("/img/vid/bkg-vid.mp4");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -20,8 +21,8 @@
 }
 
 .background-glass {
-    background-color:rgba($offBlack, 0.75);
-    backdrop-filter: blur(5px);
+    background-color:rgba($offBlack, .3);
+    backdrop-filter: blur($standardBlur);
     // transition: 1s;
 }
 
@@ -111,8 +112,7 @@
     }
 
     .background-glass {
-        background-color:rgba($offBlack, 0.75);
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur($standardBlur);
         transition: 1s;
         min-width: 80vw;
     }
