@@ -316,6 +316,7 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-top: 10vh;
   width: 100vw;
   height: 60vh;
+  padding: 8rem;
 }
 
 .hero-copy {
@@ -324,16 +325,16 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-copy p {
-  font-size: 3vh;
+  font-size: 2.6vw;
   line-height: 110%;
 }
 
 .hero-copy h1 {
-  font-size: 10vh;
+  font-size: 8vw;
 }
 
 .hero-asset img {
-  max-height: 40vh;
+  max-height: 30vw;
 }
 
 .arrow-down {
@@ -367,30 +368,39 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 1000px) {
-  .hero-copy p {
-    font-size: 2vh;
-    line-height: 110%;
-  }
-  .hero-copy h1 {
-    font-size: 8vh;
-  }
-  .hero-asset img {
-    max-height: 26vh;
-  }
-}
-
-@media (max-width: 768px) {
   .hero-section-container {
     margin-bottom: 10vh;
   }
   .hero-copy {
-    margin-top: 30vh;
+    margin-top: 24vh;
     z-index: 2;
     text-shadow: 0px 10px 30px #00000040;
+  }
+  .hero-copy p {
+    font-size: 3vw;
+    line-height: 110%;
+  }
+  .hero-copy h1 {
+    font-size: 14vw;
   }
   .hero-asset {
     position: absolute;
     margin: 0 0 0 30%;
+    opacity: .8;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-copy {
+    margin-top: 24vh;
+    z-index: 2;
+    text-shadow: 0px 0px 30px #00000050;
+  }
+  .hero-copy p {
+    font-size: 5vw;
+  }
+  .hero-copy h1 {
+    font-size: 14vw;
   }
 }
 
@@ -431,10 +441,10 @@ p, h1, h2, h3, h4, h5, h6 {
 .grid-parent {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (0fr)[3];
-      grid-template-columns: repeat(3, 0fr);
-  -ms-grid-rows: (0fr)[3];
-      grid-template-rows: repeat(3, 0fr);
+  -ms-grid-columns: (3fr)[3];
+      grid-template-columns: repeat(3, 3fr);
+  -ms-grid-rows: (3fr)[3];
+      grid-template-rows: repeat(3, 3fr);
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
 }
@@ -531,7 +541,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .tile p {
   height: 80%;
   width: 100%;
-  font-size: 1.4rem;
+  font-size: 2rem;
   padding: 1.4rem;
   text-align: center;
   color: rgba(255, 255, 255, 0);
@@ -561,13 +571,13 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .square-tile {
-  width: 210px;
+  width: 100%;
   height: 210px;
   border-radius: 8px;
 }
 
 .vertical-tile {
-  width: 210px;
+  width: 100%;
   height: 440px;
   border-radius: 8px;
 }
@@ -614,8 +624,8 @@ p, h1, h2, h3, h4, h5, h6 {
   .grid-parent {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (0fr)[2];
-        grid-template-columns: repeat(2, 0fr);
+    -ms-grid-columns: (2fr)[2];
+        grid-template-columns: repeat(2, 2fr);
     -ms-grid-rows: (1fr)[5];
         grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 2rem;
@@ -671,12 +681,10 @@ p, h1, h2, h3, h4, h5, h6 {
     grid-area: 5 / 1 / 6 / 2;
   }
   .square-tile {
-    width: 300px;
     height: 210px;
     border-radius: 8px;
   }
   .vertical-tile {
-    width: 300px;
     height: 440px;
     border-radius: 8px;
   }
@@ -703,7 +711,7 @@ p, h1, h2, h3, h4, h5, h6 {
     color: #7B61FF;
   }
   .tile p {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     width: 20ch;
     margin: 0 auto;
     color: #ECEBF2;
@@ -742,7 +750,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .section-why-go-online .background-glass {
-  border: 2px solid rgba(200, 50, 255, 0.1);
+  border: 2px solid rgba(200, 50, 255, 0.3);
   padding: 5rem;
 }
 
@@ -929,19 +937,8 @@ p, h1, h2, h3, h4, h5, h6 {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0 auto;
-  width: 104rem;
-  padding-left: 7rem;
+  width: 90vw;
   height: 60rem;
-}
-
-.portfolio-overflow-mask {
-  position: absolute;
-  width: 12rem;
-  margin: 0 88rem;
-  height: 54rem;
-  background: 2rem -webkit-gradient(linear, right top, left top, from(#1A172F), to(transparent));
-  background: 2rem linear-gradient(to left, #1A172F, transparent);
-  background-repeat: no-repeat;
 }
 
 .navigation-arrows {
@@ -955,6 +952,8 @@ p, h1, h2, h3, h4, h5, h6 {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.4));
+          filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.4));
 }
 
 .navigation-arrows:hover {
@@ -965,22 +964,12 @@ p, h1, h2, h3, h4, h5, h6 {
 .navigation-left {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  margin-left: -12rem;
   opacity: .3;
 }
 
-.navigation-left:hover {
-  margin-left: -13rem;
-}
-
 .navigation-right {
-  margin-left: 98rem;
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
-}
-
-.navigation-right:hover {
-  margin-left: 100rem;
 }
 
 .portfolio-projects {
@@ -992,19 +981,16 @@ p, h1, h2, h3, h4, h5, h6 {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 0;
-  margin-left: 0;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
 .portfolio-projects li {
   list-style-type: none;
-  margin: 0 2rem 0 0;
   cursor: pointer;
 }
 
 .portfolio-projects img {
-  width: 28rem;
   border-radius: 8px;
   opacity: .7;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1023,7 +1009,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .portfolio-projects h2 {
   position: relative;
-  width: 28rem;
   text-align: center;
   vertical-align: middle;
   color: #1A172F;
@@ -1033,74 +1018,13 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 0 4rem;
 }
 
-@media (max-width: 1350px) {
-  .navigation-arrows {
-    -webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.4));
-            filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.4));
-  }
-  .navigation-left {
-    margin-left: -4rem;
-    z-index: 3;
-  }
-  .navigation-right {
-    margin-left: 79rem;
-  }
-  .navigation-left:hover {
-    margin-left: -6rem;
-  }
-  .navigation-right:hover {
-    margin-left: 81rem;
-  }
-}
-
-@media (max-width: 1000px) {
-  .portfolio-container {
-    width: 70rem;
-    padding-left: 0rem;
-  }
-  .navigation-left {
-    margin-left: -4rem;
-  }
-  .navigation-right {
-    margin-left: 60rem;
-  }
-  .navigation-left:hover {
-    margin-left: -5rem;
-  }
-  .navigation-right:hover {
-    margin-left: 61rem;
-  }
-  .portfolio-overflow-mask {
-    margin: 0 60rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .portfolio-container {
-    width: 70vw;
-    padding-left: 0rem;
-  }
-  .navigation-right {
-    margin-left: 55vw;
-    z-index: 3;
-  }
-  .navigation-right:hover {
-    margin-left: 55vw;
-  }
-  .portfolio-overflow-mask {
-    margin: 0 70vw;
-  }
-}
-
 .section-call-to-action {
   background: #ECEBF2;
-  height: 44rem;
 }
 
-@media (max-width: 1000px) {
-  .section-call-to-action {
-    height: 36rem;
-  }
+.section-call-to-action h1 {
+  font-size: 5rem;
+  line-height: 1;
 }
 
 .section-contact-form {
@@ -1132,7 +1056,7 @@ input, select, textarea {
   color: #ECEBF2;
   border-left: 4px solid #1EF1BF;
   padding: 1rem 2rem 1rem;
-  margin: 0 0 1rem 0;
+  margin: 1rem 0;
   font-size: 1.4rem;
   border-radius: 4px;
 }
@@ -1147,7 +1071,6 @@ input[type=text]:focus, textarea:focus {
 
 textarea {
   min-height: 12rem;
-  padding: 2rem 2rem;
 }
 
 ::-webkit-input-placeholder {
@@ -1182,11 +1105,10 @@ textarea {
 }
 
 .form-control {
-  display: block;
   height: 3rem;
-  width: 86%;
+  width: 80%;
   background: #000514;
-  margin: 1rem;
+  margin-left: 1rem;
 }
 
 .contact1 {
@@ -1396,14 +1318,13 @@ body {
   font-family: "Nunito";
   margin: 0;
   padding: 0;
-  width: 100vw;
   overflow-x: hidden;
 }
 
 .section-container {
   margin: 0 auto;
-  padding: 0 0 6rem 2rem;
-  width: 70rem;
+  padding: 0 0 6rem 0;
+  width: 50vw;
 }
 
 .rounded-corners {
@@ -1412,9 +1333,10 @@ body {
 
 .heading-font {
   font-family: "Dela Gothic One", "Dela Gothic", Times, serif;
-  font-size: 4.4rem;
+  font-size: 5.6rem;
   line-height: 90%;
   letter-spacing: -.16rem;
+  max-width: 90vw;
   font-weight: normal;
 }
 
@@ -1437,7 +1359,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 10rem 0rem 6rem 0rem;
-  max-width: 80%;
+  max-width: 70vw;
 }
 
 .leading-text .accent {
@@ -1454,18 +1376,21 @@ body {
   background-color: #7B61FF;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .section-container {
-    margin: 0 auto;
     padding: 0 0 6rem 2rem;
-    width: 70rem;
+    width: 80vw;
   }
 }
 
 @media (max-width: 768px) {
   .section-container {
-    margin: 2rem;
+    margin: 0 2rem;
     padding: 0 0 10rem 0rem;
+  }
+  .leading-text h1 {
+    font-size: 8vw;
+    line-height: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */
