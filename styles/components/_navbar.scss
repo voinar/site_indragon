@@ -1,20 +1,14 @@
 .navbar {
     // visibility: hidden;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     z-index: 10;
-    padding: 3rem;
+    padding: 6rem 3rem 3rem 6rem;
 
     .nav-contents {
 
         // border: 1px solid red;
         display: flex;
-
-        // display: grid;
-        // grid-template-columns: repeat(3, 1fr);
-        // grid-template-rows: 1fr;
-        // grid-column-gap: 0px;
-        // grid-row-gap: 0px;
         
         font-family: 'Nunito', sans-serif;
 
@@ -32,9 +26,11 @@
             list-style-type: none;
             display: flex;
             margin: 0 auto;
+            padding: 0;
         }
 
         .nav-item a {
+            // border: 1px solid red;
             color: $offWhite;
             padding: 0 40px 0 48px;
             font-size: 2rem;
@@ -55,10 +51,9 @@
             cursor: pointer;
             background-color: inherit;
             color: $primaryColor;
-            transition: 0.3s;
             font-size: 2rem;
             width: 160px;
-            outline: 2px solid $primaryColor;
+            border: 2px solid $primaryColor;
             border-radius: 8px;
         }
 
@@ -127,19 +122,13 @@
 @media (max-width: 1000px) {
 
     .navbar {
-
         .nav-contents {
-
             .nav-item a {
                 padding: 0px 10px 0px 12px;
             }
         
             .nav-item:hover a {
                 padding: 0px 11px 0px 11px;
-            }
-
-            .cta-btn {
-                width: 120px;
             }
         }
     }

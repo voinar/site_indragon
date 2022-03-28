@@ -5,6 +5,10 @@
     // z-index: 5;
 }
 
+.tiles-container {
+    // border: 2px solid hotpink;
+}
+
 .background-pattern {
     position: absolute;
     background: url("/img/dots-pattern.png");
@@ -39,11 +43,11 @@
 // grid layout
 // -------------------------- //
 
-.parent {
+.grid-parent {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 1rem;
+    grid-template-columns: repeat(3, 0fr);
+    grid-template-rows: repeat(3, 0fr);
+    grid-column-gap: 2rem;
     grid-row-gap: 2rem;
 
 }
@@ -65,10 +69,11 @@
 .tile { 
     background-color: $primaryColor;
     // display: inline;
+    // border: 1px solid red;
 
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    // align-items: flex-end;
 
     background-size: cover;
     opacity: .8;
@@ -80,8 +85,8 @@
         height: 20%;
         width: 100%;
         color: $offWhite;
-        font-size: 2.4rem;
-        // border: 1px solid red;
+        font-size: 2.2rem;
+
         display: flex;
         justify-content: center;
         margin: 0 0 2rem 0;
@@ -91,9 +96,9 @@
     p {
         height: 80%;
         width: 100%;
-        position: relative;
-        font-size: 2rem;
-        padding: 2rem;
+        // position: relative;
+        font-size: 1.4rem;
+        padding: 1.4rem;
         text-align: center;
         // border: 1px solid red;
         color: rgba(255, 255, 255, 0);
@@ -117,8 +122,8 @@
 }
 
 .square-tile {
-    width: 280px;
-    height: 280px;
+    width: 210px;
+    height: 210px;
     border-radius: $border-radius;
 
     h2 { 
@@ -127,10 +132,9 @@
 }
 
 .vertical-tile {
-    width: 280px;
-    height: 580px;
+    width: 210px;
+    height: 440px;
     border-radius: $border-radius;
-
 }
 // -------------------------- //
 // feature tile images
@@ -179,16 +183,16 @@
     }
 
     .tiles-container {
-        width: 60rem;
+        // width: 60rem;
         // border: 1px solid teal;
     }
 
-    .parent {
+    .grid-parent {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 0fr);
         grid-template-rows: repeat(5, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 20px;
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
         // border: 3px solid rebeccapurple;
         // margin: auto 4rem;
         
@@ -202,64 +206,87 @@
         .div6 { grid-area: 4 / 2 / 5 / 3; }
         .div7 { grid-area: 5 / 1 / 6 / 2; }
 
+    .square-tile {
+        width: 300px;
+        height: 210px;
+        border-radius: $border-radius;
+        
+        h2 { 
+                // margin-top: 22rem;
+        }
+    }
+        
+    .vertical-tile {
+        width: 300px;
+        height: 440px;
+        border-radius: $border-radius;
+    }
+
 }
 
 
 @media (max-width: 768px) {
 
     .section-container-services {
-        // width: 80%;
-        // border: 3px solid lawngreen;
+        // width: 70%;
     }
     
     .section-services {
-        background: $offWhite;
+        // background: $offWhite;
     }
 
     .leading-text {
-        padding: 6rem 4rem 6rem;
+        // padding: 6rem 4rem 6rem;
         // border: 1px solid red;
-        width: 90vw;
+        // width: 90vw;
         // margin-right: 4rem;
     }
 
     .tiles-container {
-        // padding: 0rem;
+        padding: 0rem;
         // border: 3px solid lawngreen;
         // margin: 0 auto;
-        width: 80vw;
+        // width: 80vw;
+        // border: 3px solid lawngreen;
+
     }
 
-    .parent {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(7, 1fr);
-        // grid-column-gap: 0px;
-        // grid-row-gap: 30px;
-        // outline: 2px solid blue;
-        margin: 0;
-        }
-
-    .parent div {
-        grid-area: unset;
+    .grid-parent {
+        display: flex;
+        flex-direction: column;
     }
 
     .tile {
         // position: relative;
-        width: 100%;
-        height: 280px;
-        margin: 0 auto;
+        // width: 100%;
+        // height: 280px;
+        // margin: 0 auto;
+        opacity: .9;
 
         h2 {
+            font-size: 3rem;
+            color: $secondaryColor;
+        }
+
+        p {
         font-size: 2.4rem;
-        text-align: center;
+        width: 20ch;
+        margin: 0 auto;
+        // text-align: center;
         // border: 1px solid red;
         color: $offWhite;
         }
+
+        h2, p {
+            text-shadow: 2px 2px 12px $offBlack;
+        }
     }
     
-    .square-tile .vertical-tile {
+    .square-tile, .vertical-tile {
     
+        width: 90vw;
+        height: 300px;
+
         h2 { 
             // margin-top: 2rem;
 

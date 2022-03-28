@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T4HT4JT');</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S6QR5S9PR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0S6QR5S9PR');
+    </script>
     <!-- End Google Tag Manager -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -18,10 +22,6 @@
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4HT4JT"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <div class="modal-overlay hide-container"></div>
     
@@ -58,13 +58,11 @@
 
     </nav>
 
-
 <div class="background-container">
 
 <section aria-labelledby="hero-title" id="home" class="section-hero">
-    <div class="hero-copy-wrapper background-glass rounded-corners">
+    <div class="hero-section-container">
         <div class="hero-copy">
-
             <p>Re:invent<br>
                 Re:create<br>
                 Re:discover<br></p>
@@ -73,7 +71,7 @@
             </h1>
         </div>
         <div class="hero-asset">
-            <img src="./img/hero-asset.png" alt="person">
+            <img src="./img/hero-asset.png" alt="">
         </div>
     </div>
     <div class="arrow-down">
@@ -86,7 +84,7 @@
 
 <section aria-labelledby="services" class="section-services">
 
-    <div class="background-pattern dots-1"></div>
+    <!-- <div class="background-pattern dots-1"></div> -->
     <div class="background-pattern dots-2"></div>
     <div class="background-pattern dots-3"></div>
 
@@ -99,10 +97,9 @@
         </div>
 
         <div class="tiles-container">
-            <div class="parent">
+            <div class="grid-parent">
                 <div class="div1 tile vertical-tile">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. magni eveniet nemo fugiat nesciunt!<br>
-                    Responsive: </p>
+                    <p>Create a unique website for your customer base and fans<br></p>
                     <h2>Webdesign</h2>
                 </div>
                 <div class="div2 tile square-tile">
@@ -110,23 +107,23 @@
                     <h2>Online Ads</h2>
                 </div>
                 <div class="div3 tile square-tile">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. nemo fugiat nesciunt!<br>
+                    <p>Setup an online store for your business<br>
                     <h2>E-commerce</h2>
                 </div>
                 <div class="div4 tile vertical-tile">
-                    <p>Make your business visible across Facebook, Instagram & Twitter</p>
+                    <p>Make your business shine across Facebook, Instagram & Twitter</p>
                     <h2>Social Media</h2>
                 </div>
                 <div class="div5 tile square-tile">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. nesciunt!<br>
+                    <p>Create from the scratch or refresh your brand's image<br>
                     <h2>Branding</h2>
                 </div>
                 <div class="div6 tile square-tile">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates itaque aspernatur aperiam accusantium nobis <br>
+                    <p>Engage your audience through multichannel online content<br>
                     <h2>Content Marketing</h2>
                 </div>
                 <div class="div7 tile square-tile">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. magni eveniet nemo fugiat nesciunt!<br>
+                    <p>Use photography and video to present you and your business to the world<br>
                     <h2>Visuals</h2>
                 </div>
                 </div>
@@ -165,7 +162,7 @@
     </div>
 
     <div class="background-glass rounded-corners">
-    <h2>That's great!<br>Is the <strong>mobile version</strong> of your site up to date?
+    <h2>That's great! Is the <strong>mobile version</strong> of your site up to date?
     </h2>
     <ul>
         <li><i class="fa-solid fa-caret-right"></i>Share of users using mobile over desktop <strong>keeps growing</strong></li>

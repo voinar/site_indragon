@@ -4,6 +4,7 @@
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
     // border: 1px solid red;
+
     h2 {
         font-size: 2.8rem;
         letter-spacing: -.1rem;
@@ -22,8 +23,8 @@
 
 
 .section-why-go-online .background-glass {
-    // border: 1px solid red;
-    width: 90%;
+    border: 2px solid rgba(200, 50, 255, 0.1);
+    // width: 90vw;
     // margin-left: 5%;
     padding: 5rem;
 
@@ -35,18 +36,19 @@
 
 @media (max-width: 768px) {
     .section-why-go-online {
-        padding: 0 0 14rem 0;
+        padding: 0;
     }
 
     .section-why-go-online .background-glass {
-        max-width: 40vw;
+        max-width: 90vw;
         // border: 1px solid red;
 
-        // padding: 2rem;
+        // padding-bottom: 2rem;
 
         h2, li {
             max-width: 60vw;
             // border: 1px solid red;
+            padding-bottom: 2rem;
         }
     }
 }
