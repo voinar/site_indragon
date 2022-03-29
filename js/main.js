@@ -86,7 +86,7 @@ function hideModalOverlay() {
 
 //revert menu to defualt state on page load
 function resetMenuOnLoad() {
-    if (intViewportWidth == 768 || intViewportWidth < 768) {
+    if (intViewportWidth <= 768) {
         hideMenu();
     }
 }
@@ -109,7 +109,7 @@ window.addEventListener('load', resetMenuOnLoad); //revert menu to defualt state
 
 window.onresize = reportWindowSize; //watch for viewport change & adjust navbar functionality accordingly
 
-window.addEventListener("scroll", navbarBackgroundHandler); //apply blur effect to navbar on scroll beyond default position
+window.addEventListener('scroll', navbarBackgroundHandler); //apply blur effect to navbar on scroll beyond default position
 
 modalOverlay.addEventListener('click', toggleMenu); //hide mobile menu on click outside the menu container
 
@@ -121,57 +121,86 @@ modalOverlay.addEventListener('click', toggleMenu); //hide mobile menu on click 
 const navigationLeft = document.querySelector('.navigation-left');
 const navigationRight = document.querySelector('.navigation-right');
 const navigationArrows = document.querySelector('.navigation-arrows');
-const portfolioProjects = document.querySelector('.portfolio-projects');
-const scrollOffset = 30; //number of rem to move the container's contents to either side
-// var currentMarginOffset = parseInt(portfolioProjects.style.marginLeft, 10);
-var currentMarginOffset = parseInt(window.getComputedStyle(portfolioProjects).getPropertyValue('margin-left'));
+const portfolioProjectCards = document.querySelector('.portfolio-project-cards');
+var currentMarginOffset = parseInt(window.getComputedStyle(portfolioProjectCards).getPropertyValue('margin-left'));
+
+
+var portfolioCard = document.querySelector('.portfolioCard');
 var newMarginOffset = 0;
 
+function getCardWidth() {
+    return portfolioCard.width + 20;
+}
+
+// function scrollLeft() {
+//     var intViewportWidth = window.innerWidth;
+//     navigationRight.style.opacity = "1";
+//     navigationLeft.style.opacity = "1";
+
+//     if (intViewportWidth >= 1000) { //scroll behavior for viewport width over 1000px
+//         if (currentMarginOffset < 0) {
+//             currentMarginOffset += scrollOffset;
+//             portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
+//         } else {
+//             navigationLeft.style.opacity = ".3";
+//         }
+//     } else if (intViewportWidth < 1000) { //scroll behavior for viewport width under 1000px
+//         if (currentMarginOffset < 0) {
+//             currentMarginOffset += (scrollOffset + 50);
+//             portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
+//         } else {
+//             navigationLeft.style.opacity = ".3";
+//         }
+//     }
+// }
 
 
 function scrollLeft() {
-    var intViewportWidth = window.innerWidth;
     navigationRight.style.opacity = "1";
     navigationLeft.style.opacity = "1";
 
-    if (intViewportWidth >= 1000) { //scroll behavior for viewport width over 1000px
-        if (currentMarginOffset < 0) {
-            currentMarginOffset += scrollOffset;
-            portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
-        } else {
-            navigationLeft.style.opacity = ".3";
-        }
-    } else if (intViewportWidth < 1000) { //scroll behavior for viewport width under 1000px
-        if (currentMarginOffset < 0) {
-            currentMarginOffset += (scrollOffset + 50);
-            portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
-        } else {
-            navigationLeft.style.opacity = ".3";
-        }
-    }
+    currentMarginOffset += getCardWidth();
+    portfolioProjectCards.style.marginLeft = currentMarginOffset + "px";
 }
 
 function scrollRight() {
-    var intViewportWidth = window.innerWidth;
+    // var intViewportWidth = window.innerWidth;
     navigationRight.style.opacity = "1";
     navigationLeft.style.opacity = "1";
 
-    if (intViewportWidth >= 1000) { //scroll behavior for viewport width over 1000px
-        if (currentMarginOffset >= -30) {
-            currentMarginOffset -= scrollOffset;
-            portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
-        } else if (currentMarginOffset <= -30) {
-            navigationRight.style.opacity = ".3";
-        }
-    } else if (intViewportWidth < 1000) { //scroll behavior for viewport width under 1000px
-        if (currentMarginOffset >= -30) {
-            currentMarginOffset -= (scrollOffset + 50);
-            portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
-        } else if (currentMarginOffset <= -30) {
-            navigationRight.style.opacity = ".3";
-        }
-    }
+    currentMarginOffset -= getCardWidth();
+    portfolioProjectCards.style.marginLeft = currentMarginOffset + "px";
+
+    
+    // if (intViewportWidth >= 1000) { //scroll behavior for viewport width over 1000px
+            
+    //     } else if (currentMarginOffset <= -30) {
+    //         navigationRight.style.opacity = ".3";
+    //     }
 }
+
+// function scrollRight() {
+//     var intViewportWidth = window.innerWidth;
+
+//     navigationRight.style.opacity = "1";
+//     navigationLeft.style.opacity = "1";
+
+//     if (intViewportWidth >= 1000) { //scroll behavior for viewport width over 1000px
+//         if (currentMarginOffset >= -30) {
+//             currentMarginOffset -= scrollOffset;
+//             portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
+//         } else if (currentMarginOffset <= -30) {
+//             navigationRight.style.opacity = ".3";
+//         }
+//     } else if (intViewportWidth < 1000) { //scroll behavior for viewport width under 1000px
+//         if (currentMarginOffset >= -30) {
+//             currentMarginOffset -= (scrollOffset + 50);
+//             portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
+//         } else if (currentMarginOffset <= -30) {
+//             navigationRight.style.opacity = ".3";
+//         }
+//     }
+// }
 
 navigationLeft.addEventListener('click', scrollLeft);
 navigationRight.addEventListener('click', scrollRight);

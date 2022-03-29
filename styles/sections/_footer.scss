@@ -26,6 +26,11 @@
     p {
         color: $secondaryColor;
         font-size: $smallParagraph;
+
+        a {
+            color: $secondaryColor;
+            text-decoration: none;
+        }
     }
 }
 
