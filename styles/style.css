@@ -271,7 +271,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .section-hero {
   z-index: 1;
-  height: 90vh;
   width: 100vw;
   /* You must set a specified height */
   background-image: url("/img/hero-bkg.png");
@@ -313,7 +312,6 @@ p, h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 10vh;
   width: 100vw;
   height: 60vh;
   padding: 8rem;
@@ -338,8 +336,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .arrow-down {
-  position: relative;
-  margin: 0 auto;
+  position: absolute;
+  margin: 80vh auto 0;
   width: 20rem;
   height: 10rem;
   -webkit-filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.2));
@@ -447,6 +445,7 @@ p, h1, h2, h3, h4, h5, h6 {
       grid-template-rows: repeat(3, 3fr);
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
+  height: 70vh;
 }
 
 .div1 {
@@ -572,13 +571,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .square-tile {
   width: 100%;
-  height: 210px;
   border-radius: 8px;
 }
 
 .vertical-tile {
   width: 100%;
-  height: 440px;
   border-radius: 8px;
 }
 
@@ -1059,6 +1056,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .section-call-to-action {
   background: #ECEBF2;
+  height: 40rem;
 }
 
 .section-call-to-action h1 {
@@ -1076,6 +1074,7 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 0rem 0 12rem 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  height: 70vh;
 }
 
 .section-contact-form .send-btn {
@@ -1235,6 +1234,7 @@ h2 a {
 .section-footer {
   background: #ECEBF2;
   padding: 4rem 0 1rem 0;
+  height: 40rem;
 }
 
 .section-footer .footer-logo {
@@ -1353,9 +1353,101 @@ h2 a {
   }
 }
 
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  -webkit-transform: scaleX(1.45);
+          transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  -webkit-transform: scaleY(1.3);
+          transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
+}
+
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -1367,10 +1459,11 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  height: 100vh;
+}
+
+section {
+  height: 100vh;
 }
 
 .section-container {
@@ -1426,6 +1519,16 @@ body {
 
 .leading-text .accent-secondary {
   background-color: #7B61FF;
+}
+
+.custom-fade-in {
+  opacity: 0;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+}
+
+.scroll-class {
+  opacity: 1;
 }
 
 @media (max-width: 1200px) {

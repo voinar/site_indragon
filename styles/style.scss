@@ -3,7 +3,8 @@
 // -------------------------- //
 
 @import 
-'./components/cssReset.scss', 
+
+'./components/css-reset.scss', 
 './components/variables.scss', 
 './components/navbar.scss', 
 './sections/hero.scss',
@@ -11,9 +12,12 @@
 './sections/pitch.scss',
 './sections/workflow.scss',
 './sections/portfolio.scss',
-'./sections/calltoaction.scss',
-'./sections/contactForm.scss',
-'./sections/footer.scss';
+'./sections/call-to-action.scss',
+'./sections/contact-form.scss',
+'./sections/footer.scss',
+'../node_modules/locomotive-scroll/src/styles/_base.scss',
+'../node_modules/locomotive-scroll/src/styles/_scrollbar.scss'
+;
 
 // * {
 //     outline: 1px solid red !important;
@@ -23,7 +27,7 @@
 
 html {
     font-size: 62.5%;
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
     transition: .5s;
 }
 
@@ -36,7 +40,12 @@ body {
     // width: 100vw;
     overflow-x: hidden;
     // list-style-type: none;
-    user-select: none; 
+    // user-select: none; 
+    height: 100vh;
+}
+
+section {
+    height: 100vh;
 }
 
 .section-container {
@@ -80,7 +89,6 @@ body {
     }
 }
 
-
 .leading-text {
     display: flex;
     padding: 10rem 0rem 6rem 0rem;
@@ -105,7 +113,15 @@ body {
     .accent-secondary {
         background-color: $secondaryColor;
     }
+}
 
+.custom-fade-in {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.scroll-class {
+    opacity: 1;
 }
 
 @media (max-width: 1200px) {
@@ -117,9 +133,6 @@ body {
         // outline: 2px solid hotpink;
         // background: red;
     }
-
-
-
 }
 
 @media (max-width: 768px) {
@@ -133,3 +146,6 @@ body {
     }
 }
 
+// section {
+//     height: 100vh;
+// }

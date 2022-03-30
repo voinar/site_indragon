@@ -2,10 +2,20 @@
 // MAIN JAVASCRIPT FILE
 //---------------------
 // CONTENTS:
+// - locomotive scroll
 // - navbar behavior
 // - portfolio section scroll
 //------------------------
 
+//------------------------
+// LOCOMOTIVE SCROLL
+//------------------------
+import LocomotiveScroll from '/node_modules/locomotive-scroll/src/locomotive-scroll.js';
+
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true
+});
 
 //------------------------
 // NAVBAR
@@ -17,6 +27,7 @@ const navLinks = document.querySelector('.nav-links');
 const navHeader = document.querySelector('.nav-header');
 const modalOverlay = document.querySelector('.modal-overlay');
 const bodyScroll = document.querySelector('body');
+var intViewportWidth = window.innerWidth;
 
 var menuVisibility = false;
 
@@ -86,7 +97,7 @@ function hideModalOverlay() {
 
 //revert menu to defualt state on page load
 function resetMenuOnLoad() {
-    if (intViewportWidth <= 768) {
+    if (intViewportWidth == 768 || intViewportWidth <= 768) {
         hideMenu();
     }
 }

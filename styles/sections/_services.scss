@@ -49,6 +49,7 @@
     grid-template-rows: repeat(3, 3fr);
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
+    height: 70vh;
     // border: 1px solid red;
 
 }
@@ -124,7 +125,7 @@
 
 .square-tile {
     width: 100%;
-    height: 210px;
+    // height: 210px;
     border-radius: $border-radius;
 
     h2 { 
@@ -134,7 +135,7 @@
 
 .vertical-tile {
     width: 100%;
-    height: 440px;
+    // height: 440px;
     border-radius: $border-radius;
 }
 // -------------------------- //
