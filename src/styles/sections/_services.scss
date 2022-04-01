@@ -1,0 +1,300 @@
+.section-services {
+    background: $offWhite;
+    // min-height: 100rem;
+    // // border: 3px solid rebeccapurple;
+    // z-index: 5;
+    // overflow: auto;
+}
+
+.tiles-container {
+    // border: 2px solid hotpink;
+}
+
+.background-pattern {
+    position: absolute;
+    background: url("../img/dots-pattern.png");
+    background-size: cover;  
+    opacity: 0.1;
+}
+
+.dots-1 {
+    width: 20rem;
+    height: 20rem;
+    left: 10%;
+    top: 51rem;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.dots-2 {
+    width: 15rem;
+    height: 15rem;
+    right: 10%;
+    top: 120rem;
+}
+
+.dots-3 {
+    width: 20rem;
+    height: 20rem;
+    left: -2%;
+    top: 180rem;
+}
+
+// -------------------------- //
+// grid layout
+// -------------------------- //
+
+.grid-parent {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-template-rows: repeat(3, 3fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    height: auto;
+    padding: 0 0 2rem 0;
+    // border: 1px solid red;
+
+}
+
+    .div1 { grid-area: 1 / 1 / 3 / 2; }
+    .div2 { grid-area: 3 / 1 / 4 / 2; }
+    .div3 { grid-area: 1 / 2 / 2 / 3; }
+    .div4 { grid-area: 2 / 2 / 4 / 3; }
+    .div5 { grid-area: 1 / 3 / 2 / 4; }
+    .div6 { grid-area: 2 / 3 / 3 / 4; }
+    .div7 { grid-area: 3 / 3 / 4 / 4; }
+
+
+
+// -------------------------- //
+// component: feature tiles
+// -------------------------- //
+
+.tile { 
+    background-color: $primaryColor;
+    // display: inline;
+    // border: 1px solid red;
+
+    display: flex;
+    flex-direction: column;
+    // align-items: flex-end;
+
+    background-size: cover;
+    opacity: .8;
+    transition: all .2s ease-in-out;
+
+    cursor: pointer;
+
+    h2 {
+        height: 20%;
+        width: 100%;
+        color: $offWhite;
+        font-size: 2.2rem;
+
+        display: flex;
+        justify-content: center;
+        margin: 0 0 2rem 0;
+        align-items: flex-end;
+    }
+
+    p {
+        height: 80%;
+        width: 100%;
+        // position: relative;
+        font-size: 2rem;
+        padding: 1.4rem;
+        text-align: center;
+        // border: 1px solid red;
+        color: rgba(255, 255, 255, 0);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}
+
+.tile:hover {
+    transform: scale(1.02);
+    opacity: 1;
+
+    h2 {
+        color: $secondaryColor;
+    }
+
+    p {
+        color: $offWhite;
+    }
+}
+
+.square-tile {
+    width: 100%;
+    min-height: 18vh;
+    border-radius: $border-radius;
+
+    h2 { 
+        // margin-top: 22rem;
+    }
+}
+
+.vertical-tile {
+    width: 100%;
+    min-height: 38vh;
+    // height: 440px;
+    border-radius: $border-radius;
+}
+// -------------------------- //
+// feature tile images
+// -------------------------- //
+
+.div1 {
+    background-image: linear-gradient(to top, $gradientSecondaryStart, $gradientSecondaryEnd), url("../img/tile_1.jpeg");
+}
+
+.div2 {
+    background-image: linear-gradient(to top, $gradientSecondaryStart, $gradientSecondaryEnd), url("../img/tile_2.jpeg");
+}
+
+.div3 {
+    background-image: linear-gradient(to top, $gradientSecondaryStart, $gradientSecondaryEnd), url("../img/tile_3.jpeg");
+}
+
+.div4 {
+    background-image: linear-gradient(to top, $gradientSecondaryStart, $gradientSecondaryEnd), url("../img/tile_4.jpeg");
+}
+
+.div5 {
+    background-image: linear-gradient(to top, $gradientSecondaryStart, $gradientSecondaryEnd), url("../img/tile_5.jpeg");
+}
+
+.div6 {
+    background-image: linear-gradient(to top, $gradientSecondaryStart, $gradientSecondaryEnd), url("../img/tile_6.jpeg");
+}
+
+.div7 {
+    background-image: linear-gradient(to top, $gradientSecondaryStart, $gradientSecondaryEnd), url("../img/tile_7.jpeg");
+}
+
+// -------------------------- //
+
+@media (max-width: 1000px) {
+
+    .background-pattern {
+        display: none;
+    }
+
+    .leading-text {
+
+        // padding: 10rem 15rem 8rem 15rem;
+        
+    }
+
+    .tiles-container {
+        // width: 60rem;
+        // border: 1px solid teal;
+    }
+
+    .grid-parent {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        // border: 3px solid rebeccapurple;
+        // margin: auto 4rem;
+        
+        }
+
+        .div1 { grid-area: 1 / 1 / 3 / 2; }
+        .div2 { grid-area: 3 / 1 / 4 / 2; }
+        .div3 { grid-area: 1 / 2 / 2 / 3; }
+        .div4 { grid-area: 2 / 2 / 4 / 3; }
+        .div5 { grid-area: 4 / 1 / 5 / 2; }
+        .div6 { grid-area: 4 / 2 / 5 / 3; }
+        .div7 { grid-area: 5 / 1 / 6 / 2; }
+
+    .square-tile {
+        height: 210px;
+        border-radius: $border-radius;
+        
+        h2 { 
+                // margin-top: 22rem;
+        }
+    }
+        
+    .vertical-tile {
+        height: 440px;
+        border-radius: $border-radius;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .section-container-services {
+        // width: 70%;
+    }
+    
+    .section-services {
+        // background: $offWhite;
+    }
+
+    .leading-text {
+        // padding: 6rem 4rem 6rem;
+        // border: 1px solid red;
+        // width: 90vw;
+        // margin-right: 4rem;
+    }
+
+    .tiles-container {
+        padding: 0rem;
+        // border: 3px solid lawngreen;
+        // margin: 0 auto;
+        // width: 80vw;
+        // border: 3px solid lawngreen;
+
+    }
+
+    .grid-parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tile {
+        // position: relative;
+        // width: 100%;
+        // height: 280px;
+        // margin: 0 auto;
+        opacity: .9;
+
+        h2 {
+            font-size: 3rem;
+            color: $secondaryColor;
+        }
+
+        p {
+        font-size: 2.2rem;
+        width: 20ch;
+        margin: 0 auto;
+        // text-align: center;
+        // border: 1px solid red;
+        color: $offWhite;
+        }
+
+        h2, p {
+            text-shadow: 2px 2px 12px $offBlack;
+        }
+    }
+    
+    .square-tile, .vertical-tile {
+    
+        width: 90vw;
+        height: 300px;
+
+        h2 { 
+            // margin-top: 2rem;
+
+        }
+    }
+    
+
+}
