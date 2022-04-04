@@ -35,31 +35,32 @@
     </div>
 
     <div class="modal-overlay hide-container"></div>
-    
+
+<div data-scroll-container>  
     <nav class="navbar navbar-solid" role="navigation">
 
         <div class="nav-contents">
 
             <div class="nav-header">
-                <a href="#home"><img class= "logo" alt="">indragon</a>
+                <a href="" class="logo">indragon</a>
             </div>
     
             <ul class="nav-links">
                 <li class="nav-item">
-                    <a href="#services">services</a>
+                    <a href="#services" data-scroll-to>services</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#portfolio">projects</a>
+                    <a href="#portfolio" data-scroll-to>projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#workflow">about</a>
+                    <a href="#workflow" data-scroll-to>about</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact">contact</a>
+                    <a href="#contact" data-scroll-to>contact</a>
                 </li>
             </ul>
             
-            <a href="#contact"><button class="cta-btn">get a quote</button></a>
+            <button class="cta-btn"><a href="#contact" data-scroll-to>get a quote</a></button>
 
             <button class="nav-toggle">
                 <i class="fas fa-bars"></i>
@@ -69,17 +70,16 @@
 
     </nav>
 
-<div data-scroll-container>
+
 <section aria-labelledby="hero-title" id="home" class="section-hero" data-scroll-section>
     <div class="arrow-down">
-        <a href="#services">
+        <a href="#services" data-scroll-to>
             <img alt="Learn more" src="./img/arrow.svg">
         </a>
     </div>
     <div class="hero-section-container">
         <div class="hero-copy">
-                <p data-scroll data-scroll-speed="1">
-                    <div id="typewriter"></div>
+                <div id="typewriter" data-scroll data-scroll-speed="1"></div>
                     <!-- Re:invent<br>
                 Re:create<br>
                 Re:discover<br></p> -->
@@ -88,26 +88,31 @@
             </h1>
         </div>
         <div class="hero-asset">
-            <img  data-scroll data-scroll-speed="2" src="./img/hero-asset.png" alt="">
+            <img  data-scroll data-scroll-speed="3" src="./img/hero-asset.png" alt="">
         </div>
     </div>
 
 
-    <div class="video-wrapper">
+    <!-- <div class="video-wrapper">
         <video playsinline autoplay muted loop poster="./img/hero-bkg.png">
             <source src="./img/vid/bkg-ink.mp4" type="video/webm">
             Your browser does not support the video tag.
-    </video>
-
-    </div>
+        </video>
+    </div> -->
 
 </section>
 
 <section aria-labelledby="services" class="section-services" data-scroll-section>
 
-    <!-- <div class="background-pattern dots-1"></div> -->
-    <div class="background-pattern dots-2"></div>
-    <div class="background-pattern dots-3"></div>
+    <div class="ornament-pattern pattern-1" data-scroll data-scroll-class="scroll-class" data-scroll-speed="9">
+        <img src="./img/ornament/img_5.png" alt="">
+    </div>
+    <div class="ornament-pattern pattern-2" data-scroll data-scroll-class="scroll-class" data-scroll-speed="3">
+        <img src="./img/ornament/img_1.png" alt="">
+    </div>
+    <div class="ornament-pattern pattern-3" data-scroll data-scroll-class="scroll-class" data-scroll-speed="6">
+        <img src="./img/ornament/img_12.png" alt="">
+    </div>
 
     <div class="section-container" id="services">
         <div class="leading-text" data-scroll data-scroll-class="scroll-class" data-scroll-speed=".9">
@@ -119,7 +124,7 @@
 
         <div class="tiles-container custom-fade-in" data-scroll data-scroll-class="scroll-class">
             <div class="grid-parent">
-                <div class="div1 tile vertical-tile">
+                <div class="div1 tile vertical-tile" >
                     <p>Create a unique website for your customer base and fans<br></p>
                     <h2>Webdesign</h2>
                 </div>
@@ -154,6 +159,13 @@
 </section>
 
 <section aria-labelledby="why-go-online" class="section-why-go-online" data-scroll-section>
+
+    <div class="ornament-pattern pattern-4" data-scroll data-scroll-class="scroll-class" data-scroll-speed="5">
+        <img src="./img/ornament/img_10.png" alt="">
+    </div>
+    <div class="ornament-pattern pattern-5" data-scroll data-scroll-class="scroll-class" data-scroll-speed="2">
+        <img src="./img/ornament/img_4.png" alt="">
+    </div>
 
     <div class="section-why-go-online-background"></div>
 
@@ -212,6 +224,11 @@
     </div>
 
     <div class="workflow-tiles custom-fade-in" data-scroll data-scroll-class="scroll-class">
+
+        <div class="ornament-pattern pattern-6" data-scroll data-scroll-class="scroll-class" data-scroll-speed="2">
+            <img src="./img/ornament/img_7.png" alt="">
+        </div>
+
         <div class="workflow-tile workflow-tile-1">
             <div class="workflow-tile-top">
                 <div class="workflow-tile-number">1</div>
@@ -259,6 +276,14 @@
 </section>
 
 <section aria-labelledby="see-our-projects" class="section-portfolio" id="portfolio" data-scroll-section>
+
+    <div class="ornament-pattern pattern-8" data-scroll data-scroll-class="scroll-class" data-scroll-speed="5">
+        <img src="./img/ornament/img_3.png" alt="">
+    </div>
+    <div class="ornament-pattern pattern-9" data-scroll data-scroll-class="scroll-class" data-scroll-speed="2">
+        <img src="./img/ornament/img_8.png" alt="">
+    </div>
+
     <div class="section-container">
     <div class="leading-text" data-scroll data-scroll-speed=".9">
         <div class="accent accent-primary"></div>
@@ -301,6 +326,11 @@
 </section>
 
 <section aria-labelledby="call-to-action" class="section-call-to-action" data-scroll-section>
+
+    <div class="ornament-pattern pattern-10" data-scroll data-scroll-class="scroll-class" data-scroll-speed="5">
+        <img src="./img/ornament/img_3.png" alt="">
+    </div>
+
     <div class="section-container" id="call-to-action">
     <div class="leading-text" data-scroll data-scroll-speed="1">
         <div class="accent accent-secondary"></div>
@@ -327,7 +357,7 @@
 
         <h2>Fill out this form...</h2>
         <div class="contact-methods custom-fade-in" data-scroll data-scroll-class="scroll-class">
-            <form action="https://formsubmit.co/f8624a75233df840300727616e713bb8" method="POST" class="contact1 background-glass rounded-corners" id="contactForm" name="contactForm">
+            <form action="https://formsubmit.co/91a23d228b74f00ac6479cc0c9c50720" method="POST" class="contact1 background-glass rounded-corners" id="contactForm" name="contactForm">
 
             <input type="hidden" name="_captcha" value="false">
                 
@@ -358,8 +388,6 @@
 <section aria-labelledby="footer" class="section-footer" id="footer" data-scroll-section>
 
     <div class="section-container">
-
-
         <div class="footer-container">
             <div class="footer-column footer-col-1">
                 <div class="footer-logo">
@@ -373,14 +401,14 @@
             </div>
             <div class="footer-column footer-col-2">
                 <h1>Services</h1>
-                <li><a href="#services">Webdesign</a></li>
-                <li><a href="#services">Social Media</a></li>
-                <li><a href="#services">Online Ads</a></li>
-                <li><a href="#services">E-commerce</a></li>
-                <li><a href="#services">Social Media</a></li>
-                <li><a href="#services">Branding</a></li>
-                <li><a href="#services">Content Marketing</a></li>
-                <li><a href="#services">Visuals</a></li>
+                <li><a href="#services" data-scroll-to>Webdesign</a></li>
+                <li><a href="#services" data-scroll-to>Social Media</a></li>
+                <li><a href="#services" data-scroll-to>Online Ads</a></li>
+                <li><a href="#services" data-scroll-to>E-commerce</a></li>
+                <li><a href="#services" data-scroll-to>Social Media</a></li>
+                <li><a href="#services" data-scroll-to>Branding</a></li>
+                <li><a href="#services" data-scroll-to>Content Marketing</a></li>
+                <li><a href="#services" data-scroll-to>Visuals</a></li>
             </div>
             <div class="footer-column footer-col-3">
                 <h1>Contact</h1>

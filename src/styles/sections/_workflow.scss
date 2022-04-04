@@ -107,22 +107,6 @@
     background-size: 220%;
 }
 
-.background-pattern-workflow {
-    position: relative;
-    background: url("../img/dots-pattern.png");
-    background-size: cover;  
-    opacity: 0.1;
-}
-
-.dots-workflow {
-    width: 20rem;
-    height: 20rem;
-    right: -80%;
-    top: -50rem;
-    opacity: 0.1;
-    // border: 11px solid yellow;
-}
-
 @media (max-width: 1000px) {
 
     .section-workflow {
@@ -153,17 +137,5 @@
     .workflow-tile {
         width: 80vw;
         height: 280px;
-    }
-
-    .workflow-tile-1 {
-
-    }
-
-    .workflow-tile-2 {
-        
-    }
-
-    .workflow-tile-3 {
-        
     }
 }

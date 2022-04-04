@@ -1,14 +1,12 @@
 .section-hero {
-    // z-index: 1;
-    // height: 100vh;
+    display: flex;
+    flex-direction: column;
     width: 100vw; /* You must set a specified height */
     height: 100vh;
-    background-image: url("/src/img/hero-bkg.png");
+    background-image: url("/src/img/hero-bkg.jpg");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -19,19 +17,17 @@
     position: absolute;
     top: 0;
     left: 0;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
     // z-index: 0;
 
     video {
-        // // position: absolute;
+        // position: absolute;
         // top: 0;
         // left: 0;
         height: 100vh;    
-        // width: 100%;
         width: 100vw;
         object-fit: cover;
         transform: rotateY(180deg);
-
     }
   }
 

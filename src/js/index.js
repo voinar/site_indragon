@@ -14,108 +14,93 @@
 // NAVBAR
 //------------------------
 
-// const navbar = document.querySelector('.navbar');
-// const navToggle = document.querySelector('.nav-toggle');
-// const navLinks = document.querySelector('.nav-links');
-// const navHeader = document.querySelector('.nav-header');
-// const modalOverlay = document.querySelector('.modal-overlay');
-// const bodyScroll = document.querySelector('body');
-// var intViewportWidth = window.innerWidth;
+const navbar = document.querySelector('.navbar');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+const navHeader = document.querySelector('.nav-header');
+const modalOverlay = document.querySelector('.modal-overlay');
+const bodyScroll = document.querySelector('body');
+var intViewportWidth = window.innerWidth;
 
-// var menuVisibility = false;
+var menuVisibility = false;
 
-// //watch for viewport change & adjust navbar functionality accordingly, reset mobile menu on viewport change
-// function reportWindowSize() {
-//     var intViewportWidth = window.innerWidth;
-//     if (intViewportWidth == 768 || intViewportWidth > 768) {
-//         hideModalOverlay();
-//         navLinks.style.display = 'flex';        
-//         navHeader.style.visibility = 'visible';
-//         navToggle.style.visibility = 'hidden';
-//         navToggle.style.transition = '0s';
-//         menuVisibility = false;
-//     } else if (intViewportWidth < 768 && menuVisibility == false) {
-//         hideModalOverlay();
-//         navLinks.style.display = 'none';
-//         navHeader.style.visibility = 'visible';
-//         navToggle.style.visibility = 'visible';
-//         navToggle.style.transition = '0.3s';
-//     } else if (intViewportWidth < 768 && menuVisibility == true) {
-//         showModalOverlay();
-//         navLinks.style.display = 'flex';
-//         navToggle.style.visibility = 'visible';        
-//         navToggle.style.transition = '0.3s';
-//         navToggle.style.top = '2rem';
-//     }
-//   }
+//watch for viewport change & adjust navbar functionality accordingly, reset mobile menu on viewport change
+function reportWindowSize() {
+    var intViewportWidth = window.innerWidth;
+    if (intViewportWidth == 768 || intViewportWidth > 768) {
+        hideModalOverlay();
+        navLinks.style.display = 'flex';        
+        navHeader.style.visibility = 'visible';
+        navToggle.style.visibility = 'hidden';
+        navToggle.style.transition = '0s';
+        menuVisibility = false;
+    } else if (intViewportWidth < 768 && menuVisibility == false) {
+        hideModalOverlay();
+        navLinks.style.display = 'none';
+        navHeader.style.visibility = 'visible';
+        navToggle.style.visibility = 'visible';
+        navToggle.style.transition = '0.3s';
+    } else if (intViewportWidth < 768 && menuVisibility == true) {
+        showModalOverlay();
+        navLinks.style.display = 'flex';
+        navToggle.style.visibility = 'visible';        
+        navToggle.style.transition = '0.3s';
+        navToggle.style.top = '2rem';
+    }
+  }
 
-// //mobile view: open-close menu on burger button click
-// function toggleMenu() {
-//     if (!menuVisibility) {
-//         showMenu();
-//     } else if (menuVisibility) {
-//         hideMenu();
-//     }
-// }
+//mobile view: open-close menu on burger button click
+function toggleMenu() {
+    if (!menuVisibility) {
+        showMenu();
+    } else if (menuVisibility) {
+        hideMenu();
+    }
+}
 
-// //show-hide mobile menu
-// function showMenu(){    
-//     navLinks.style.display = 'flex';
-//     navHeader.style.visibility = 'hidden';    
-//     modalOverlay.classList.remove('hide-container');
-//     menuVisibility = true;
-//     bodyScroll.style.position = 'fixed';
-//     // console.log(menuVisibility);
-// }
+//show-hide mobile menu
+function showMenu(){    
+    navLinks.style.display = 'flex';
+    navHeader.style.visibility = 'hidden';    
+    modalOverlay.classList.remove('hide-container');
+    menuVisibility = true;
+    bodyScroll.style.position = 'fixed';
+}
 
-// function hideMenu(){
-//     navLinks.style.display = 'none';
-//     navHeader.style.visibility = 'visible';
-//     modalOverlay.classList.add('hide-container');
-//     menuVisibility = false;
-//     bodyScroll.style.position = 'relative';
-//     // console.log(menuVisibility);
-// }
+function hideMenu(){
+    navLinks.style.display = 'none';
+    navHeader.style.visibility = 'visible';
+    modalOverlay.classList.add('hide-container');
+    menuVisibility = false;
+    bodyScroll.style.position = 'relative';
+    // console.log(menuVisibility);
+}
 
-// //toggle modal overlay
-// function showModalOverlay() {
-//     modalOverlay.classList.remove('hide-container');
-//     modalOverlay.classList.add('show-container');
-// }
+//toggle modal overlay
+function showModalOverlay() {
+    modalOverlay.classList.remove('hide-container');
+    modalOverlay.classList.add('show-container');
+}
 
-// function hideModalOverlay() {
-//     modalOverlay.classList.remove('show-container');
-//     modalOverlay.classList.add('hide-container');
-// }
+function hideModalOverlay() {
+    modalOverlay.classList.remove('show-container');
+    modalOverlay.classList.add('hide-container');
+}
 
-// //revert menu to defualt state on page load
-// function resetMenuOnLoad() {
-//     if (intViewportWidth == 768 || intViewportWidth <= 768) {
-//         hideMenu();
-//     }
-// }
+//revert menu to defualt state on page load
+function resetMenuOnLoad() {
+    if (intViewportWidth == 768 || intViewportWidth <= 768) {
+        hideMenu();
+    }
+}
 
-// //apply blur effect to navbar on scroll beyond default position
-// function navbarBackgroundHandler() {
-//     let scroll = this.scrollY;
-//     if (Math.round(scroll) > 60) {
-//         navbar.classList.remove('navbar-solid');
-//         navbar.classList.add('navbar-alt');
-//     } else if(Math.round(scroll) <= 60) {
-//         navbar.classList.remove('navbar-alt');
-//         navbar.classList.add('navbar-solid');
-//     }
-// }
+navToggle.addEventListener('click', toggleMenu); //mobile view: open-close menu on burger button click
 
-// navToggle.addEventListener('click', toggleMenu); //mobile view: open-close menu on burger button click
+window.addEventListener('load', resetMenuOnLoad); //revert menu to defualt state on page load
 
-// window.addEventListener('load', resetMenuOnLoad); //revert menu to defualt state on page load
+window.onresize = reportWindowSize; //watch for viewport change & adjust navbar functionality accordingly
 
-// window.onresize = reportWindowSize; //watch for viewport change & adjust navbar functionality accordingly
-
-// window.addEventListener('scroll', navbarBackgroundHandler); //apply blur effect to navbar on scroll beyond default position
-
-// modalOverlay.addEventListener('click', toggleMenu); //hide mobile menu on click outside the menu container
+modalOverlay.addEventListener('click', toggleMenu); //hide mobile menu on click outside the menu container
 
 
 //------------------------
@@ -127,13 +112,13 @@ const introMask = document.querySelector('.intro-mask');
 function addMaskFadeIn() {
     setTimeout(function () {
         introMask.classList.add('custom-fade-in');
-      }, 3000);
+      }, 2000);
 }
 
 function removeIntroMask() {
     setTimeout(function () {
         introMask.remove();
-      }, 6000);
+      }, 3500);
 }
 
 window.addEventListener('load', addMaskFadeIn);
@@ -146,18 +131,42 @@ import LocomotiveScroll from '/node_modules/locomotive-scroll/src/locomotive-scr
 
 const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
-    smooth: true
+    smooth: true,
+        lerp: 0.08, // Linear Interpolation, 0 > 1 // Try 0.01
+    multiplier: 1.4, // Effect Multiplier
+    reloadOnContextChange: true,
+    touchMultiplier: 2,
+    smoothMobile: 0,
+    smartphone: {
+        smooth: !0,
+        breakpoint: 767
+    },
+    tablet: {
+        smooth: !1,
+        breakpoint: 1024
+    },
 });
 
 function updateScrollStatus() {
     setTimeout(function () {
         scroll.update();
         console.log("scroll status updated");
-    }, 3000);
+    }, 2000);
 };
 
 updateScrollStatus();
 
+//apply blur effect to navbar on scroll beyond default position
+
+scroll.on('scroll', (position) => {
+    if ((position.scroll.y) > 60) {
+        navbar.classList.remove('navbar-initial');
+        navbar.classList.add('navbar-alt');
+    } else {
+        navbar.classList.remove('navbar-alt');
+        navbar.classList.add('navbar-initial');
+        }
+    });
 
 
 //------------------------
