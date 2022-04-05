@@ -116,7 +116,7 @@ body {
 
 .custom-fade-in {
     opacity: 0;
-    transition: opacity 2s;
+    transition: opacity 1s;
 }
 
 .scroll-class {
@@ -234,14 +234,20 @@ body {
     }
 }
 
+
+
 @media (max-width: 1200px) {
     .section-container {
         // margin: 0 auto;
-        padding: 0 0 6rem 2rem;
+        padding: 0 0 4rem 2rem;
         width: 80vw;
         // height: 130rem;
         // outline: 2px solid hotpink;
         // background: red;
+    }
+
+    .pattern {
+        display: none;
     }
 }
 

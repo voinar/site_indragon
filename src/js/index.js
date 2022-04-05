@@ -90,7 +90,7 @@ function hideModalOverlay() {
 //revert menu to defualt state on page load
 function resetMenuOnLoad() {
     if (intViewportWidth == 768 || intViewportWidth <= 768) {
-        hideMenu();
+        
     }
 }
 
@@ -112,13 +112,13 @@ const introMask = document.querySelector('.intro-mask');
 function addMaskFadeIn() {
     setTimeout(function () {
         introMask.classList.add('custom-fade-in');
-      }, 2000);
+      }, 1000);
 }
 
 function removeIntroMask() {
     setTimeout(function () {
         introMask.remove();
-      }, 3500);
+      }, 2000);
 }
 
 window.addEventListener('load', addMaskFadeIn);
@@ -151,7 +151,7 @@ function updateScrollStatus() {
     setTimeout(function () {
         scroll.update();
         console.log("scroll status updated");
-    }, 2000);
+    }, 500);
 };
 
 updateScrollStatus();

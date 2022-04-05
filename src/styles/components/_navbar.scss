@@ -3,18 +3,33 @@
     position: fixed;
     z-index: 10;
     padding: 6rem 3rem 3rem 6rem;
+    transition: ease-in-out .5s;
+
 
     .nav-contents {
         display: flex;
         font-family: 'Nunito', sans-serif;
+        
 
         .nav-header {
             font-family: 'Iceberg', cursive;
             font-size: 2.4rem;
 
+
             a {
-                color: $primaryColor;
+                // color: $primaryColor;
                 text-decoration: none;
+
+            display: flex;
+            flex-direction: row;
+
+            .logo-left {
+                color: yellow;
+            }
+            .logo-right {
+                color: rgb(30, 135, 255)
+            }
+
             }
         }
         
@@ -23,6 +38,7 @@
             display: flex;
             margin: 0 auto;
             padding: 0;
+            cursor: pointer;
         }
 
         .nav-item a {
@@ -36,7 +52,7 @@
             transition: 0.3s;
         }
 
-        .nav-item:hover a {
+        .nav-item:hover a{
             color: $primaryColor;
             padding: 0px 44px 0px 44px;
         }
@@ -44,7 +60,6 @@
         .cta-btn {
             font-weight: bold;
             border: 0;
-            cursor: pointer;
             background-color: inherit;
             color: $primaryColor;
             font-size: 2rem;
@@ -58,22 +73,27 @@
             }
         }
 
-        .cta-btn:hover {
-            color: $offWhite;
+        button:hover {
+            box-shadow: 0px 0px 14px $primaryColor;
+            transition: .3s;
+        }
+
+        button:hover a {
+            color: $primaryColor;
+            cursor: pointer;
         }
     }
 }
 
 .navbar-initial {
     // background-color: $offBlack;
-    background: linear-gradient(180deg, rgb(7, 10, 17) 20%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(180deg, rgb(7, 10, 17) 0%, rgba(0,0,0,0) 100%);
 }
 
 .navbar-alt {
     padding-top: 3rem;
     background-color:rgba($offBlack, 0.7);
     backdrop-filter: blur($standardBlur);
-    transition: 1s;
 
     .nav-toggle {
         top: 2rem;
@@ -156,13 +176,11 @@
             flex-direction: column;
             align-items: left;
             position: fixed;
-            // background-color: inherit;
-            // height: auto;
-
-            padding-top: 10rem !important;
+            margin: 0;
+            padding-top: 14vh !important;
 
             .nav-item {
-                margin-bottom: 4rem;
+                margin-bottom: 3vh;
                 width: 80vw;
                 text-align: left;
             }
@@ -170,7 +188,7 @@
             .nav-item a {
                 // border: 1px solid red;
                 color: $offBlack;
-                font-size: 4rem;
+                font-size: 10vw;
                 transition: .3s;
                 padding: 2rem;
             }
@@ -190,11 +208,11 @@
         cursor: pointer;
         transition: 0.8s;
         position: absolute;
-        top: 12rem;
-        right: 8rem;
+        top: 20vw;
+        right: 12vw;
          
         i {
-        font-size: 8rem;
+        font-size: 7vh;
         }
     }
 
