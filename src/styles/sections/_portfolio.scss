@@ -1,3 +1,6 @@
+$slider-width: 40rem;
+$slider-height: 80rem;
+
 .section-portfolio {
     background: $offBlack;
     height: auto;
@@ -9,107 +12,111 @@
     flex-direction: row;
     margin: 0 auto;
     width: 50vw;
+    height: 60vh;
     padding: 0 0 2rem 0;
 }
 
-.portfolio-cards-container {
-    // border: 2px solid hotpink;
-    // width: 100%;    
-    // height: 100%;
-    mask-image: radial-gradient(circle, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0.3) 100%);
+.slider {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $slider-width;
+    height: $slider-height;
 }
-
-.portfolio-project-cards {
+  
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    width: $slider-width;
+    height: $slider-height;
+    z-index: 1;
+}
+  
+.slides {
     display: flex;
-    flex-direction: row;
-    // flex: 1;
+    position: relative;
+    top: 0;
+    left: -$slider-width;
+    width: 10000px;
 
-    // gap: 2rem;
-    // margin-left: 0;
-    // transition: .3s;
-    padding: 0;
-    margin-left: 0;
-    // z-index: 1;
-    transition: .3s;
-
-    li {
-        width: 26rem;
-        list-style-type: none;
-        cursor: pointer;
-        margin: 0 2rem 0 0;
-    }
-    
-    img {
-        // min-width: 28rem;
-        border-radius: $border-radius;
-        opacity: .7;
-        transition: $transition-default;
-    }
-
-    li:hover {
-        img {
-            opacity: 1;
-        }
-        
-        h2 {
-            // margin-top: -9.6rem;
-            transition: $transition-default;
-        }
-    }
+    border-radius: 12px;
+}
+  
+.slides.shifting {
+    transition: left .2s ease-out;
+}
+  
+.slide {
+    width: $slider-width;
+    height: $slider-height;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 1s;
+    position: relative;
+    // background: #FFCF47;
 
     h2 {
         position: relative;
-        // width: 28rem;
-        text-align: center;
-        vertical-align: middle;        
+        bottom: 12%;
         color: $offBlack;
-        font-size: 2.4rem;
-        margin-top: -9rem;
-        line-height: 110%;
-        padding: 0 2rem 4rem 0;
-        // word-wrap: break-word;
+        text-align: center;
     }
 }
 
+.slider.loaded {
+    .slide:nth-child(2),
+    .slide:nth-child(7),
+    .slide:nth-child(1),
+    .slide:nth-child(6),
+    .slide:nth-child(3),
+    .slide:nth-child(4),
+    .slide:nth-child(5) { background: #ffffff00 }
+}
 
-
-.navigation-arrows {
+.control {
     position: absolute;
-    z-index: 3;
-    margin-top: 18rem;
-    // transition: 0.3s;
-
-    // border: 1px solid pink;
-    filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, .4));
-
-    img {
-        padding: 3rem;
-    }
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    // background: $secondaryColor;
+    border-radius: 50px;
+    margin-top: -40px;
+    // box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
 }
-
-.navigation-arrows:hover {
-    opacity: .8;
+  
+.prev,
+.next {
+    // background-size: 62px;
+    background-position: center;
+    background-repeat: no-repeat;
     cursor: pointer;
+    transition: $transition-default;
 }
-
-.navigation-left {
+  
+.prev {
+    background-image: url("../img/arrow.svg");
+    left: -100px;
     transform: rotate(90deg);
-    margin-left: -10vw;
-    opacity: .3;
 }
-
-.navigation-left:hover {
-    // margin-left: -13rem;
-}
-
-.navigation-right {
-    margin-left: 50vw;
+  
+.next {
+    background-image: url("../img/arrow.svg");
+    right: -100px;
     transform: rotate(270deg);
 }
-
-.navigation-right:hover {
-    // margin-left: 100rem;
+  
+.prev:hover {
+    left: -110px;
 }
+
+.next:hover {
+    right: -110px;
+}
+
 
 
 @media (max-width: 1200px) {
@@ -119,18 +126,10 @@
         // padding-left: 0rem;
     }
 
-    .navigation-arrows {
-        position: absolute;
-        z-index: 3;
-        margin-top: 12rem;
-    }
-
-    .navigation-right {
-        margin-left: 73vw;
-    }
-}
 
 @media (max-width: 1000px) {
+    $slider-width: 30rem;
+    $slider-height: 60rem;
 
     .portfolio-container {
         width: 80vw;
@@ -139,19 +138,8 @@
         // padding-left: 0rem;
     }
 
-    .portfolio-cards-container {
-        // height: 70vw;
     }
 
-    .portfolio-project-cards {
-        li {
-            // min-width: 50vw;
-        }
-    }
-    .navigation-right {
-        margin-left: 60vw;
-        // z-index: 3;
-    }
     
 }
 
