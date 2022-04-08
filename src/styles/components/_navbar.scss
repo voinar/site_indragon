@@ -17,11 +17,9 @@
 
 
             a {
-                // color: $primaryColor;
                 text-decoration: none;
-
-            display: flex;
-            flex-direction: row;
+                display: flex;
+                flex-direction: row;
 
             .logo-left {
                 color: yellow;
@@ -154,7 +152,6 @@
 
 
 @media (max-width: 768px) {
-    
     .navbar {
         // height: auto;
         visibility: hidden;
@@ -169,7 +166,7 @@
         }
 
         .nav-links {
-            visibility: visible;
+            visibility: hidden;
             color: $offBlack;
             font-family: $headingFont;
     

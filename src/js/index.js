@@ -9,6 +9,28 @@
 // - portfolio section slider
 //------------------------
 
+//------------------------
+// PRELOADER MASK FADE IN
+//------------------------
+
+const introMask = document.querySelector('.intro-mask');
+
+function addMaskFadeIn() {
+    setTimeout(function () {
+        introMask.classList.add('custom-fade-in');
+      }, 500);
+}
+
+function removeIntroMask() {
+    setTimeout(function () {
+        introMask.remove();
+      }, 1500);
+}
+
+window.addEventListener('load', addMaskFadeIn);
+window.addEventListener('load', removeIntroMask);
+
+
 
 //------------------------
 // NAVBAR
@@ -59,8 +81,9 @@ function toggleMenu() {
 }
 
 //show-hide mobile menu
-function showMenu(){    
+function showMenu(){
     navLinks.style.display = 'flex';
+    navLinks.style.visibility = 'visible';
     navHeader.style.visibility = 'hidden';    
     modalOverlay.classList.remove('hide-container');
     menuVisibility = true;
@@ -69,6 +92,7 @@ function showMenu(){
 
 function hideMenu(){
     navLinks.style.display = 'none';
+    navLinks.style.visibility = 'hidden';
     navHeader.style.visibility = 'visible';
     modalOverlay.classList.add('hide-container');
     menuVisibility = false;
@@ -98,31 +122,11 @@ navToggle.addEventListener('click', toggleMenu); //mobile view: open-close menu 
 
 window.addEventListener('load', resetMenuOnLoad); //revert menu to defualt state on page load
 
-window.onresize = reportWindowSize; //watch for viewport change & adjust navbar functionality accordingly
+window.onresize = reportWindowSize; //watch for viewport change & adjust navbar accordingly
 
 modalOverlay.addEventListener('click', toggleMenu); //hide mobile menu on click outside the menu container
 
 
-//------------------------
-// PRELOADER MASK FADE IN
-//------------------------
-
-const introMask = document.querySelector('.intro-mask');
-
-function addMaskFadeIn() {
-    setTimeout(function () {
-        introMask.classList.add('custom-fade-in');
-      }, 1000);
-}
-
-function removeIntroMask() {
-    setTimeout(function () {
-        introMask.remove();
-      }, 2000);
-}
-
-window.addEventListener('load', addMaskFadeIn);
-window.addEventListener('load', removeIntroMask);
 
 //------------------------
 // LOCOMOTIVE SCROLL
@@ -187,6 +191,8 @@ new Typewriter('#typewriter', {
 // PORTFOLIO NAVIGATION SLIDER
 //------------------------
 
+window.addEventListener("load", function(){ //wrapping the slider function inside this wrapper fixes a glitch resulting from erroneous slider offset calculations when running the script before all assets are loaded
+
 var slider = document.getElementById('slider'),
     sliderItems = document.getElementById('slides'),
     prev = document.getElementById('prev'),
@@ -227,7 +233,7 @@ function slide(wrapper, items, prev, next) {
   
   // Transition events
   items.addEventListener('transitionend', checkIndex);
-  
+
   function dragStart (e) {
     e = e || window.event;
     e.preventDefault();
@@ -287,7 +293,7 @@ function slide(wrapper, items, prev, next) {
     allowShift = false;
   }
     
-  function checkIndex (){
+  function checkIndex(){
     items.classList.remove('shifting');
 
     if (index == -1) {
@@ -306,91 +312,4 @@ function slide(wrapper, items, prev, next) {
 
 slide(slider, sliderItems, prev, next);
 
-
-
-// const navigationLeft = document.querySelector('.navigation-left');
-// const navigationRight = document.querySelector('.navigation-right');
-// const navigationArrows = document.querySelector('.navigation-arrows');
-// const portfolioProjectCards = document.querySelector('.portfolio-project-cards');
-// var currentMarginOffset = parseInt(window.getComputedStyle(portfolioProjectCards).getPropertyValue('margin-left'));
-
-
-// var portfolioCard = document.querySelector('.portfolioCard');
-// var newMarginOffset = 0;
-
-// function getCardWidth() {
-//     return portfolioCard.width + 20;
-// }
-
-// // function scrollLeft() {
-// //     var intViewportWidth = window.innerWidth;
-// //     navigationRight.style.opacity = "1";
-// //     navigationLeft.style.opacity = "1";
-
-// //     if (intViewportWidth >= 1000) { //scroll behavior for viewport width over 1000px
-// //         if (currentMarginOffset < 0) {
-// //             currentMarginOffset += scrollOffset;
-// //             portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
-// //         } else {
-// //             navigationLeft.style.opacity = ".3";
-// //         }
-// //     } else if (intViewportWidth < 1000) { //scroll behavior for viewport width under 1000px
-// //         if (currentMarginOffset < 0) {
-// //             currentMarginOffset += (scrollOffset + 50);
-// //             portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
-// //         } else {
-// //             navigationLeft.style.opacity = ".3";
-// //         }
-// //     }
-// // }
-
-
-// function scrollLeft() {
-//     navigationRight.style.opacity = "1";
-//     navigationLeft.style.opacity = "1";
-
-//     currentMarginOffset += getCardWidth();
-//     portfolioProjectCards.style.marginLeft = currentMarginOffset + "px";
-// }
-
-// function scrollRight() {
-//     // var intViewportWidth = window.innerWidth;
-//     navigationRight.style.opacity = "1";
-//     navigationLeft.style.opacity = "1";
-
-//     currentMarginOffset -= getCardWidth();
-//     portfolioProjectCards.style.marginLeft = currentMarginOffset + "px";
-
-    
-//     // if (intViewportWidth >= 1000) { //scroll behavior for viewport width over 1000px
-            
-//     //     } else if (currentMarginOffset <= -30) {
-//     //         navigationRight.style.opacity = ".3";
-//     //     }
-// }
-
-// // function scrollRight() {
-// //     var intViewportWidth = window.innerWidth;
-
-// //     navigationRight.style.opacity = "1";
-// //     navigationLeft.style.opacity = "1";
-
-// //     if (intViewportWidth >= 1000) { //scroll behavior for viewport width over 1000px
-// //         if (currentMarginOffset >= -30) {
-// //             currentMarginOffset -= scrollOffset;
-// //             portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
-// //         } else if (currentMarginOffset <= -30) {
-// //             navigationRight.style.opacity = ".3";
-// //         }
-// //     } else if (intViewportWidth < 1000) { //scroll behavior for viewport width under 1000px
-// //         if (currentMarginOffset >= -30) {
-// //             currentMarginOffset -= (scrollOffset + 50);
-// //             portfolioProjects.style.marginLeft = currentMarginOffset + "rem";
-// //         } else if (currentMarginOffset <= -30) {
-// //             navigationRight.style.opacity = ".3";
-// //         }
-// //     }
-// // }
-
-navigationLeft.addEventListener('click', scrollLeft);
-navigationRight.addEventListener('click', scrollRight);
+});

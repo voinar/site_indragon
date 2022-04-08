@@ -1,0 +1,270 @@
+.case-studies {
+    padding: 12vh 0 0 0;
+
+}
+
+.case-study-container {
+    height: auto;
+    width: 80vw;
+    margin: 0 auto;
+    // border: 1px solid red;
+    box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 1.2rem;
+}
+
+.case-study-header {
+    height: 50rem;
+    background: url(../../src/img/portfolio/portfolio_3_car_rental_mockup_pc.jpg);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1.2rem;
+    // backdrop-filter: blur($standardBlur);
+}
+
+.case-study-title {
+    margin-left: 50%;
+
+    h1 {
+        font-size: 4.8rem;
+    }
+}
+
+.case-study-description {
+        // position: relative;
+        // display: flex;
+        // flex-direction: column;
+        width: 40vw;
+        padding-right: 8rem;
+}
+
+.project-scope-section {
+    height: 60rem;
+}
+
+.tech-section {
+    height: 60rem;
+}
+
+.design-section {
+    height: 90rem;
+}
+
+.bright-section {
+    background: $offWhite;
+
+    display: flex;
+    flex-direction: row;
+    padding-left: 4rem;
+
+    .case-study-design img {
+        position: relative;
+        width: 50vw;
+        margin: 0 auto;
+        top: 4rem;
+        right: 4rem;
+        // right: 4rem;
+        border-radius: 2rem;
+        box-shadow: 8px 8px 24px 0px rgba(40, 40, 60, 0.2);
+        // padding-right: unset;
+        // transition: all .5s;
+        z-index: 0;
+    }
+
+    // .case-study-design img:hover {
+    //     transform: scale(1.1);
+    // }
+
+    .case-study-description {
+        p {
+            color: $offBlack;
+            font-size: 2rem;
+            line-height: 120%;
+        }
+    }
+    
+    .case-study-description-title {
+        // margin-left: 50%;
+    
+        h1 {
+            font-size: 4rem;
+        }
+    }
+}
+
+.dark-section {
+        background: #383250;
+        display: flex;
+        flex-direction: row;
+        padding-left: 4rem;
+        padding-right: 6vw;
+    
+        .case-study-description {
+            p {
+                color: $offWhite;
+                font-size: 2rem;
+            }
+        }
+        
+        .case-study-description-title {
+            // margin-left: 50%;
+        
+            h1 {
+                font-size: 4rem;
+            }
+        }
+
+        .tech-stack-logos {
+
+            display: flex;
+            flex-direction: column;
+            // width: 100%;
+
+            .tech-stack-logos-row {
+                display: flex;
+                flex-direction: row;
+            }
+
+            img {
+                width: 5rem;
+                filter: contrast(200%) grayscale(90%);
+                transition: ease-in-out .3s;
+                margin: 1rem;
+            }
+            img:hover {
+                filter: unset;
+            }
+        }
+}
+
+.color-palette-wrapper {
+    width: 30vw;
+    height: 20rem;
+    // border: 1px solid blue;
+    display: grid;
+    grid-template-columns: repeat(1, fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    
+    .color-palette {
+        border-radius: $border-radius;
+        box-shadow: 8px 8px 24px 0px rgba(40, 40, 60, 0.08);
+    }
+
+    .color-palette-1 {
+        grid-area: 1 / 1 / 2 / 2; 
+        background-color: #fcfffc;
+    }
+    
+    .color-palette-2 {
+        grid-area: 1 / 2 / 2 / 3; 
+        background-color: #6ca95e;
+    }
+    
+    .color-palette-3 {
+        grid-area: 2 / 1 / 3 / 2;
+        background-color: #1d3218;
+    }
+    
+    .color-palette-4 {
+        grid-area: 2 / 2 / 3 / 3;
+        background-color: #f7f057;
+    }
+
+    p {
+        padding: 5rem 0 0 2rem;
+        text-transform: uppercase;
+        opacity: .7;
+    }
+
+    .color-palette-3 p {
+        color: $offWhite;
+    }
+}
+
+.typography-wrapper {
+    padding: 4rem 0;
+    
+    img {
+        padding: 1rem 0;
+    }
+}
+
+
+.mobile-section {
+    height: 100vh;
+    background-image: url("../img/portfolio/background_mobile_view.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // border: 4px solid red;
+}
+
+.mobile-view {
+    position: absolute;
+    img {
+        padding-left: 4vw;
+        width: 50vw;
+    }
+}
+
+.mobile-background-decal {
+    position: relative;
+    width: 50rem;
+    left: 40vw;
+    top: 20rem;
+    z-index: 0;
+    opacity: .4;
+    // border: 3px solid yellow;
+}
+
+.mobile-background-decal  p {
+    // position: relative;
+    font-family: 'Iceberg', cursive;
+    font-size: 20rem !important;
+    line-height: 70%;
+    color: $secondaryColor !important;
+    // z-index: 0;
+}
+
+.portfolio-navigation {
+    width: inherit;
+    height: 20rem;
+    // border: 1px solid pink;
+}
+
+.portfolio-nav-arrows {
+    position: relative;
+    display: flex;
+    gap: 10vw;
+    flex-direction: row;
+    // background: red;
+    margin: 0 auto;
+    // top: 55rem;
+    // left: 3rem;
+    // font-size: 10rem;
+
+    // border: 4px solid hotpink;
+    filter: drop-shadow(0px 2px 4px rgba(255, 255, 255, 0.2));
+
+
+
+    .portfolio-nav-prev {
+        transform: rotate(90deg);
+        // border: 1px solid forestgreen;
+
+        img {
+            height: 4rem;
+        }
+    }
+
+    .portfolio-nav-next {
+        transform: rotate(270deg);
+        // border: 2px solid darkturquoise;
+
+        img {
+            height: 4rem;
+        }
+    }
+}

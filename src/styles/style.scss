@@ -15,10 +15,12 @@
 './sections/portfolio.scss',
 './sections/call-to-action.scss',
 './sections/contact-form.scss',
+'./sections/contact-thank-you.scss',
 './sections/footer.scss',
+'./sections/case-studies.scss',
+'./sections/contact-thank-you.scss',
 '../../node_modules/locomotive-scroll/src/styles/_base.scss',
-'../../node_modules/locomotive-scroll/src/styles/_scrollbar.scss'
-;
+'../../node_modules/locomotive-scroll/src/styles/_scrollbar.scss';
 
 // * {
 //     outline: 1px solid red !important;
@@ -130,7 +132,7 @@ body {
     top: 36vh;
 
     img {
-        opacity: .6;
+        opacity: .1;
         filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
     }
 }
@@ -141,7 +143,7 @@ body {
     top: 30vh;
 
     img {
-        opacity: .4;
+        opacity: .2;
         filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
     }
 }
@@ -152,24 +154,24 @@ body {
     top: 44vh;
 
     img {
-        opacity: .2;
+        opacity: .1;
         filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
     }
 }
 
 .pattern-4 {
-    width: 6vw;
+    width: 8vw;
     right: 14vw;
     top: 74vh;
 
     img {
-        opacity: .2;
+        opacity: .1;
         filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(130deg) brightness(100%) contrast(100%);
     }
 }
 
 .pattern-5 {
-    width: 4vw;
+    width: 7vw;
     left: 10vw;
     top: 30vh;
 
@@ -180,23 +182,23 @@ body {
 }
 
 .pattern-6 {
-    width: 6vw;
+    width: 8vw;
     right: 10vw;
-    top: 42vh;
+    top: 30rem;
 
     img {
-        opacity: .4;
+        opacity: .1;
         filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
     }
 }
 
 .pattern-7 {
     width: 6vw;
-    right: 30vw;
-    top: 10vh;
+    right: 10vw;
+    top: 30%;
 
     img {
-        opacity: .3;
+        opacity: .1;
         filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
     }
 }
