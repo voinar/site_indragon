@@ -1736,7 +1736,7 @@ h2 a {
 }
 
 .mobile-section {
-  height: 100vh;
+  height: 100rem;
   background-image: url("../img/portfolio/background_mobile_view.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -1753,19 +1753,17 @@ h2 a {
 }
 
 .mobile-background-decal {
-  position: relative;
-  width: 50rem;
-  left: 40vw;
+  width: 40vw;
+  margin-left: 36vw;
   top: 20rem;
   z-index: 0;
-  opacity: .4;
 }
 
 .mobile-background-decal p {
   font-family: 'Iceberg', cursive;
-  font-size: 20rem !important;
+  font-size: 14vw !important;
   line-height: 70%;
-  color: #7B61FF !important;
+  color: rgba(0, 0, 100, 0.1) !important;
 }
 
 .portfolio-navigation {
@@ -1778,14 +1776,14 @@ h2 a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10vw;
+  gap: 20vw;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0 auto;
-  -webkit-filter: drop-shadow(0px 2px 4px rgba(255, 255, 255, 0.2));
-          filter: drop-shadow(0px 2px 4px rgba(255, 255, 255, 0.2));
+  -webkit-filter: drop-shadow(0px 2px 4px rgba(255, 255, 255, 0.3));
+          filter: drop-shadow(0px 2px 4px rgba(255, 255, 255, 0.3));
 }
 
 .portfolio-nav-arrows .portfolio-nav-prev {
