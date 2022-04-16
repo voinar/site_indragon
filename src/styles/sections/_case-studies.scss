@@ -1,6 +1,5 @@
 .case-studies {
-    padding: 12vh 0 0 0;
-
+    padding: 20rem 0 0 0;
 }
 
 .case-study-container {
@@ -14,7 +13,7 @@
 
 .case-study-header {
     height: 50rem;
-    background: url(../../src/img/portfolio/portfolio_3_car_rental_mockup_pc.jpg);
+    background: url(../../src/case-studies/car-rental/img/portfolio_3_car_rental_mockup_pc.jpg);
     background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,49 +30,45 @@
 }
 
 .case-study-description {
-        // position: relative;
-        // display: flex;
-        // flex-direction: column;
         width: 40vw;
         padding-right: 8rem;
 }
 
 .project-scope-section {
-    height: 60rem;
+    max-height: 70rem;
+}
+
+.project-visualization-pc {
+    display: visible !important;
+}
+
+.project-visualization-mobile {
+    display: none !important;
 }
 
 .tech-section {
-    height: 60rem;
+    height: auto;
 }
 
 .design-section {
-    height: 90rem;
+    height: auto;
 }
 
 .bright-section {
     background: $offWhite;
-
     display: flex;
     flex-direction: row;
-    padding-left: 4rem;
+    padding: 4rem;
 
     .case-study-design img {
-        position: relative;
-        width: 50vw;
+        width: 40vw;
+        max-width: unset;
         margin: 0 auto;
         top: 4rem;
         right: 4rem;
-        // right: 4rem;
         border-radius: 2rem;
-        box-shadow: 8px 8px 24px 0px rgba(40, 40, 60, 0.2);
-        // padding-right: unset;
-        // transition: all .5s;
-        z-index: 0;
+        box-shadow: 8px 8px 24px 0px rgba(40, 40, 60, 0.3);
     }
-
-    // .case-study-design img:hover {
-    //     transform: scale(1.1);
-    // }
 
     .case-study-description {
         p {
@@ -95,9 +90,9 @@
 .dark-section {
         background: #383250;
         display: flex;
+        // width: 100%;
         flex-direction: row;
-        padding-left: 4rem;
-        padding-right: 6vw;
+        padding: 4rem;
     
         .case-study-description {
             p {
@@ -126,11 +121,13 @@
             }
 
             img {
-                width: 5rem;
+                width: 5vw;
+                height: 5vw;
                 filter: contrast(200%) grayscale(90%);
                 transition: ease-in-out .3s;
                 margin: 1rem;
             }
+
             img:hover {
                 filter: unset;
             }
@@ -138,7 +135,7 @@
 }
 
 .color-palette-wrapper {
-    width: 30vw;
+    width: 26vw;
     height: 20rem;
     // border: 1px solid blue;
     display: grid;
@@ -191,9 +188,9 @@
     }
 }
 
-
 .mobile-section {
-    height: 100rem;
+    display: none;
+    height: auto;
     background-image: url("../img/portfolio/background_mobile_view.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -202,37 +199,35 @@
 }
 
 .mobile-view {
-    position: absolute;
+
+    // position: absolute;
     img {
-        padding-left: 4vw;
-        width: 50vw;
+        // padding-left: 4vw;
+        margin: 0 auto;
+        height: 70vh;
     }
 }
 
 .mobile-background-decal {
+    // display: none;
     // position: relative;
-    width: 40vw;
-    margin-left: 36vw;
-    top: 20rem;
-    z-index: 0;
-    // opacity: .4;
-    // border: 3px solid yellow;
+    // height: 0;
+    // width: 40vw;
+    // top: 0rem;
+    // z-index: 0;
 }
 
-.mobile-background-decal  p {
-    // position: relative;
+.mobile-background-decal p {
     font-family: 'Iceberg', cursive;
-    font-size: 14vw !important;
+    font-size: 12vw !important;
     line-height: 70%;
-    // color: $secondaryColor !important;
-    color: rgba(0, 0, 100, 0.1) !important;
-    // z-index: 0;
+    color: rgba(0, 0, 0, 0.07) !important;
+    text-shadow: 0px 0px 20px rgba(40, 40, 70, 0.3);
 }
 
 .portfolio-navigation {
     width: inherit;
     height: 20rem;
-    // border: 1px solid pink;
 }
 
 .portfolio-nav-arrows {
@@ -240,20 +235,10 @@
     display: flex;
     gap: 20vw;
     flex-direction: row;
-    // background: red;
     margin: 0 auto;
-    // top: 55rem;
-    // left: 3rem;
-    // font-size: 10rem;
-
-    // border: 4px solid hotpink;
-    filter: drop-shadow(0px 2px 4px rgba(255, 255, 255, 0.3));
-
-
 
     .portfolio-nav-prev {
         transform: rotate(90deg);
-        // border: 1px solid forestgreen;
 
         img {
             height: 4rem;
@@ -262,10 +247,138 @@
 
     .portfolio-nav-next {
         transform: rotate(270deg);
-        // border: 2px solid darkturquoise;
-
+        
         img {
             height: 4rem;
         }
+    }
+}
+
+@media (min-width: 1400px) {
+    .portfolio-filler {
+        height: 0rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .portfolio-filler {
+        height: 20rem;
+    }
+}
+
+@media (min-width: 1800px) {
+    .portfolio-filler {
+        height: 44rem;
+    }
+}
+
+@media (min-width: 2000px) {
+    .portfolio-filler {
+        height: 130rem;
+    }
+
+    .mobile-background-decal {
+        margin-top: 30vh;
+    }
+
+    .bright-section {
+        .case-study-design img {
+            // width: 1000px; 
+            height: 3474px;
+            width: 1000px;
+            }
+        }
+    
+    .dark-section {
+        .tech-stack-logos {
+            img {
+                width: 10rem;
+                height: 10rem;
+                filter: contrast(200%) grayscale(90%);
+                transition: ease-in-out .3s;
+                margin: 1rem;
+                }
+            }
+        }
+    }
+
+@media (max-width: 1800px) {
+    .mobile-background-decal {
+        display: none;
+}
+}
+
+@media (max-width: 1000px) {
+    
+.case-study-description {
+        width: 70vw;
+}
+
+    .design-section {
+
+        .case-study-description {
+            width: 100%;
+        }
+    }
+
+    .color-palette-wrapper {
+        width: 50vw;
+    }
+
+    .case-study-container {
+        width: 95vw;
+    }
+
+    .design-section {
+
+        .case-study-description {
+            // position: relative;
+            // display: flex;
+            // flex-direction: column;
+            width: 100%;
+            padding-right: 8rem;
+        }
+    }
+
+    .project-visualization-pc {
+        display: none !important;
+    }
+    
+    .project-visualization-mobile {
+        display: inline !important;
+
+        .case-study-design img {
+            border-radius: $border-radius;
+        }
+    }
+
+    .mobile-view {
+        position: absolute;
+        img {
+            // padding-left: 4vw;
+            width: 120%;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .leading-text {
+        max-width: 100vw;
+        padding-top: 14rem;
+    }
+
+    .case-study-title {
+        margin-left: 4rem;
+
+    
+        h1 {
+            font-size: 4.8rem;
+        }
+    }
+
+    .case-study-header {
+        background-position: 25%;
+        background-size: cover;
     }
 }

@@ -2,12 +2,15 @@
 // MAIN JAVASCRIPT FILE
 //---------------------
 // CONTENTS:
-// - locomotive scroll
 // - preloader mask fade in
+// - navbar responsiveness & functionality
+// - navbar language selection
 // - hero section typewriter effect
+// - locomotive scroll
 // - navbar behavior
 // - portfolio section slider
 //------------------------
+
 
 //------------------------
 // PRELOADER MASK FADE IN
@@ -119,19 +122,26 @@ function resetMenuOnLoad() {
 }
 
 navToggle.addEventListener('click', toggleMenu); //mobile view: open-close menu on burger button click
-
 window.addEventListener('load', resetMenuOnLoad); //revert menu to defualt state on page load
-
 window.onresize = reportWindowSize; //watch for viewport change & adjust navbar accordingly
-
 modalOverlay.addEventListener('click', toggleMenu); //hide mobile menu on click outside the menu container
+
+//------------------------
+// NAVBAR LANGUAGE SELECTION
+//------------------------
+
+
+
 
 
 
 //------------------------
 // LOCOMOTIVE SCROLL
 //------------------------
+
 import LocomotiveScroll from '/node_modules/locomotive-scroll/src/locomotive-scroll.js';
+
+window.addEventListener("load", function(){ 
 
 const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
@@ -172,18 +182,6 @@ scroll.on('scroll', (position) => {
         }
     });
 
-
-//------------------------
-// HERO SECTION TYPEWRITER EFFECT
-//------------------------
-
-import Typewriter from '/node_modules/typewriter-effect/dist/core';
-
-new Typewriter('#typewriter', {
-  strings: ['Reinvent', 'Recreate', 'Rediscover'],
-  autoStart: true,
-  loop: true,
-  delay: 70,
 });
 
 
@@ -191,7 +189,7 @@ new Typewriter('#typewriter', {
 // PORTFOLIO NAVIGATION SLIDER
 //------------------------
 
-window.addEventListener("load", function(){ //wrapping the slider function inside this wrapper fixes a glitch resulting from erroneous slider offset calculations when running the script before all assets are loaded
+window.addEventListener("load", function(){ //putting the slider function inside this wrapper fixes a glitch resulting from erroneous slider offset calculations
 
 var slider = document.getElementById('slider'),
     sliderItems = document.getElementById('slides'),
@@ -222,11 +220,11 @@ function slide(wrapper, items, prev, next) {
   // Mouse events
   items.onmousedown = dragStart;
   
-  // Touch events
-  items.addEventListener('touchstart', dragStart);
+  // Touch events //touchstart events prevent anchor tag from working, disabling till a better fix is in
+  // items.addEventListener('touchstart', dragStart);
   items.addEventListener('touchend', dragEnd);
   items.addEventListener('touchmove', dragAction);
-  
+
   // Click events
   prev.addEventListener('click', function () { shiftSlide(-1) });
   next.addEventListener('click', function () { shiftSlide(1) });
@@ -313,3 +311,12 @@ function slide(wrapper, items, prev, next) {
 slide(slider, sliderItems, prev, next);
 
 });
+
+// var portfolio3 = document.getElementById("portfolio-3");
+// portfolio3.addEventListener('touchend', function(){
+//   // happens(e)
+//   console.log('touched');
+//   window.location = "http://localhost:1234/case-studies/car-rental/index.html";
+
+
+// });

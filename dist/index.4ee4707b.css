@@ -407,7 +407,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-copy {
-  text-shadow: 0 10px 30px #00000030;
+  text-shadow: 0 10px 30px #00000020;
   padding: 0 4rem;
 }
 
@@ -417,13 +417,13 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-copy h1 {
-  font-size: 8vw;
+  font-size: 7vw;
 }
 
 .hero-asset img {
   max-height: 28vw;
-  -webkit-filter: drop-shadow(0 0 3px #1e0032b3);
-  filter: drop-shadow(0 0 3px #1e0032b3);
+  -webkit-filter: drop-shadow(0 0 3px #8c00ff4d);
+  filter: drop-shadow(0 0 3px #8c00ff4d);
 }
 
 .arrow-down {
@@ -569,7 +569,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .tile {
   opacity: .8;
-  cursor: pointer;
   background-color: #1ef1bf;
   background-size: cover;
   flex-direction: column;
@@ -592,11 +591,11 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 80%;
   width: 100%;
   text-align: center;
-  color: #fff0;
+  opacity: 0;
   justify-content: center;
   align-items: flex-end;
   padding: 1.4rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   display: flex;
 }
 
@@ -611,6 +610,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .tile:hover p {
   color: #ecebf2;
+  opacity: 1;
 }
 
 .square-tile {
@@ -651,6 +651,13 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .div7 {
   background-image: linear-gradient(to top, #280042, #2f00ff5d), url("tile_7.8842d0cd.jpeg");
+}
+
+@media (max-width: 1200px) {
+  .tile p {
+    opacity: .9;
+    text-shadow: 0 0 4px #00000080;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -792,7 +799,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .section-why-go-online .background-glass {
-  border: 2px solid #5000501a;
+  border: 2px solid #c832ff4d;
   padding: 5rem;
 }
 
@@ -950,10 +957,13 @@ p, h1, h2, h3, h4, h5, h6 {
   transform: translate(-50%, -50%);
 }
 
+.slider a {
+  text-decoration: none;
+}
+
 .wrapper {
   width: 360px;
   height: 720px;
-  z-index: 1;
   position: relative;
   overflow: hidden;
 }
@@ -973,7 +983,6 @@ p, h1, h2, h3, h4, h5, h6 {
 .slide {
   width: 360px;
   height: 720px;
-  cursor: pointer;
   opacity: .8;
   flex-direction: column;
   justify-content: center;
@@ -986,11 +995,12 @@ p, h1, h2, h3, h4, h5, h6 {
   color: #1f1b3b;
   text-align: center;
   width: 100%;
+  height: 40px;
   text-shadow: 0 1px 4px #f0f0f0b3;
-  font-size: 2rem;
+  font-size: 2.6rem;
   transition: all .7s;
   position: relative;
-  bottom: 12%;
+  bottom: 12rem;
 }
 
 .slide:hover {
@@ -1006,11 +1016,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .control {
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 140px;
   z-index: 2;
-  border-radius: 50px;
-  margin-top: -20px;
   position: absolute;
   top: 50%;
 }
@@ -1024,13 +1032,15 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .prev {
   background-image: url("arrow.b9dab6f1.svg");
-  left: -100px;
+  background-size: contain;
+  left: -140px;
   transform: rotate(90deg);
 }
 
 .next {
   background-image: url("arrow.b9dab6f1.svg");
-  right: -100px;
+  background-size: contain;
+  right: -140px;
   transform: rotate(270deg);
 }
 
@@ -1052,6 +1062,11 @@ p, h1, h2, h3, h4, h5, h6 {
   .portfolio-container {
     width: 80vw;
   }
+
+  .control {
+    width: 20vh;
+    height: 20vw;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1060,13 +1075,11 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 
   .prev {
-    background-image: url("arrow.b9dab6f1.svg");
     left: -10px;
     transform: rotate(90deg);
   }
 
   .next {
-    background-image: url("arrow.b9dab6f1.svg");
     right: -10px;
     transform: rotate(270deg);
   }
@@ -1236,11 +1249,6 @@ h2 a {
   }
 }
 
-.contact-thank-you {
-  border: 1px solid red;
-  padding: 20vh 0;
-}
-
 .section-footer {
   height: auto;
   background: #ecebf2;
@@ -1350,8 +1358,13 @@ h2 a {
   }
 }
 
+.contact-thank-you {
+  border: 1px solid red;
+  padding: 20vh 0;
+}
+
 .case-studies {
-  padding: 12vh 0 0;
+  padding: 20rem 0 0;
 }
 
 .case-study-container {
@@ -1364,7 +1377,7 @@ h2 a {
 
 .case-study-header {
   height: 50rem;
-  background: url("portfolio_3_car_rental_mockup_pc.4f36db75.jpg") center / cover no-repeat;
+  background: url("portfolio_3_car_rental_mockup_pc.66609ef9.jpg") center / cover no-repeat;
   border-radius: 1.2rem;
 }
 
@@ -1381,30 +1394,37 @@ h2 a {
   padding-right: 8rem;
 }
 
-.project-scope-section, .tech-section {
-  height: 60rem;
+.project-scope-section {
+  max-height: 70rem;
 }
 
-.design-section {
-  height: 90rem;
+.project-visualization-pc {
+  display: visible !important;
+}
+
+.project-visualization-mobile {
+  display: none !important;
+}
+
+.tech-section, .design-section {
+  height: auto;
 }
 
 .bright-section {
   background: #ecebf2;
   flex-direction: row;
-  padding-left: 4rem;
+  padding: 4rem;
   display: flex;
 }
 
 .bright-section .case-study-design img {
-  width: 50vw;
-  z-index: 0;
+  width: 40vw;
+  max-width: unset;
   border-radius: 2rem;
   margin: 0 auto;
-  position: relative;
   top: 4rem;
   right: 4rem;
-  box-shadow: 8px 8px 24px #28283c33;
+  box-shadow: 8px 8px 24px #28283c4d;
 }
 
 .bright-section .case-study-description p {
@@ -1420,8 +1440,7 @@ h2 a {
 .dark-section {
   background: #383250;
   flex-direction: row;
-  padding-left: 4rem;
-  padding-right: 6vw;
+  padding: 4rem;
   display: flex;
 }
 
@@ -1445,7 +1464,8 @@ h2 a {
 }
 
 .dark-section .tech-stack-logos img {
-  width: 5rem;
+  width: 5vw;
+  height: 5vw;
   -webkit-filter: contrast(200%) grayscale(90%);
   filter: contrast(200%) grayscale(90%);
   margin: 1rem;
@@ -1458,7 +1478,7 @@ h2 a {
 }
 
 .color-palette-wrapper {
-  width: 30vw;
+  width: 26vw;
   height: 20rem;
   display: -ms-grid;
   -ms-grid-columns: (fr) [1];
@@ -1530,34 +1550,25 @@ h2 a {
 }
 
 .mobile-section {
-  height: 100rem;
+  height: auto;
   background-image: url("background_mobile_view.1969ec5c.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.mobile-view {
-  position: absolute;
+  display: none;
 }
 
 .mobile-view img {
-  width: 50vw;
-  padding-left: 4vw;
-}
-
-.mobile-background-decal {
-  width: 40vw;
-  z-index: 0;
-  margin-left: 36vw;
-  top: 20rem;
+  height: 70vh;
+  margin: 0 auto;
 }
 
 .mobile-background-decal p {
+  text-shadow: 0 0 20px #2828464d;
   font-family: Iceberg, cursive;
   line-height: 70%;
-  color: #0000641a !important;
-  font-size: 14vw !important;
+  color: #00000012 !important;
+  font-size: 12vw !important;
 }
 
 .portfolio-navigation {
@@ -1566,8 +1577,6 @@ h2 a {
 }
 
 .portfolio-nav-arrows {
-  -webkit-filter: drop-shadow(0 2px 4px #ffffff4d);
-  filter: drop-shadow(0 2px 4px #ffffff4d);
   flex-direction: row;
   gap: 20vw;
   margin: 0 auto;
@@ -1591,9 +1600,115 @@ h2 a {
   height: 4rem;
 }
 
-.contact-thank-you {
-  border: 1px solid red;
-  padding: 20vh 0;
+@media (min-width: 1400px) {
+  .portfolio-filler {
+    height: 0;
+  }
+}
+
+@media (min-width: 1600px) {
+  .portfolio-filler {
+    height: 20rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .portfolio-filler {
+    height: 44rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .portfolio-filler {
+    height: 130rem;
+  }
+
+  .mobile-background-decal {
+    margin-top: 30vh;
+  }
+
+  .bright-section .case-study-design img {
+    height: 3474px;
+    width: 1000px;
+  }
+
+  .dark-section .tech-stack-logos img {
+    width: 10rem;
+    height: 10rem;
+    -webkit-filter: contrast(200%) grayscale(90%);
+    filter: contrast(200%) grayscale(90%);
+    margin: 1rem;
+    transition: all .3s ease-in-out;
+  }
+}
+
+@media (max-width: 1800px) {
+  .mobile-background-decal {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .case-study-description {
+    width: 70vw;
+  }
+
+  .design-section .case-study-description {
+    width: 100%;
+  }
+
+  .color-palette-wrapper {
+    width: 50vw;
+  }
+
+  .case-study-container {
+    width: 95vw;
+  }
+
+  .design-section .case-study-description {
+    width: 100%;
+    padding-right: 8rem;
+  }
+
+  .project-visualization-pc {
+    display: none !important;
+  }
+
+  .project-visualization-mobile {
+    display: inline !important;
+  }
+
+  .project-visualization-mobile .case-study-design img {
+    border-radius: 8px;
+  }
+
+  .mobile-view {
+    position: absolute;
+  }
+
+  .mobile-view img {
+    width: 120%;
+  }
+}
+
+@media (max-width: 768px) {
+  .leading-text {
+    max-width: 100vw;
+    padding-top: 14rem;
+  }
+
+  .case-study-title {
+    margin-left: 4rem;
+  }
+
+  .case-study-title h1 {
+    font-size: 4.8rem;
+  }
+
+  .case-study-header {
+    background-position: 25%;
+    background-size: cover;
+  }
 }
 
 html.has-scroll-smooth {
@@ -1707,7 +1822,7 @@ body {
   letter-spacing: -.16rem;
   max-width: 90vw;
   font-family: Dela Gothic One, Dela Gothic, Times, serif;
-  font-size: 5.6rem;
+  font-size: 5.4rem;
   font-weight: normal;
   line-height: 90%;
 }
@@ -1728,7 +1843,7 @@ body {
 
 .leading-text {
   max-width: 70vw;
-  padding: 10rem 0 6rem;
+  padding: 8rem 0 6rem;
   display: flex;
 }
 
