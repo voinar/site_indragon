@@ -7,7 +7,7 @@
     width: 80vw;
     margin: 0 auto;
     // border: 1px solid red;
-    box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 64px 0px rgba(0, 0, 0, 0.3);
     border-radius: 1.2rem;
 }
 
@@ -32,6 +32,7 @@
 .case-study-description {
         width: 40vw;
         padding-right: 8rem;
+        text-align: justify;
 }
 
 .project-scope-section {
@@ -58,7 +59,7 @@
     background: $offWhite;
     display: flex;
     flex-direction: row;
-    padding: 4rem;
+    padding: 4rem 8rem;
 
     .case-study-design img {
         width: 40vw;
@@ -74,7 +75,7 @@
         p {
             color: $offBlack;
             font-size: 2rem;
-            line-height: 120%;
+            line-height: 126%;
         }
     }
     
@@ -92,7 +93,7 @@
         display: flex;
         // width: 100%;
         flex-direction: row;
-        padding: 4rem;
+        padding: 4rem 8rem;
     
         .case-study-description {
             p {
@@ -151,12 +152,12 @@
 
     .color-palette-1 {
         grid-area: 1 / 1 / 2 / 2; 
-        background-color: #fcfffc;
+        background-color: #6ca95e;
     }
     
     .color-palette-2 {
         grid-area: 1 / 2 / 2 / 3; 
-        background-color: #6ca95e;
+        background-color: #fcfffc;
     }
     
     .color-palette-3 {
@@ -166,7 +167,7 @@
     
     .color-palette-4 {
         grid-area: 2 / 2 / 3 / 3;
-        background-color: #f7f057;
+        background-color: #ebf840;
     }
 
     p {
@@ -247,7 +248,7 @@
 
     .portfolio-nav-next {
         transform: rotate(270deg);
-        
+
         img {
             height: 4rem;
         }
@@ -261,6 +262,15 @@
 }
 
 @media (min-width: 1600px) {
+    .case-study-header {
+        height: 60rem;
+    }
+    
+    .case-study-title {
+        h1 {
+            font-size: 5.8rem;
+        }
+    }
     .portfolio-filler {
         height: 20rem;
     }
@@ -299,19 +309,20 @@
                 margin: 1rem;
                 }
             }
-        }
     }
+}
 
 @media (max-width: 1800px) {
     .mobile-background-decal {
         display: none;
-}
+    }
 }
 
 @media (max-width: 1000px) {
     
-.case-study-description {
+    .case-study-description {
         width: 70vw;
+        padding-right: 1rem;
 }
 
     .design-section {
@@ -329,17 +340,6 @@
         width: 95vw;
     }
 
-    .design-section {
-
-        .case-study-description {
-            // position: relative;
-            // display: flex;
-            // flex-direction: column;
-            width: 100%;
-            padding-right: 8rem;
-        }
-    }
-
     .project-visualization-pc {
         display: none !important;
     }
@@ -350,6 +350,18 @@
         .case-study-design img {
             border-radius: $border-radius;
         }
+    }
+
+    .dark-section {
+        .tech-stack-logos {
+            img {
+                width: 6rem;
+                height: 6rem;
+                filter: contrast(200%) grayscale(90%);
+                transition: ease-in-out .3s;
+                margin: 1rem;
+                }
+            }
     }
 
     .mobile-view {
