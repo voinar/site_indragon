@@ -1087,7 +1087,7 @@ p, h1, h2, h3, h4, h5, h6 {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 360px;
-  height: 720px;
+  height: 680px;
 }
 
 .slider a {
@@ -1098,7 +1098,7 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   position: relative;
   width: 360px;
-  height: 720px;
+  height: 680px;
 }
 
 .slides {
@@ -1118,7 +1118,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .slide {
   width: 360px;
-  height: 720px;
+  height: 680px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1144,7 +1144,7 @@ p, h1, h2, h3, h4, h5, h6 {
   -webkit-transition: all .7s;
   transition: all .7s;
   width: 100%;
-  height: 40px;
+  height: 0;
   text-shadow: 0px 1px 8px rgba(255, 255, 255, 0.4);
 }
 
@@ -1579,12 +1579,47 @@ h2 a {
   border-radius: 1.2rem;
 }
 
-.case-study-title {
-  margin-left: 50%;
+.case-study-header-nav {
+  position: relative;
 }
 
-.case-study-title h1 {
-  font-size: 4.8rem;
+.header-nav-arrows {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 60vw;
+  width: 90%;
+  left: 50%;
+  top: 26vh;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.header-nav-arrows .portfolio-nav-prev {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.header-nav-arrows .portfolio-nav-prev img {
+  height: 4rem;
+}
+
+.header-nav-arrows .portfolio-nav-next {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.header-nav-arrows .portfolio-nav-next img {
+  height: 4rem;
+}
+
+.case-study-title {
+  margin-left: 50%;
 }
 
 .case-study-description {
@@ -1638,12 +1673,12 @@ h2 a {
 
 .bright-section .case-study-description p {
   color: #1f1b3b;
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 126%;
 }
 
 .bright-section .case-study-description-title h1 {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 .dark-section {
@@ -1660,11 +1695,11 @@ h2 a {
 
 .dark-section .case-study-description p {
   color: #ECEBF2;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .dark-section .case-study-description-title h1 {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 .dark-section .tech-stack-logos {
@@ -1675,6 +1710,7 @@ h2 a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-right: 8rem;
 }
 
 .dark-section .tech-stack-logos .tech-stack-logos-row {
@@ -1760,7 +1796,7 @@ h2 a {
 .color-palette-wrapper p {
   padding: 5rem 0 0 2rem;
   text-transform: uppercase;
-  opacity: .7;
+  opacity: .6;
 }
 
 .color-palette-wrapper .color-palette-3 p {
@@ -1768,11 +1804,14 @@ h2 a {
 }
 
 .typography-wrapper {
-  padding: 4rem 0;
+  padding: 6rem 0;
+  width: 18vw;
 }
 
 .typography-wrapper img {
-  padding: 1rem 0;
+  padding: 2rem 0;
+  width: auto;
+  opacity: .9;
 }
 
 .mobile-section {
@@ -1800,19 +1839,24 @@ h2 a {
 .portfolio-navigation {
   width: inherit;
   height: 20rem;
+  height: 0px;
+  padding: 0;
 }
 
 .portfolio-nav-arrows {
-  position: relative;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20vw;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0 auto;
+  gap: 20vw;
+  left: 50%;
+  bottom: 18rem;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .portfolio-nav-arrows .portfolio-nav-prev {
@@ -1831,6 +1875,12 @@ h2 a {
 
 .portfolio-nav-arrows .portfolio-nav-next img {
   height: 4rem;
+}
+
+@media (max-width: 1400px) and (min-width: 1000px) {
+  .project-scope-section {
+    min-height: 100rem;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -1885,6 +1935,29 @@ h2 a {
   }
 }
 
+@media (max-width: 1200px) {
+  .portfolio-navigation {
+    width: inherit;
+    height: 10rem;
+    padding: 0;
+  }
+  .portfolio-nav-arrows {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20vw;
+    left: 50%;
+    bottom: 7rem;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
 @media (max-width: 1000px) {
   .case-study-description {
     width: 70vw;
@@ -1907,6 +1980,10 @@ h2 a {
   }
   .project-visualization-mobile .case-study-design img {
     border-radius: 8px;
+    margin: 8rem auto;
+    width: 90%;
+    -webkit-box-shadow: 0px 10px 64px 0px rgba(104, 59, 239, 0.847);
+            box-shadow: 0px 10px 64px 0px rgba(104, 59, 239, 0.847);
   }
   .dark-section .tech-stack-logos img {
     width: 6rem;
@@ -1917,6 +1994,9 @@ h2 a {
     transition: ease-in-out .3s;
     margin: 1rem;
   }
+  .typography-wrapper {
+    width: 40vw;
+  }
   .mobile-view {
     position: absolute;
   }
@@ -1926,19 +2006,31 @@ h2 a {
 }
 
 @media (max-width: 768px) {
+  .bright-section {
+    padding-left: 4rem;
+  }
+  .bright-section .case-study-description-title h1 {
+    font-size: 9vw;
+  }
+  .dark-section {
+    padding-left: 4rem;
+  }
+  .dark-section .case-study-description-title h1 {
+    font-size: 9vw;
+  }
   .leading-text {
     max-width: 100vw;
     padding-top: 14rem;
   }
-  .case-study-title {
-    margin-left: 4rem;
-  }
-  .case-study-title h1 {
-    font-size: 4.8rem;
-  }
   .case-study-header {
     background-position: 25%;
     background-size: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-nav-arrows {
+    display: none;
   }
 }
 
@@ -2086,7 +2178,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 8rem 0rem 6rem 0rem;
-  max-width: 70vw;
+  max-width: 24vw;
 }
 
 .leading-text .accent {
@@ -2247,6 +2339,9 @@ body {
   .pattern {
     display: none;
   }
+  .leading-text {
+    max-width: 70vw;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2254,7 +2349,7 @@ body {
     padding: 0;
   }
   .leading-text h1 {
-    font-size: 8vw;
+    font-size: 10vw;
     line-height: 1;
   }
 }

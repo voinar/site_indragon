@@ -1,5 +1,5 @@
 $slider-width: 360px;
-$slider-height: 720px;
+$slider-height: 680px;
 
 .section-portfolio {
     background: $offBlack;
@@ -71,24 +71,12 @@ $slider-height: 720px;
         text-align: center;
         transition: all .7s;
         width: 100%;
-        height: 40px;
+        height: 0;
         text-shadow: 0px 1px 8px rgba(255, 255, 255, 0.4);
     }
-
-    a {
-        // position: absolute;
-
-        // border: 8px solid yellow;
-        // background: yellow;
-        // height: 100%;
-        // z-index: 2200;
-        // padding: 1rem;
-    }
-
-    // a:hover {
-    //     border: 2px solid red;
-    // }
 }
+
+
 
 .slide:hover {
     opacity: 1;

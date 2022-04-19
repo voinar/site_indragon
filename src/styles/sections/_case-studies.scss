@@ -21,12 +21,45 @@
     // backdrop-filter: blur($standardBlur);
 }
 
+.case-study-header-nav {
+    position: relative;
+    // border: 1px solid lime;
+}
+
+.header-nav-arrows {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 60vw;
+    width: 90%;
+    left: 50%;
+    top: 26vh;
+    transform: translate(-50%, 0);
+    // border: 1px solid yellow;
+
+    .portfolio-nav-prev {
+        transform: rotate(90deg);
+
+        img {
+            height: 4rem;
+        }
+    }
+
+    .portfolio-nav-next {
+        transform: rotate(270deg);
+
+        img {
+            height: 4rem;
+        }
+    }
+}
+
 .case-study-title {
     margin-left: 50%;
 
-    h1 {
-        font-size: 4.8rem;
-    }
+    // h1 {
+    //     font-size: 5rem;
+    // }
 }
 
 .case-study-description {
@@ -74,16 +107,14 @@
     .case-study-description {
         p {
             color: $offBlack;
-            font-size: 2rem;
+            font-size: 2.2rem;
             line-height: 126%;
         }
     }
     
     .case-study-description-title {
-        // margin-left: 50%;
-    
         h1 {
-            font-size: 4rem;
+            font-size: 5rem;
         }
     }
 }
@@ -96,24 +127,23 @@
         padding: 4rem 8rem;
     
         .case-study-description {
+
             p {
                 color: $offWhite;
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
         }
         
         .case-study-description-title {
-            // margin-left: 50%;
-        
             h1 {
-                font-size: 4rem;
+                font-size: 5rem;
             }
         }
 
         .tech-stack-logos {
-
             display: flex;
             flex-direction: column;
+            padding-right: 8rem;
             // width: 100%;
 
             .tech-stack-logos-row {
@@ -173,7 +203,7 @@
     p {
         padding: 5rem 0 0 2rem;
         text-transform: uppercase;
-        opacity: .7;
+        opacity: .6;
     }
 
     .color-palette-3 p {
@@ -182,10 +212,17 @@
 }
 
 .typography-wrapper {
-    padding: 4rem 0;
-    
+    padding: 6rem 0;
+    width: 18vw;
+
     img {
-        padding: 1rem 0;
+        padding: 2rem 0;
+        width: auto;
+        opacity: .9;
+    }
+
+    .font-name {
+
     }
 }
 
@@ -229,14 +266,20 @@
 .portfolio-navigation {
     width: inherit;
     height: 20rem;
+    // border: 1px solid lime;
+    height: 0px;
+    padding: 0;
 }
 
 .portfolio-nav-arrows {
-    position: relative;
+    position: absolute;
     display: flex;
-    gap: 20vw;
     flex-direction: row;
-    margin: 0 auto;
+    gap: 20vw;
+    left: 50%;
+    bottom: 18rem;
+    transform: translate(-50%, 0);
+    // border: 1px solid lime;
 
     .portfolio-nav-prev {
         transform: rotate(90deg);
@@ -252,6 +295,12 @@
         img {
             height: 4rem;
         }
+    }
+}
+
+@media (max-width: 1400px) and (min-width: 1000px) {
+    .project-scope-section {
+        min-height: 100rem;
     }
 }
 
@@ -318,6 +367,26 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .portfolio-navigation {
+        width: inherit;
+        // border: 1px solid lime;
+        height: 10rem;
+        padding: 0;
+    }
+    
+    .portfolio-nav-arrows {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        gap: 20vw;
+        left: 50%;
+        bottom: 7rem;
+        transform: translate(-50%, 0);
+        // border: 1px solid lime;
+    }
+}
+
 @media (max-width: 1000px) {
     
     .case-study-description {
@@ -349,6 +418,9 @@
 
         .case-study-design img {
             border-radius: $border-radius;
+            margin: 8rem auto;
+            width: 90%;
+            box-shadow: 0px 10px 64px 0px rgba(104, 59, 239, 0.847);
         }
     }
 
@@ -364,6 +436,10 @@
             }
     }
 
+    .typography-wrapper {
+        width: 40vw;
+    }    
+
     .mobile-view {
         position: absolute;
         img {
@@ -375,22 +451,40 @@
 
 
 @media (max-width: 768px) {
+
+    .bright-section {
+        padding-left: 4rem;
+
+        .case-study-description-title {
+            h1 {
+                font-size: 9vw;
+            }
+        }
+    }
+
+    .dark-section {
+        padding-left: 4rem;
+        
+        .case-study-description-title {
+            h1 {
+                font-size: 9vw;
+            }
+        }
+    }
+
     .leading-text {
         max-width: 100vw;
         padding-top: 14rem;
     }
 
-    .case-study-title {
-        margin-left: 4rem;
-
-    
-        h1 {
-            font-size: 4.8rem;
-        }
-    }
-
     .case-study-header {
         background-position: 25%;
         background-size: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-nav-arrows {
+        display: none;
     }
 }

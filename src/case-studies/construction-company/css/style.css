@@ -5,6 +5,7 @@
     background-size: cover;
 }
 
+
 .color-palette-wrapper .color-palette-1 {
         background-color: #F8F8F8;
 }
@@ -21,9 +22,11 @@
         background-color: #5567A4;
 }
 
+
+
 @media (min-width: 1200px) {
     .portfolio-filler {
-        height: 30rem;
+        height: 00rem;
     }
 
     .mobile-background-decal {
@@ -33,26 +36,22 @@
 
 @media (min-width: 1400px) {
     .portfolio-filler {
-        height: 60rem;
-    }
-
-    .mobile-background-decal {
-        display: block;
+        height: 30rem;
     }
 
 }
 
 @media (min-width: 1600px) {
-    .portfolio-filler {
-        height: 0rem;
+    .mobile-background-decal {
+        display: block;
     }
 
     .mobile-background-decal {
-        margin-top: 20vh;
+        margin-top: 4vh;
     }
 
     .portfolio-filler {
-        height: 90rem;
+        height: 74rem;
     }
 }
 
@@ -61,18 +60,35 @@
         height: 70rem;
     }
 
+    .mobile-background-decal {
+        margin-top: 20vh;
+    }
+
     .portfolio-filler {
-        height: 130rem;
+        height: 110rem;
     }
 }
 
 @media (min-width: 2000px) {
     .portfolio-filler {
-        height: 230rem;
+        height: 210rem;
     }
 
     .bright-section .case-study-design img {
         width: 1000px; 
         height: 4167px;
+    }
+}
+
+@media (max-width: 1600px) and (min-width: 1200px) {
+    .project-scope-section {
+        min-height: 90rem;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 1000px) {
+    .project-scope-section {
+        min-height: 110rem !important;
+        /* border: 1px solid red; */
     }
 }
