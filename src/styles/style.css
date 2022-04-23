@@ -439,7 +439,7 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 100vw;
   /* You must set a specified height */
   height: 100vh;
-  background-image: url("/src/img/hero-bkg.png");
+  background-image: url("/src/img/hero-bkg.jpg");
   background-position: center;
   /* Center the image */
   background-repeat: no-repeat;
@@ -459,10 +459,10 @@ p, h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
-          mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
-          mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(transparent));
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+          mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(transparent));
+          mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
 }
 
 .video-wrapper video {
@@ -564,7 +564,7 @@ p, h1, h2, h3, h4, h5, h6 {
   .hero-asset {
     position: absolute;
     margin: 0 0 0 30%;
-    opacity: .8;
+    opacity: .9;
   }
 }
 
@@ -911,8 +911,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .section-why-go-online .background-glass {
-  border: 2px solid rgba(200, 50, 255, 0.3);
-  padding: 5rem;
+  border: 2px solid rgba(83, 15, 110, 0.2);
+  padding: 4rem;
 }
 
 .section-why-go-online .background-glass .fa-caret-right {
@@ -925,6 +925,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
   .section-why-go-online .background-glass {
     max-width: 90vw;
+    padding: 2rem;
   }
   .section-why-go-online .background-glass h2, .section-why-go-online .background-glass li {
     max-width: 60vw;
@@ -1553,8 +1554,7 @@ h2 a {
 }
 
 .contact-thank-you {
-  padding: 20vh 0;
-  border: 1px solid red;
+  padding: 16vh 0;
 }
 
 .case-studies {
@@ -1565,14 +1565,13 @@ h2 a {
   height: auto;
   width: 80vw;
   margin: 0 auto;
-  -webkit-box-shadow: 0px 10px 64px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 10px 64px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 10px 64px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 10px 64px 0px rgba(0, 0, 0, 0.1);
   border-radius: 1.2rem;
 }
 
 .case-study-header {
   height: 50rem;
-  background: url(../../src/case-studies/car-rental/img/portfolio_3_car_rental_mockup_pc.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1595,7 +1594,7 @@ h2 a {
   gap: 60vw;
   width: 90%;
   left: 50%;
-  top: 26vh;
+  top: 36rem;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
@@ -1622,6 +1621,10 @@ h2 a {
   margin-left: 50%;
 }
 
+.case-study-title h1 {
+  text-shadow: 0 1px 18px rgba(24, 0, 80, 0.5);
+}
+
 .case-study-description {
   width: 40vw;
   padding-right: 8rem;
@@ -1629,7 +1632,7 @@ h2 a {
 }
 
 .project-scope-section {
-  max-height: 70rem;
+  max-height: 80rem;
 }
 
 .project-visualization-pc {
@@ -1967,7 +1970,7 @@ h2 a {
     width: 100%;
   }
   .color-palette-wrapper {
-    width: 50vw;
+    width: 70vw;
   }
   .case-study-container {
     width: 95vw;
@@ -2006,6 +2009,13 @@ h2 a {
 }
 
 @media (max-width: 768px) {
+  .header-nav-arrows {
+    gap: 40vw;
+    margin: 1rem;
+  }
+  .case-study-title {
+    margin-left: 4rem;
+  }
   .bright-section {
     padding-left: 4rem;
   }
@@ -2025,12 +2035,6 @@ h2 a {
   .case-study-header {
     background-position: 25%;
     background-size: cover;
-  }
-}
-
-@media (max-width: 768px) {
-  .header-nav-arrows {
-    display: none;
   }
 }
 
@@ -2178,7 +2182,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 8rem 0rem 6rem 0rem;
-  max-width: 24vw;
+  max-width: 40vw;
 }
 
 .leading-text .accent {

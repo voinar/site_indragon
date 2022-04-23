@@ -7,13 +7,13 @@
     width: 80vw;
     margin: 0 auto;
     // border: 1px solid red;
-    box-shadow: 0px 10px 64px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 64px 0px rgba(0, 0, 0, 0.1);
     border-radius: 1.2rem;
 }
 
 .case-study-header {
     height: 50rem;
-    background: url(../../src/case-studies/car-rental/img/portfolio_3_car_rental_mockup_pc.jpg);
+    // background: url(../../src/case-studies/car-rental/img/portfolio_3_car_rental_mockup_pc.jpg);
     background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,7 +33,7 @@
     gap: 60vw;
     width: 90%;
     left: 50%;
-    top: 26vh;
+    top: 36rem;
     transform: translate(-50%, 0);
     // border: 1px solid yellow;
 
@@ -56,10 +56,10 @@
 
 .case-study-title {
     margin-left: 50%;
-
-    // h1 {
-    //     font-size: 5rem;
-    // }
+    
+    h1 {
+        text-shadow: 0 1px 18px rgba(24, 0, 80, 0.5);
+    }
 }
 
 .case-study-description {
@@ -69,7 +69,7 @@
 }
 
 .project-scope-section {
-    max-height: 70rem;
+    max-height: 80rem;
 }
 
 .project-visualization-pc {
@@ -388,21 +388,19 @@
 }
 
 @media (max-width: 1000px) {
-    
     .case-study-description {
         width: 70vw;
         padding-right: 1rem;
 }
 
     .design-section {
-
         .case-study-description {
             width: 100%;
         }
     }
 
     .color-palette-wrapper {
-        width: 50vw;
+        width: 70vw;
     }
 
     .case-study-container {
@@ -449,8 +447,16 @@
     }
 }
 
-
 @media (max-width: 768px) {
+    .header-nav-arrows {
+        // top: 30vh;
+        gap: 40vw;
+        margin: 1rem;
+    }
+
+    .case-study-title {
+        margin-left: 4rem;
+    }
 
     .bright-section {
         padding-left: 4rem;
@@ -480,11 +486,5 @@
     .case-study-header {
         background-position: 25%;
         background-size: cover;
-    }
-}
-
-@media (max-width: 768px) {
-    .header-nav-arrows {
-        display: none;
     }
 }

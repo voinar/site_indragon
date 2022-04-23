@@ -1,0 +1,6 @@
+.case-study-header {
+    height: 50rem;
+    background: url(../img/header_mockup_pc.jpg);
+    background-position: center; 
+    background-size: cover;
+}

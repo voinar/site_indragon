@@ -1,0 +1,69 @@
+.case-study-header {
+    height: 50rem;
+    background: url(../img/header_mockup_pc.jpg);
+    background-position: center; 
+    background-size: cover;
+}
+
+.color-palette-wrapper .color-palette-1 {
+        background-color: #5492EE;
+}
+    
+.color-palette-wrapper .color-palette-2 {
+        background-color: #A7F4F5;
+}
+    
+.color-palette-wrapper .color-palette-3 {
+        background-color: #1A2F77;
+}
+    
+.color-palette-wrapper .color-palette-4 {
+        background-color: #40EEA3;
+}
+
+@media (min-width: 1200px) {
+    .portfolio-filler {
+        height: 44rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .portfolio-filler {
+        height: 84rem;
+    }
+
+    .mobile-background-decal {
+        display: block;
+    }
+}
+
+@media (min-width: 1600px) {
+    .case-study-header {
+        height: 60rem;
+    }
+
+    .portfolio-filler {
+        height: 124rem;
+    }
+
+    .mobile-background-decal {
+        margin-top: 30vh;
+    }
+}
+
+@media (min-width: 1800px) {
+    .portfolio-filler {
+        height: 160rem;
+    }
+}
+
+@media (min-width: 2000px) {
+    .portfolio-filler {
+        height: 290rem;
+    }
+
+    .bright-section .case-study-design img {
+            width: 1000px; 
+            height: 5248px;
+    }
+}

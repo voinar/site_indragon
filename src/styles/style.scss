@@ -71,11 +71,6 @@ body {
     border-radius: $border-radius;
 }
 
-.background-container {
-    // height: 6678px;
-    // background-color: rgb(84, 101, 122);
-}
-
 .heading-font {
     font-family: $headingFont;
     font-size: 5.4rem;
@@ -83,7 +78,6 @@ body {
     letter-spacing: -.16rem ;
     max-width: 90vw;
     font-weight: normal;
-    // border: 2px solid magenta;
 
     strong {
         color: $primaryColor;
@@ -102,7 +96,7 @@ body {
 .leading-text {
     display: flex;
     padding: 8rem 0rem 6rem 0rem;
-    max-width: 24vw;
+    max-width: 40vw;
     // border: 1px solid grey;
 
     .accent {
@@ -110,10 +104,6 @@ body {
 
         border-radius: $border-radius;
         margin-right: 4rem;
-
-        h1 {
-            // margin-left: 14rem;
-        }
     }
 
     .accent-primary {
