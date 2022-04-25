@@ -26,5 +26,13 @@
     "parcel": "^2.4.0",
     "process": "^0.11.10"
   },
-    "source": "src/en/index.html"
+    "source": [
+      "./src/en/index.html", 
+      "./src/pl/index.html",
+      "./src/en/400.html",
+      "./src/en/401.html",
+      "./src/en/403.html",
+      "./src/en/404.html",
+      "./src/en/500.html"
+    ]
 }

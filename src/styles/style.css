@@ -304,6 +304,67 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 2.8rem;
 }
 
+.nav-lang-dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.nav-lang-dropdown .dropbtn {
+  width: 10.4rem;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  color: #ECEBF2;
+  padding: 3px 3rem;
+  margin: 0 3rem 0 0;
+  background-color: inherit;
+  font-family: inherit;
+  border-left: 2px solid #1EF1BF;
+  cursor: pointer;
+  -webkit-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100px;
+  background-color: rgba(50, 0, 150, 0.9);
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 3px 2rem;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #ECEBF2;
+  font-size: 2rem;
+  padding: 0 1rem;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .nav-lang-dropdown:hover .dropbtn {
+  background-color: rgba(50, 0, 150, 0.7);
+  color: #ECEBF2;
+}
+
+.dropdown-content a:hover {
+  background-color: #320096;
+  color: #1EF1BF;
+}
+
+.nav-lang-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content:hover {
+  border-left: 2px solid #1EF1BF;
+  font-weight: bold;
+}
+
 .hide-container {
   visibility: hidden;
 }
@@ -347,7 +408,7 @@ p, h1, h2, h3, h4, h5, h6 {
   .nav-contents .nav-links {
     visibility: hidden;
     color: #1f1b3b;
-    font-family: "Dela Gothic One", "Dela Gothic", Times, serif;
+    font-family: "Dela Gothic One", Times, serif;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -439,7 +500,7 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 100vw;
   /* You must set a specified height */
   height: 100vh;
-  background-image: url("/src/img/hero-bkg.jpg");
+  background-image: url("/src/img/hero-bkg1.jpg");
   background-position: center;
   /* Center the image */
   background-repeat: no-repeat;
@@ -979,7 +1040,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .workflow-tile .workflow-tile-bottom h1 {
-  font-family: "Dela Gothic One", "Dela Gothic", Times, serif;
+  font-family: "Dela Gothic One", Times, serif;
   font-weight: 400;
   font-size: 2.6rem;
   margin-top: 1rem;
@@ -1391,7 +1452,7 @@ h2 a {
 }
 
 .contact2 p, .contact3 p {
-  font-family: "Dela Gothic One", "Dela Gothic", Times, serif;
+  font-family: "Dela Gothic One", Times, serif;
   font-size: 2.4rem;
 }
 
@@ -2155,7 +2216,7 @@ body {
 }
 
 .heading-font {
-  font-family: "Dela Gothic One", "Dela Gothic", Times, serif;
+  font-family: "Dela Gothic One", Times, serif;
   font-size: 5.4rem;
   line-height: 90%;
   letter-spacing: -.16rem;

@@ -1,24 +1,24 @@
 # redirect user to page according to default browser language settings
 
 RewriteEngine on
-# RewriteCond %{HTTP:Accept-Language} (en) [NC]
-# RewriteRule .* /en/index.html [L]
-# RewriteCond %{HTTP:Accept-Language} (pl) [NC]
-# RewriteRule .* /pl/index.html [L
+RewriteCond %{HTTP:Accept-Language} (en) [NC]
+RedirectMatch ^/$ /en/
+RewriteCond %{HTTP:Accept-Language} (pl) [NC]
+RedirectMatch ^/$ /pl/
 
 # remove .html from page addresses
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^/]+)/$ $1.html
-RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
-RewriteRule (.*)$ /$1/ [R=301,L]
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^([^/]+)/$ $1.html
+# RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+# RewriteRule (.*)$ /$1/ [R=301,L]
 
 # Error page redirects
-ErrorDocument 400 400.html
-ErrorDocument 401 401.html
-ErrorDocument 403 403.html
-ErrorDocument 404 404.html
-ErrorDocument 500 500.html
+ErrorDocument 400 /en/400.html
+ErrorDocument 401 /en/401.html
+ErrorDocument 403 /en/403.html
+ErrorDocument 404 /en/404.html
+ErrorDocument 500 /en/500.html
 
