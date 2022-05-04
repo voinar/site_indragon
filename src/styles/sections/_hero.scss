@@ -48,6 +48,10 @@
 #typewriter {
     font-size: 3vh;
     line-height: 110%;
+
+    span {
+        font-weight: 200;
+    }
 }
 
 .hero-copy {
@@ -92,14 +96,6 @@
     
     }
 }
-
-// .background-glass {
-//     background-color:rgba($offBlack, .4);
-//     backdrop-filter: blur($standardBlur);
-//     transition: 1s;
-// }
-
-
 
 @media (max-width: 1000px) {
 

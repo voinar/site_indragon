@@ -2,7 +2,7 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
-@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Iceberg&family=Nunito:wght@200;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Iceberg&family=Nunito:wght@200;300&display=swap");
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -36,6 +36,13 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #root, #__next {
   isolation: isolate;
+}
+
+@font-face {
+  font-family: 'Dela Gothic One';
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/DelaGothicOne-Regular.ttf");
 }
 
 .intro-mask {
@@ -408,7 +415,7 @@ p, h1, h2, h3, h4, h5, h6 {
   .nav-contents .nav-links {
     visibility: hidden;
     color: #1f1b3b;
-    font-family: "Dela Gothic One", Times, serif;
+    font-family: "Dela Gothic One";
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -561,6 +568,10 @@ p, h1, h2, h3, h4, h5, h6 {
 #typewriter {
   font-size: 3vh;
   line-height: 110%;
+}
+
+#typewriter span {
+  font-weight: 200;
 }
 
 .hero-copy {
@@ -972,7 +983,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .section-why-go-online .background-glass {
-  border: 2px solid rgba(83, 15, 110, 0.2);
+  border: 3px solid rgba(31, 27, 59, 0.1);
   padding: 4rem;
 }
 
@@ -1040,7 +1051,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .workflow-tile .workflow-tile-bottom h1 {
-  font-family: "Dela Gothic One", Times, serif;
+  font-family: "Dela Gothic One";
   font-weight: 400;
   font-size: 2.6rem;
   margin-top: 1rem;
@@ -1452,7 +1463,7 @@ h2 a {
 }
 
 .contact2 p, .contact3 p {
-  font-family: "Dela Gothic One", Times, serif;
+  font-family: "Dela Gothic One";
   font-size: 2.4rem;
 }
 
@@ -2216,7 +2227,7 @@ body {
 }
 
 .heading-font {
-  font-family: "Dela Gothic One", Times, serif;
+  font-family: "Dela Gothic One";
   font-size: 5.4rem;
   line-height: 90%;
   letter-spacing: -.16rem;
@@ -2261,7 +2272,7 @@ body {
 }
 
 .background-glass {
-  background-color: rgba(31, 27, 59, 0.4);
+  background-color: rgba(123, 97, 255, 0.2);
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
 }

@@ -1,10 +1,19 @@
 // fonts import
 
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Iceberg&family=Nunito:wght@200;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Iceberg&family=Nunito:wght@200;300&display=swap');
+
+@font-face {
+    font-family: 'Dela Gothic One';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./fonts/DelaGothicOne-Regular.ttf');
+    // src: local('Ataturk Regular'), url('font/ataturk.ttf') format('truetype'), 
+    // url('font/ataturk.woff') format('woff');
+}
 
 // fonts variable names
 // $headingFont: 'Dela Gothic One', Times, serif;
-$headingFont: 'Dela Gothic One', Times, serif;
+$headingFont: 'Dela Gothic One';
 $paragraphFont: 'Nunito';
 
 // solid colors
