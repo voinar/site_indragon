@@ -1,10 +1,20 @@
 # redirect user to page according to default browser language settings
 
 RewriteEngine on
-RewriteCond %{HTTP:Accept-Language} (en) [NC]
-RedirectMatch ^/$ /en/
-RewriteCond %{HTTP:Accept-Language} (pl) [NC]
-RedirectMatch ^/$ /pl/
+
+RewriteCond %{HTTP:Accept-Language} !pl [NC]
+RedirectMatch ^/$ /en/ [L,R=301]
+
+RewriteCond %{HTTP:Accept-Language} pl [NC]
+RedirectMatch ^/$ /pl/ [L,R=301]
+
+
+
+# RewriteCond %{HTTP:Accept-Language} pl [NC]
+# RewriteRule !^/?pl http://indragon.eu/pl/ [R,L]
+
+# RewriteCond %{HTTP:Accept-Language} !pl [NC]
+# RewriteRule !^/?en http://indragon.eu/en/ [R,L]
 
 # remove .html from page addresses
 # RewriteCond %{REQUEST_FILENAME} !-f
