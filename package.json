@@ -28,11 +28,19 @@
   },
     "source": [
       "./src/en/index.html", 
-      "./src/pl/index.html",
+      "./src/en/thankyou.html", 
       "./src/en/400.html",
       "./src/en/401.html",
       "./src/en/403.html",
       "./src/en/404.html",
-      "./src/en/500.html"
+      "./src/en/500.html",
+      
+      "./src/pl/index.html", 
+      "./src/pl/thankyou.html", 
+      "./src/pl/400.html",
+      "./src/pl/401.html",
+      "./src/pl/403.html",
+      "./src/pl/404.html",
+      "./src/pl/500.html"
     ]
 }
