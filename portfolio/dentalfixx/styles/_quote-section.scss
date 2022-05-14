@@ -1,0 +1,23 @@
+#quote-section {
+    display: flex;
+    flex-direction: column;
+    margin: 8rem 0 12rem;
+
+    h1 {
+        width: 50vw;
+    }
+}
+
+#quote-decal {
+    background-image: url("../img/happiness.svg");
+    position: relative;
+    height: 40rem; 
+    min-width: 40rem;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain; 
+    margin: -28rem 0 0 0;
+    right: -32rem;
+    top: 12rem;
+    z-index: 0;
+}

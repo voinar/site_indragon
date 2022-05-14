@@ -2,28 +2,11 @@
 
 RewriteEngine on
 
-RewriteCond %{HTTP:Accept-Language} !pl [NC]
-RedirectMatch ^/$ /en/ [L,R=301]
-
 RewriteCond %{HTTP:Accept-Language} pl [NC]
 RedirectMatch ^/$ /pl/ [L,R=301]
 
-
-
-# RewriteCond %{HTTP:Accept-Language} pl [NC]
-# RewriteRule !^/?pl http://indragon.eu/pl/ [R,L]
-
-# RewriteCond %{HTTP:Accept-Language} !pl [NC]
-# RewriteRule !^/?en http://indragon.eu/en/ [R,L]
-
-# remove .html from page addresses
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteRule ^([^/]+)/$ $1.html
-# RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
-# RewriteRule (.*)$ /$1/ [R=301,L]
+RewriteCond %{HTTP:Accept-Language} !pl [NC]
+RedirectMatch ^/$ /en/ [L,R=301]
 
 # Error page redirects
 ErrorDocument 400 /en/400.html

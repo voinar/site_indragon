@@ -1,0 +1,22 @@
+#top-bar-section {
+    background-color: $secondaryColor;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 4rem;
+}
+
+.top-bar-item {
+    // width: 16rem;
+    margin: auto 0 auto 2.6rem;
+}
+
+.top-bar-item p {
+    text-align: right;
+    color: $offWhite;
+    font-size: 1.6rem;
+}
+
+.top-bar-item i {
+    padding-right: .8rem;
+}

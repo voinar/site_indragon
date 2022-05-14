@@ -1,0 +1,29 @@
+{
+  "name": "dental-clinic",
+  "version": "1.0.0",
+  "description": "dental clinic site",
+  "default": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build ./*.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voinar/dental-clinic.git"
+  },
+  "keywords": [
+    "dental"
+  ],
+  "author": "marcin wojnar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voinar/dental-clinic/issues"
+  },
+  "homepage": "https://github.com/voinar/dental-clinic#readme",
+  "dependencies": {
+    "parcel": "^2.5.0"
+  },
+  "source": [
+    "index.html"
+  ]
+}

@@ -66,6 +66,28 @@
         width: 40vw;
         padding-right: 8rem;
         text-align: justify;
+
+    .see-live-btn {
+        a {
+            font-family: $paragraphFont;
+            font-weight: bold;
+            font-size: 2rem;
+            color: $primaryColor;
+            transition: .3s all;
+            text-decoration: none;
+            background-color: $offBlack;
+            padding: 1rem;
+            border-radius: 1rem;
+        }
+
+        a:hover {
+            color: $secondaryColor;
+        }
+
+        a:visited {
+            color: $offWhite;
+        }
+    }
 }
 
 .project-scope-section {
@@ -122,12 +144,10 @@
 .dark-section {
         background: #383250;
         display: flex;
-        // width: 100%;
         flex-direction: row;
         padding: 4rem 8rem;
     
         .case-study-description {
-
             p {
                 color: $offWhite;
                 font-size: 2.2rem;
@@ -144,7 +164,6 @@
             display: flex;
             flex-direction: column;
             padding-right: 8rem;
-            // width: 100%;
 
             .tech-stack-logos-row {
                 display: flex;
@@ -161,6 +180,21 @@
 
             img:hover {
                 filter: unset;
+            }
+            
+            a {
+                background-color: rgb(51, 26, 93);
+                margin-bottom: 1rem;
+                border-radius: 1rem;
+            }
+    
+            a:hover {
+                color: $secondaryColor;
+                background-color: inherit;
+            }
+    
+            a:visited {
+                color: $offWhite;
             }
         }
 }

@@ -1,0 +1,123 @@
+#services-section {
+    padding: 8rem 20vw;
+}
+
+#services-section-container {
+    border: 1px solid $primaryColor;
+    border-radius: 4rem;
+    padding: 2rem 2rem 10rem;
+
+    h1 {
+        font-size: 5rem;
+        margin: 4rem auto 2rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+}
+
+#services-items-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 10rem;
+}
+
+.services-item-template {
+    background-color: $primaryColor;
+    height: 14rem;
+    width: 14rem;
+    border-radius: 10rem;
+    margin: 0 auto;
+    // padding: 0 4rem;
+
+    p {
+        position: relative;
+        padding-top: 110%;
+    }
+}
+
+.services-item-1 { 
+    grid-area: 1 / 1 / 2 / 2; 
+    background-image: url("../img/services-item-1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    margin: 0 auto;
+}
+
+.services-item-2 { 
+    grid-area: 1 / 2 / 2 / 3;
+    background-image: url("../img/services-item-2.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    margin: 0 auto;
+}
+
+.services-item-3 { 
+    grid-area: 1 / 3 / 2 / 4;
+    background-image: url("../img/services-item-3.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    margin: 0 auto; 
+}
+
+.services-item-4 { 
+    grid-area: 1 / 4 / 2 / 5;
+    background-image: url("../img/services-item-4.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    margin: 0 auto; 
+}
+
+.services-item-5 { 
+    grid-area: 2 / 1 / 3 / 2; 
+    background-image: url("../img/services-item-5.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    margin: 0 auto;
+}
+
+.services-item-6 { 
+    grid-area: 2 / 2 / 3 / 3;
+    background-image: url("../img/services-item-6.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 44%;
+    margin: 0 auto;
+}
+
+.services-item-7 { 
+    grid-area: 2 / 3 / 3 / 4;
+    background-image: url("../img/services-item-7.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    margin: 0 auto;
+}
+
+.services-item-8 { 
+    grid-area: 2 / 4 / 3 / 5;
+    background-image: url("../img/services-item-8.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    margin: 0 auto; 
+}
+
+#services-section-decal {
+    width: 80rem;
+    height: 80rem;
+    margin: 40rem 0 0 0;
+    left: -20rem;
+    z-index: 1;
+}

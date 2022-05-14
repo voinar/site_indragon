@@ -1,0 +1,50 @@
+#footer-section {
+    background-color: $offBlack;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 20vw;
+
+    h1, p {
+        text-align: left;
+        color: $offWhite;
+        opacity: .8;
+    }
+
+    h1 {
+        font-size: 3.6rem;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+}
+
+.footer-logo {
+    color: $offWhite;
+}
+
+#footer-main {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-column {
+    padding-right: 12vw;
+    // width: 8rem;
+}
+
+#footer-social {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-social-icon {
+    img {
+        width: 4rem;
+        margin-right: 2rem;
+    }
+}
+
+.icon-tt {
+    margin: auto 0;
+}

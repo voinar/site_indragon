@@ -1,0 +1,52 @@
+#navbar {
+    background-color: $primaryColor;
+    height: 8rem;
+    // outline: $o;
+
+}
+
+#navbar-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: auto;  
+    justify-content: space-between;
+    // outline: $o;
+    padding: 2rem 0;
+
+    div {
+        margin: auto 0;
+    }
+
+    img {
+        margin: auto 0;
+    }
+}
+
+#nav-logo {
+    font-family: $logoFont;
+    font-size: 3rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-logo {
+    color: $offBlack;
+}
+
+#logo-image {
+    padding-right: .4rem;
+}
+
+#nav-links ul {
+    font-family: $headerFont;
+    font-size: 1.7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    color: $offBlack;
+
+    li {
+        padding-left: 4rem;
+    }
+}

@@ -1703,6 +1703,27 @@ h2 a {
   text-align: justify;
 }
 
+.case-study-description .see-live-btn a {
+  font-family: "Nunito";
+  font-weight: bold;
+  font-size: 2rem;
+  color: #1EF1BF;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  text-decoration: none;
+  background-color: #1f1b3b;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.case-study-description .see-live-btn a:hover {
+  color: #7B61FF;
+}
+
+.case-study-description .see-live-btn a:visited {
+  color: #ECEBF2;
+}
+
 .project-scope-section {
   max-height: 80rem;
 }
@@ -1811,6 +1832,21 @@ h2 a {
 .dark-section .tech-stack-logos img:hover {
   -webkit-filter: unset;
           filter: unset;
+}
+
+.dark-section .tech-stack-logos a {
+  background-color: #331a5d;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+.dark-section .tech-stack-logos a:hover {
+  color: #7B61FF;
+  background-color: inherit;
+}
+
+.dark-section .tech-stack-logos a:visited {
+  color: #ECEBF2;
 }
 
 .color-palette-wrapper {

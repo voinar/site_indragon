@@ -1,0 +1,63 @@
+#hero-section {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $primaryColor;
+}
+
+#hero-image {
+    background-image: url("../img/dental_clinic_hero.png");
+    height: 50rem; 
+    min-width: 60rem;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain; 
+}
+
+#hero-section-grid {
+    margin: auto 0;
+}
+
+#hero-section-header {
+    h1 {
+        font-size: 7rem;
+        line-height: 80%;
+        text-align: left;
+        margin-bottom: 4rem;
+    }
+}
+
+#hero-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn {
+    font-family: $headerFont;
+    font-size: 1.6rem;
+    color: $offBlack;
+    font-weight: 500;
+    width: 16rem;
+    height: 4rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid $primaryColor;
+    margin: 0 2rem 0 0;
+    padding: .8rem;
+    box-shadow: $standardShadow;
+}
+
+.btn-primary {
+    background: $accentColor;
+    a {
+
+    margin: auto 0;
+    }
+}
+
+.btn-secondary {
+    background: $offWhite;
+}
+

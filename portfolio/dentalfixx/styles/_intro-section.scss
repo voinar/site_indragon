@@ -1,0 +1,59 @@
+.arrow {
+    // outline: 1px solid red;
+    background-image: url("../img/arrow.svg");
+    height: 12rem;
+    width: 12rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+}
+
+#intro-section {
+    h1, p {
+        text-align: left;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    p {
+        font-size: 2.2rem;
+        padding: 0;
+        text-align: justify;
+        margin: 2rem 0;
+    }
+}
+
+#intro-description {
+    display: flex;
+    flex-direction: row;
+    margin: auto 0;
+}
+
+#intro-image {
+    background-image: url("../img/intro-main.jpg");
+    height: 40rem;
+    min-width: 40rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 1rem;
+    margin: 0 4rem 0 0;
+}
+
+.link {
+    font-family: $paragraphFont;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: $offBlack;
+    text-decoration: underline;
+}
+
+#intro-section-decal {
+    width: 80rem;
+    height: 80rem;
+    margin: 20rem 0 0 0;
+    right: -20rem;
+}

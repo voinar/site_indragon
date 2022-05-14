@@ -1,0 +1,56 @@
+#location-directions-section {
+    display: flex;
+    flex-direction: row;
+    background-color: $offBlack;
+    width: auto;
+    height: auto;
+    margin: 8rem 20vw;
+    padding: 8rem 4rem;
+    border-radius: 2rem;
+    justify-content: space-between;
+}
+
+#location-directions-text {
+    width: 100%;
+
+    h1, p {
+    color: $offWhite;
+    text-align: left;
+    margin: 0;
+    padding: 1rem;
+    }
+
+    h1 {
+        font-size: 3.8rem;
+        margin: 2rem 0 4rem 0;
+        opacity: .9;
+    }
+
+    p {
+        font-size: 1.7rem;
+        opacity: .7;
+    }
+}
+
+#location-directions-map {
+    img {
+        width: 100%;
+        opacity: .8;
+        border-radius: 1rem;
+        z-index: 2;
+    }
+
+    #location-pin {
+        width: 5rem;
+        position: relative;
+        bottom: 20rem;
+        left: 14rem;
+    }
+}
+
+#location-section-decal {
+    width: 60rem;
+    height: 60rem;
+    margin: 30rem 0 0 0;
+    left: 10rem;
+}
