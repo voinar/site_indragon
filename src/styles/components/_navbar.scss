@@ -10,24 +10,22 @@
         display: flex;
         font-family: 'Nunito', sans-serif;
         
-
         .nav-header {
             font-family: 'Iceberg', cursive;
             font-size: 2.4rem;
-
 
             a {
                 text-decoration: none;
                 display: flex;
                 flex-direction: row;
 
-            .logo-left {
-                color: yellow;
-            }
-            .logo-right {
-                color: rgb(30, 135, 255)
-            }
+                .logo-left {
+                    color: yellow;
+                }
 
+                .logo-right {
+                    color: rgb(30, 135, 255)
+                }
             }
         }
         
@@ -40,7 +38,6 @@
         }
 
         .nav-item a {
-            // border: 1px solid red;
             color: $offWhite;
             padding: 0 40px 0 48px;
             font-size: 2rem;
@@ -56,7 +53,6 @@
         }
 
         .language-select {
-            // border: 3px solid yellow;
             width: 80px;
             padding-top: 4px;
 
@@ -74,7 +70,7 @@
             background-color: inherit;
             color: $primaryColor;
             font-size: 2rem;
-            width: 160px;
+            width: 170px;
             border: 2px solid $primaryColor;
             border-radius: 8px;
 
@@ -97,7 +93,6 @@
 }
 
 .navbar-initial {
-    // background-color: $offBlack;
     background: linear-gradient(180deg, rgb(7, 10, 17) 0%, rgba(0,0,0,0) 100%);
 }
 
@@ -142,7 +137,6 @@
     margin: 0 3rem 0 0;
     background-color: inherit;
     font-family: inherit;
-    // margin: 3px 4rem;
     border-left: 2px solid $primaryColor;
     cursor: pointer;    
     transition: ease-in-out .3s;
@@ -153,7 +147,6 @@
     position: absolute;
     width: 100px;
     background-color: rgba(50, 0, 150, .9);
-    // min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     padding: 3px 2rem;
@@ -206,11 +199,9 @@
     margin: 0;
     padding: 0;
     z-index: 10;
-    // overflow: hidden;
 }
 
 @media (max-width: 1200px) {
-
     .navbar {
         .nav-contents {
             .nav-item a {
@@ -227,11 +218,8 @@
 
 @media (max-width: 768px) {
     .navbar {
-        // height: auto;
         visibility: hidden;
         align-items: left;
-        // height: 8rem;
-        // min-width: 400px;
         padding: 0;
     }
     
@@ -272,7 +260,6 @@
     }
 
     .nav-toggle {
-        // outline: 1px solid white;
         color: $offWhite;
         visibility: visible;
         border: 0px;
@@ -284,7 +271,7 @@
         right: 12vw;
          
         i {
-        font-size: 7vh;
+        font-size: 6vh;
         }
     }
 

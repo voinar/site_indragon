@@ -7,13 +7,9 @@ $slider-height: 680px;
 }
 
 .portfolio-container {
-    // overflow: hidden;
-    // display: flex;
-    // flex-direction: row;
     margin: 0 auto;
     width: 50vw;
     height: auto;
-    // padding: 0;
 }
 
 .slider {
@@ -27,7 +23,6 @@ $slider-height: 680px;
     a {
         text-decoration: none;
     }
-
 }
   
 .wrapper {
@@ -35,8 +30,6 @@ $slider-height: 680px;
     position: relative;
     width: $slider-width;
     height: $slider-height;
-    // z-index: 1;
-    
 }
   
 .slides {
@@ -45,7 +38,6 @@ $slider-height: 680px;
     top: 0;
     left: -$slider-width;
     width: 10000px;
-    // border-radius: 12px;
 }
   
 .slides.shifting {
@@ -55,7 +47,6 @@ $slider-height: 680px;
 .slide {
     width: $slider-width;
     height: $slider-height;
-    // cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,8 +66,6 @@ $slider-height: 680px;
         text-shadow: 0px 1px 8px rgba(255, 255, 255, 0.4);
     }
 }
-
-
 
 .slide:hover {
     opacity: 1;
@@ -101,16 +90,11 @@ $slider-height: 680px;
     top: 50%;
     width: 140px;
     height: 140px;
-    // background: $secondaryColor;
-    // border-radius: 50px;
-    // margin-top: -20px;
-    // box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
     z-index: 2;
 }
   
 .prev,
 .next {
-    // background-size: 62px;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -143,15 +127,12 @@ $slider-height: 680px;
 @media (max-width: 1200px) {
     .portfolio-container {
         width: 70vw;
-        // border: 1px solid red;
-        // padding-left: 0rem;
     }
 }
 
 @media (max-width: 1000px) {
     .portfolio-container {
         width: 80vw;
-        // outline: 1px solid red;
     }
 
     .control {
@@ -170,26 +151,20 @@ $slider-height: 680px;
         h2 {
             font-size: 4rem;
             bottom: 16rem;
-            // color: $offWhite;
-            // text-shadow: 0 0px 4px rgb(255, 255, 255);
         }
     }
 
     .control {
-        // top: 80%;
-        // box-shadow: 0 0px 4px rgba(53, 0, 167, 0.429);
         width: 140px;
         height: 140px;
     }
 
     .prev {
-        // background-image: url("../img/arrow.svg");
         left: -10px;
         transform: rotate(90deg);
     }
       
     .next {
-        // background-image: url("../img/arrow.svg");
         right: -10px;
         transform: rotate(270deg);
     }

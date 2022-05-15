@@ -256,7 +256,7 @@ p, h1, h2, h3, h4, h5, h6 {
   background-color: inherit;
   color: #1EF1BF;
   font-size: 2rem;
-  width: 160px;
+  width: 170px;
   border: 2px solid #1EF1BF;
   border-radius: 8px;
 }
@@ -415,7 +415,7 @@ p, h1, h2, h3, h4, h5, h6 {
   .nav-contents .nav-links {
     visibility: hidden;
     color: #1f1b3b;
-    font-family: "Dela Gothic One";
+    font-family: "Dela Gothic One", Times, serif;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -455,7 +455,7 @@ p, h1, h2, h3, h4, h5, h6 {
     right: 12vw;
   }
   .nav-toggle i {
-    font-size: 7vh;
+    font-size: 6vh;
   }
   .cta-btn {
     display: none;
@@ -496,6 +496,130 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.pattern {
+  position: absolute;
+}
+
+.pattern-1 {
+  width: 6vw;
+  left: 14vw;
+  top: 36vh;
+}
+
+.pattern-1 img {
+  opacity: .1;
+  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+}
+
+.pattern-2 {
+  width: 4vw;
+  left: 7vw;
+  top: 30vh;
+}
+
+.pattern-2 img {
+  opacity: .2;
+  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+}
+
+.pattern-3 {
+  width: 6vw;
+  right: 7vw;
+  top: 44vh;
+}
+
+.pattern-3 img {
+  opacity: .1;
+  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+}
+
+.pattern-4 {
+  width: 8vw;
+  right: 14vw;
+  top: 74vh;
+}
+
+.pattern-4 img {
+  opacity: .1;
+  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(130deg) brightness(100%) contrast(100%);
+          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(130deg) brightness(100%) contrast(100%);
+}
+
+.pattern-5 {
+  width: 7vw;
+  left: 10vw;
+  top: 30vh;
+}
+
+.pattern-5 img {
+  opacity: .2;
+  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(130deg) brightness(100%) contrast(100%);
+          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(130deg) brightness(100%) contrast(100%);
+}
+
+.pattern-6 {
+  width: 8vw;
+  right: 10vw;
+  top: 30rem;
+}
+
+.pattern-6 img {
+  opacity: .1;
+  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+}
+
+.pattern-7 {
+  width: 6vw;
+  right: 10vw;
+  top: 30%;
+}
+
+.pattern-7 img {
+  opacity: .1;
+  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+}
+
+.pattern-8 {
+  width: 16vw;
+  left: 6vw;
+  top: 20vh;
+}
+
+.pattern-8 img {
+  opacity: .1;
+  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+}
+
+.pattern-9 {
+  width: 12vw;
+  right: 6vw;
+  top: 10vh;
+}
+
+.pattern-9 img {
+  opacity: .1;
+  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+}
+
+.pattern-10 {
+  width: 12vw;
+  right: 6vw;
+  top: 10vh;
+}
+
+.pattern-10 img {
+  opacity: .1;
+  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+}
+
 .section-hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -505,15 +629,11 @@ p, h1, h2, h3, h4, h5, h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100vw;
-  /* You must set a specified height */
   height: 100vh;
   background-image: url("/src/img/hero-bkg1.jpg");
   background-position: center;
-  /* Center the image */
   background-repeat: no-repeat;
-  /* Do not repeat the image */
   background-size: cover;
-  /* Resize the background image to cover the entire container */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -635,7 +755,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
   .hero-asset {
     position: absolute;
-    margin: 0 0 0 30%;
+    margin: 0 0 10vh 0;
     opacity: .9;
   }
 }
@@ -652,14 +772,14 @@ p, h1, h2, h3, h4, h5, h6 {
   .hero-copy h1 {
     font-size: 14vw;
   }
+  .hero-asset {
+    margin: 0 0 10vh 0;
+    opacity: 1;
+  }
 }
 
 .section-services {
   background: #ECEBF2;
-}
-
-.pattern {
-  position: absolute;
 }
 
 .grid-parent {
@@ -788,7 +908,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .tile:hover h2 {
-  color: #7B61FF;
+  color: #ECEBF2;
 }
 
 .tile:hover p {
@@ -941,7 +1061,9 @@ p, h1, h2, h3, h4, h5, h6 {
   }
   .tile h2 {
     font-size: 3rem;
-    color: #7B61FF;
+    color: #1EF1BF;
+    font-family: "Dela Gothic One", Times, serif;
+    font-weight: 100;
   }
   .tile p {
     font-size: 2.2rem;
@@ -961,9 +1083,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .section-why-go-online {
   background: url("../img/bkg_why_online.jpg");
   background-position: center;
-  /* Center the image */
   background-repeat: no-repeat;
-  /* Do not repeat the image */
   background-size: cover;
 }
 
@@ -1051,7 +1171,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .workflow-tile .workflow-tile-bottom h1 {
-  font-family: "Dela Gothic One";
+  font-family: "Dela Gothic One", Times, serif;
   font-weight: 400;
   font-size: 2.6rem;
   margin-top: 1rem;
@@ -1339,9 +1459,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .section-contact-form {
   background: url("../img/bkg_contact-form.jpg");
   background-position: center;
-  /* Center the image */
   background-repeat: no-repeat;
-  /* Do not repeat the image */
   background-size: cover;
   padding: 0rem 0 12rem 0;
   -webkit-box-sizing: border-box;
@@ -1372,7 +1490,6 @@ input, select, textarea {
 }
 
 input[type=text]:focus, input[type=email]:focus, textarea:focus {
-  /* ...existing styles */
   background: #101078;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
@@ -1463,7 +1580,7 @@ h2 a {
 }
 
 .contact2 p, .contact3 p {
-  font-family: "Dela Gothic One";
+  font-family: "Dela Gothic One", Times, serif;
   font-size: 2.4rem;
 }
 
@@ -2263,7 +2380,7 @@ body {
 }
 
 .heading-font {
-  font-family: "Dela Gothic One";
+  font-family: "Dela Gothic One", Times, serif;
   font-size: 5.4rem;
   line-height: 90%;
   letter-spacing: -.16rem;
@@ -2290,7 +2407,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 8rem 0rem 6rem 0rem;
-  max-width: 40vw;
+  max-width: 90ch;
 }
 
 .leading-text .accent {
@@ -2321,126 +2438,6 @@ body {
 
 .scroll-class {
   opacity: 1;
-}
-
-.pattern-1 {
-  width: 6vw;
-  left: 14vw;
-  top: 36vh;
-}
-
-.pattern-1 img {
-  opacity: .1;
-  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-}
-
-.pattern-2 {
-  width: 4vw;
-  left: 7vw;
-  top: 30vh;
-}
-
-.pattern-2 img {
-  opacity: .2;
-  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-}
-
-.pattern-3 {
-  width: 6vw;
-  right: 7vw;
-  top: 44vh;
-}
-
-.pattern-3 img {
-  opacity: .1;
-  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-}
-
-.pattern-4 {
-  width: 8vw;
-  right: 14vw;
-  top: 74vh;
-}
-
-.pattern-4 img {
-  opacity: .1;
-  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(130deg) brightness(100%) contrast(100%);
-          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(130deg) brightness(100%) contrast(100%);
-}
-
-.pattern-5 {
-  width: 7vw;
-  left: 10vw;
-  top: 30vh;
-}
-
-.pattern-5 img {
-  opacity: .2;
-  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(130deg) brightness(100%) contrast(100%);
-          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(130deg) brightness(100%) contrast(100%);
-}
-
-.pattern-6 {
-  width: 8vw;
-  right: 10vw;
-  top: 30rem;
-}
-
-.pattern-6 img {
-  opacity: .1;
-  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-}
-
-.pattern-7 {
-  width: 6vw;
-  right: 10vw;
-  top: 30%;
-}
-
-.pattern-7 img {
-  opacity: .1;
-  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-}
-
-.pattern-8 {
-  width: 16vw;
-  left: 6vw;
-  top: 20vh;
-}
-
-.pattern-8 img {
-  opacity: .1;
-  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-}
-
-.pattern-9 {
-  width: 12vw;
-  right: 6vw;
-  top: 10vh;
-}
-
-.pattern-9 img {
-  opacity: .1;
-  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-}
-
-.pattern-10 {
-  width: 12vw;
-  right: 6vw;
-  top: 10vh;
-}
-
-.pattern-10 img {
-  opacity: .1;
-  -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-          filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
 }
 
 @media (max-width: 1200px) {

@@ -7,13 +7,10 @@
     font-style: normal;
     font-weight: normal;
     src: url('./fonts/DelaGothicOne-Regular.ttf');
-    // src: local('Ataturk Regular'), url('font/ataturk.ttf') format('truetype'), 
-    // url('font/ataturk.woff') format('woff');
 }
 
 // fonts variable names
-// $headingFont: 'Dela Gothic One', Times, serif;
-$headingFont: 'Dela Gothic One';
+$headingFont: 'Dela Gothic One', Times, serif;
 $paragraphFont: 'Nunito';
 
 // solid colors

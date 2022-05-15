@@ -4,16 +4,12 @@
     width: 100vw;
     height: 100vh;
     z-index: 15;
-	opacity: 1;
-    
-    // display: none;
-    // border: 5px solid red;
+	  opacity: 1;
 }
 
 .loading-wrapper {
     display: flex;
     flex-direction: column;
-    // border: 1px solid red;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -28,8 +24,6 @@
 }
 
 .lds-grid {
-    // border: 1px solid red;
-    // display: inline-block;
     width: 90px;
     height: 90px;
 

@@ -7,7 +7,8 @@
 './components/css-reset.scss', // Josh's Custom CSS Reset: https://www.joshwcomeau.com/css/custom-css-reset/
 './components/variables.scss', // global style variables
 './components/intro.scss', // site preloader
-'./components/navbar.scss', 
+'./components/navbar.scss', // navbar navigation
+'./components/sprites.scss', // sprites rendered dynamically in main page's sides
 
 // main page sections
 './sections/hero.scss',
@@ -30,15 +31,13 @@
 '../../node_modules/locomotive-scroll/src/styles/_scrollbar.scss';
 
 * {
-    // outline: 1px solid red !important;
+    // outline: 1px solid magenta !important;
     // visibility: visible !important;
     // opacity: 1 !important;
 }
 
 html {
     font-size: 62.5%;
-    // scroll-behavior: smooth;
-    // transition: .5s;
 }
 
 body {
@@ -47,11 +46,7 @@ body {
     font-family: $paragraphFont;
     margin: 0;
     padding: 0;
-    // width: 100vw;
     overflow-x: hidden;
-    // list-style-type: none;
-    // user-select: none; 
-    // height: 100vh;
 }
 
 .section-container {
@@ -89,8 +84,7 @@ body {
 .leading-text {
     display: flex;
     padding: 8rem 0rem 6rem 0rem;
-    max-width: 40vw;
-    // border: 1px solid grey;
+    max-width: 90ch;
 
     .accent {
         min-width: 1rem;
@@ -122,126 +116,11 @@ body {
     opacity: 1;
 }
 
-.pattern-1 {
-    width: 6vw;
-    left: 14vw;
-    top: 36vh;
-
-    img {
-        opacity: .1;
-        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-    }
-}
-
-.pattern-2 {
-    width: 4vw;
-    left: 7vw;
-    top: 30vh;
-
-    img {
-        opacity: .2;
-        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-    }
-}
-
-.pattern-3 {
-    width: 6vw;
-    right: 7vw;
-    top: 44vh;
-
-    img {
-        opacity: .1;
-        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-    }
-}
-
-.pattern-4 {
-    width: 8vw;
-    right: 14vw;
-    top: 74vh;
-
-    img {
-        opacity: .1;
-        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(130deg) brightness(100%) contrast(100%);
-    }
-}
-
-.pattern-5 {
-    width: 7vw;
-    left: 10vw;
-    top: 30vh;
-
-    img {
-        opacity: .2;
-        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(130deg) brightness(100%) contrast(100%);
-    }
-}
-
-.pattern-6 {
-    width: 8vw;
-    right: 10vw;
-    top: 30rem;
-
-    img {
-        opacity: .1;
-        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-    }
-}
-
-.pattern-7 {
-    width: 6vw;
-    right: 10vw;
-    top: 30%;
-
-    img {
-        opacity: .1;
-        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-    }
-}
-
-.pattern-8 {
-    width: 16vw;
-    left: 6vw;
-    top: 20vh;
-
-    img {
-        opacity: .1;
-        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-    }
-}
-
-.pattern-9 {
-    width: 12vw;
-    right: 6vw;
-    top: 10vh;
-
-    img {
-        opacity: .1;
-        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-    }
-}
-
-.pattern-10 {
-    width: 12vw;
-    right: 6vw;
-    top: 10vh;
-
-    img {
-        opacity: .1;
-        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
-    }
-}
-
-
 
 @media (max-width: 1200px) {
     .section-container {
-        // margin: 0 auto;
         padding: 0 0 4rem 2rem;
         width: 80vw;
-        // height: 130rem;
-        // outline: 2px solid hotpink;
-        // background: red;
     }
 
     .pattern {

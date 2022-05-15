@@ -1,7 +1,7 @@
 .section-contact-form {
     background: url("../img/bkg_contact-form.jpg");
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     padding: 0rem 0 12rem 0;
     box-sizing: border-box;
@@ -25,16 +25,12 @@ input, select, textarea {
     color: $offWhite;
     border-left: 4px solid $primaryColor;
     padding: 1rem 2rem 1rem;
-    // width: 100%;
     margin: 1rem 0;
     font-size: 1.4rem;
     border-radius: 4px;
-    // line-height: 120%;
 }
 
 input[type=text]:focus, input[type=email]:focus, textarea:focus {
-    /* ...existing styles */
-    // border: 3px solid red;
     background: rgb(16, 16, 120);
     transition: .3s ease-in-out;
     outline: 1px solid rgba(rgb(100, 160, 170), 1);
@@ -42,33 +38,25 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
 
 textarea {
     min-height: 12rem;
-    // padding: 2rem 2rem;
 }
 
 ::placeholder {
     color: rgba(100, 200, 160, 0.9);
     font-size: 1.3em;
-    // padding-left: 2rem;
 }
 
 .contact-methods {
-    // border: 1px solid hotpink;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
-    // margin-top: 1rem;
 }
 
 .form-control {
-    // display: block;
     height: 3rem;
     width: 80%;
-    // border-radius: $border-radius;
     background: rgb(0, 5, 20);
-    // color: $primaryColor;
-    // border: 1px solid red;
     margin-left: 1rem;
 }
 
@@ -77,7 +65,6 @@ textarea {
 .contact3 { grid-area: 2 / 2 / 3 / 3; }
 
 .contact2, .contact3 {
-// background: green;
     padding: 4rem;
 }
 .contact1, .contact2, .contact3 {
@@ -123,6 +110,5 @@ h2 a {
     .contact2, .contact3 {
         padding: 3rem;
         height: 14rem;
-        // display:none;
     }
 }

@@ -1,21 +1,6 @@
 .section-services {
     background: $offWhite;
-    // min-height: 100rem;
-    // // border: 3px solid rebeccapurple;
-    // z-index: 5;
-    // overflow: auto;
 }
-
-.tiles-container {
-    // border: 2px solid hotpink;
-}
-
-.pattern {
-    position: absolute;
-    // opacity: 0.5;
-}
-
-
 
 // -------------------------- //
 // grid layout
@@ -29,8 +14,6 @@
     grid-row-gap: 2rem;
     height: auto;
     padding: 0 0 2rem 0;
-    // border: 1px solid red;
-
 }
 
     .div1 { grid-area: 1 / 1 / 3 / 2; }
@@ -42,32 +25,23 @@
     .div7 { grid-area: 3 / 3 / 4 / 4; }
 
 
-
 // -------------------------- //
 // component: feature tiles
 // -------------------------- //
 
 .tile { 
     background-color: $primaryColor;
-    // display: inline;
-    // border: 1px solid red;
-
     display: flex;
     flex-direction: column;
-    // align-items: flex-end;
-
     background-size: cover;
     opacity: .8;
     transition: all .2s ease-in-out;
-
-    // cursor: pointer;
 
     h2 {
         height: 20%;
         width: 100%;
         color: $offWhite;
         font-size: 2.2rem;
-
         display: flex;
         justify-content: center;
         margin: 0 0 2rem 0;
@@ -77,11 +51,9 @@
     p {
         height: 80%;
         width: 100%;
-        // position: relative;
         font-size: 1.8rem;
         padding: 1.4rem;
         text-align: center;
-        // border: 1px solid red;
         opacity: 0;
         display: flex;
         justify-content: center;
@@ -94,7 +66,7 @@
     opacity: 1;
 
     h2 {
-        color: $secondaryColor;
+        color: $offWhite;
     }
 
     p {
@@ -107,18 +79,14 @@
     width: 100%;
     min-height: 18vh;
     border-radius: $border-radius;
-
-    h2 { 
-        // margin-top: 22rem;
-    }
 }
 
 .vertical-tile {
     width: 100%;
     min-height: 38vh;
-    // height: 440px;
     border-radius: $border-radius;
 }
+
 // -------------------------- //
 // feature tile images
 // -------------------------- //
@@ -161,24 +129,11 @@
             text-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);
         }
     }
-    
 }
 
 @media (max-width: 1000px) {
-
     .background-pattern {
         display: none;
-    }
-
-    .leading-text {
-
-        // padding: 10rem 15rem 8rem 15rem;
-        
-    }
-
-    .tiles-container {
-        // width: 60rem;
-        // border: 1px solid teal;
     }
 
     .grid-parent {
@@ -187,10 +142,7 @@
         grid-template-rows: repeat(5, 1fr);
         grid-column-gap: 2rem;
         grid-row-gap: 2rem;
-        // border: 3px solid rebeccapurple;
-        // margin: auto 4rem;
-        
-        }
+    }
 
         .div1 { grid-area: 1 / 1 / 3 / 2; }
         .div2 { grid-area: 3 / 1 / 4 / 2; }
@@ -203,10 +155,6 @@
     .square-tile {
         height: 210px;
         border-radius: $border-radius;
-        
-        h2 { 
-                // margin-top: 22rem;
-        }
     }
         
     .vertical-tile {
@@ -218,29 +166,8 @@
 
 
 @media (max-width: 768px) {
-
-    .section-container-services {
-        // width: 70%;
-    }
-    
-    .section-services {
-        // background: $offWhite;
-    }
-
-    .leading-text {
-        // padding: 6rem 4rem 6rem;
-        // border: 1px solid red;
-        // width: 90vw;
-        // margin-right: 4rem;
-    }
-
     .tiles-container {
         padding: 0rem;
-        // border: 3px solid lawngreen;
-        // margin: 0 auto;
-        // width: 80vw;
-        // border: 3px solid lawngreen;
-
     }
 
     .grid-parent {
@@ -249,23 +176,19 @@
     }
 
     .tile {
-        // position: relative;
-        // width: 100%;
-        // height: 280px;
-        // margin: 0 auto;
         opacity: .9;
 
         h2 {
             font-size: 3rem;
-            color: $secondaryColor;
+            color: $primaryColor;
+            font-family: $headingFont;
+            font-weight: 100;
         }
 
         p {
         font-size: 2.2rem;
         width: 20ch;
         margin: 0 auto;
-        // text-align: center;
-        // border: 1px solid red;
         color: $offWhite;
         }
 
@@ -275,15 +198,7 @@
     }
     
     .square-tile, .vertical-tile {
-    
         width: 82vw;
         height: 300px;
-
-        h2 { 
-            // margin-top: 2rem;
-
-        }
     }
-    
-
 }

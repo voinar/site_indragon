@@ -1,0 +1,116 @@
+
+// sprites rendered dynamically in main page's sides
+
+.pattern {
+    position: absolute;
+}
+
+.pattern-1 {
+    width: 6vw;
+    left: 14vw;
+    top: 36vh;
+
+    img {
+        opacity: .1;
+        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+    }
+}
+
+.pattern-2 {
+    width: 4vw;
+    left: 7vw;
+    top: 30vh;
+
+    img {
+        opacity: .2;
+        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+    }
+}
+
+.pattern-3 {
+    width: 6vw;
+    right: 7vw;
+    top: 44vh;
+
+    img {
+        opacity: .1;
+        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+    }
+}
+
+.pattern-4 {
+    width: 8vw;
+    right: 14vw;
+    top: 74vh;
+
+    img {
+        opacity: .1;
+        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(130deg) brightness(100%) contrast(100%);
+    }
+}
+
+.pattern-5 {
+    width: 7vw;
+    left: 10vw;
+    top: 30vh;
+
+    img {
+        opacity: .2;
+        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(130deg) brightness(100%) contrast(100%);
+    }
+}
+
+.pattern-6 {
+    width: 8vw;
+    right: 10vw;
+    top: 30rem;
+
+    img {
+        opacity: .1;
+        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+    }
+}
+
+.pattern-7 {
+    width: 6vw;
+    right: 10vw;
+    top: 30%;
+
+    img {
+        opacity: .1;
+        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+    }
+}
+
+.pattern-8 {
+    width: 16vw;
+    left: 6vw;
+    top: 20vh;
+
+    img {
+        opacity: .1;
+        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+    }
+}
+
+.pattern-9 {
+    width: 12vw;
+    right: 6vw;
+    top: 10vh;
+
+    img {
+        opacity: .1;
+        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+    }
+}
+
+.pattern-10 {
+    width: 12vw;
+    right: 6vw;
+    top: 10vh;
+
+    img {
+        opacity: .1;
+        filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
+    }
+}
