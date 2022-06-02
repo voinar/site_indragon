@@ -2,7 +2,6 @@
 // MAIN JAVASCRIPT FILE
 //---------------------
 // CONTENTS:
-// - preloader mask fade in
 // - navbar responsiveness & functionality
 // - navbar language selection
 // - hero section typewriter effect
@@ -10,31 +9,6 @@
 // - navbar behavior
 // - portfolio section slider
 //------------------------
-
-
-
-//------------------------
-// PRELOADER MASK FADE IN
-//------------------------
-
-const introMask = document.querySelector('.intro-mask');
-
-function addMaskFadeIn() {
-    setTimeout(function () {
-        introMask.classList.add('custom-fade-in');
-      }, 500);
-}
-
-function removeIntroMask() {
-    setTimeout(function () {
-        introMask.remove();
-      }, 1500);
-}
-
-window.addEventListener('load', addMaskFadeIn);
-window.addEventListener('load', removeIntroMask);
-
-
 
 //------------------------
 // NAVBAR

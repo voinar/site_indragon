@@ -53,6 +53,7 @@ body {
     margin: 0 auto;
     padding: 0 0 3rem 0;
     width: 50vw;
+    max-width: 160rem;
 }
 
 .rounded-corners {
@@ -88,7 +89,6 @@ body {
 
     .accent {
         min-width: 1rem;
-
         border-radius: $border-radius;
         margin-right: 4rem;
     }
@@ -108,6 +108,11 @@ body {
 }
 
 .custom-fade-in {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.custom-fade-out {
     opacity: 0;
     transition: opacity 1s;
 }
