@@ -41,7 +41,8 @@
         height: 20%;
         width: 100%;
         color: $offWhite;
-        font-size: 2.2rem;
+        font-size: 2rem;
+        font-weight: bold;
         display: flex;
         justify-content: center;
         margin: 0 0 2rem 0;
@@ -52,6 +53,7 @@
         height: 80%;
         width: 100%;
         font-size: 1.8rem;
+        font-weight: bold;
         padding: 1.4rem;
         text-align: center;
         opacity: 0;
@@ -179,21 +181,21 @@
         opacity: .9;
 
         h2 {
-            font-size: 3rem;
+            font-size: 2.6rem;
             color: $primaryColor;
             font-family: $headingFont;
             font-weight: 100;
         }
 
         p {
-        font-size: 2.2rem;
-        width: 20ch;
-        margin: 0 auto;
-        color: $offWhite;
+            font-size: 2.2rem;
+            width: 20ch;
+            margin: 0 auto;
+            color: $offWhite;
         }
 
         h2, p {
-            text-shadow: 2px 2px 12px $offBlack;
+            text-shadow: 2px 2px 32px $offBlack;
         }
     }
     

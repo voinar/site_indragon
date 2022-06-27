@@ -101,14 +101,6 @@ window.addEventListener('load', resetMenuOnLoad); //revert menu to defualt state
 window.onresize = reportWindowSize; //watch for viewport change & adjust navbar accordingly
 modalOverlay.addEventListener('click', toggleMenu); //hide mobile menu on click outside the menu container
 
-//------------------------
-// NAVBAR LANGUAGE SELECTION
-//------------------------
-
-
-
-
-
 
 //------------------------
 // LOCOMOTIVE SCROLL
@@ -194,11 +186,12 @@ function slide(wrapper, items, prev, next) {
   
   // Mouse events
   items.onmousedown = dragStart;
+  items.onmouseup = dragEnd;
   
-  // Touch events //touchstart events prevent anchor tag from working, disabling till a better fix is in
+  // // Touch events //touchstart events prevent anchor tag from working, disabling till a better fix is in
   // items.addEventListener('touchstart', dragStart);
-  items.addEventListener('touchend', dragEnd);
-  items.addEventListener('touchmove', dragAction);
+  // items.addEventListener('touchend', dragEnd);
+  // items.addEventListener('touchmove', dragAction);
 
   // Click events
   prev.addEventListener('click', function () { shiftSlide(-1) });

@@ -9,7 +9,7 @@
     .nav-contents {
         display: flex;
         font-family: 'Nunito', sans-serif;
-        
+
         .nav-header {
             font-family: 'Iceberg', cursive;
             font-size: 2.4rem;
@@ -20,11 +20,11 @@
                 flex-direction: row;
 
                 .logo-left {
-                    color: yellow;
+                    color: $primaryColor;
                 }
 
                 .logo-right {
-                    color: rgb(30, 135, 255)
+                    color: $primaryColor;
                 }
             }
         }
@@ -60,18 +60,18 @@
                 font-size: 2rem;
                 text-decoration: none;
                 color: $offWhite;
-
             }
         }
 
         .cta-btn {
             font-weight: bold;
-            border: 0;
             background-color: inherit;
             color: $primaryColor;
             font-size: 2rem;
-            width: 170px;
-            border: 2px solid $primaryColor;
+            min-width: 180px;
+            height: 36px;
+            border: 0;
+            outline: 2px solid $primaryColor;
             border-radius: 8px;
 
             a {
@@ -100,11 +100,6 @@
     padding-top: 3rem;
     background-color:rgba($offBlack, 0.7);
     backdrop-filter: blur($standardBlur);
-
-    .nav-toggle {
-        top: 2rem;
-        color: $offWhite;
-    }
 }
 
 .nav-toggle {
@@ -123,18 +118,17 @@
 }
 
 .nav-lang-dropdown {
-    float: left;
-    overflow: hidden;
+    margin-right: 2vw;
 }
   
 .nav-lang-dropdown .dropbtn {
-    width: 10.4rem;
+    width: 80px;
     font-size: 2rem; 
     border: none;
     outline: none;
     color: $offWhite;
-    padding: 3px 3rem;
-    margin: 0 3rem 0 0;
+    padding: 3px 0;
+    margin: 0 auto;
     background-color: inherit;
     font-family: inherit;
     border-left: 2px solid $primaryColor;
@@ -145,22 +139,20 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    width: 100px;
+    width: 80px;
     background-color: rgba(50, 0, 150, .9);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    padding: 3px 2rem;
-
+    padding: 3px 0 0 24px;
 }
   
 .dropdown-content a {
     float: none;
     color: $offWhite;
     font-size: 2rem;
-    padding: 0 1rem;
     text-decoration: none;
     display: block;
-    text-align: left;
+    // text-align: left;
 }
   
 .topnav a:hover, .nav-lang-dropdown:hover .dropbtn {
@@ -201,6 +193,33 @@
     z-index: 10;
 }
 
+.mobile-logo {
+    position: absolute;
+    visibility: visible;
+    right: 70px;
+    top: 70px;
+    font-family: 'Iceberg', cursive;
+    font-size: 3rem;
+    text-decoration: none;
+    color: $primaryColor;
+    text-shadow: 0px 0px 44px rgba(0, 252, 8, 0.7);
+
+    a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.nav-mobile-language-select {
+    display: none;
+}
+
+.nav-mobile-language-select a {
+    font-size: 26px !important;
+
+}
+
 @media (max-width: 1200px) {
     .navbar {
         .nav-contents {
@@ -232,12 +251,11 @@
             visibility: hidden;
             color: $offBlack;
             font-family: $headingFont;
-    
             flex-direction: column;
             align-items: left;
             position: fixed;
             margin: 0;
-            padding-top: 14vh !important;
+            top: 24vh;
 
             .nav-item {
                 margin-bottom: 3vh;
@@ -248,7 +266,7 @@
             .nav-item a {
                 // border: 1px solid red;
                 color: $offBlack;
-                font-size: 10vw;
+                font-size: 8vw;
                 transition: .3s;
                 padding: 2rem;
             }
@@ -267,16 +285,31 @@
         cursor: pointer;
         transition: 0.8s;
         position: absolute;
-        top: 20vw;
-        right: 12vw;
+        top: 70px;
+        left: 50px;
          
         i {
-        font-size: 6vh;
+        font-size: 6rem;
         }
     }
 
     .cta-btn {
         display: none;
+    }
+
+    .nav-mobile-language-select {
+        display: block;
+        a {
+            // font-size: 10px;
+        }
+    }
+}
+
+
+
+@media (min-width: 769px) {
+    .mobile-logo {
+        visibility: hidden;
     }
 }
 
