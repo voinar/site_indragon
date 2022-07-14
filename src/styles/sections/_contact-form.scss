@@ -67,25 +67,33 @@ textarea {
 .contact2, .contact3 {
     padding: 4rem;
 }
+
 .contact1, .contact2, .contact3 {
     border: 2px solid rgba(200, 50, 255, 0.1);
 }
 
 h2 {
     color: $primaryColor;
-    font-size: 2.6rem;
+    font-size: 2.4rem;
 }
 
 h2 a {
     color: $primaryColor;
 }
 
-.contact2 p, .contact3 p {
-    font-family: $headingFont;
-    font-size: 2.4rem;
+.contact2, .contact3 {
+
+    p {
+        font-family: $headingFont;
+        font-size: 2.8rem;
+    }
 
     a {
         color: $offWhite;
+    }
+
+    img {
+        width: 260px
     }
 }    
 
@@ -108,7 +116,23 @@ h2 a {
     }
 
     .contact2, .contact3 {
-        padding: 3rem;
-        height: 14rem;
-    }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+    
+        a {
+            color: $offWhite;
+            font-size: 2.2rem;
+        }
+    
+        img {
+            width: 160px;
+            height: auto;
+        }
+    }    
 }

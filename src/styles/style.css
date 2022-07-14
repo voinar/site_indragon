@@ -178,6 +178,7 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 6rem 3rem 3rem 6rem;
   -webkit-transition: ease-in-out .5s;
   transition: ease-in-out .5s;
+  will-change: transform, opacity;
 }
 
 .navbar .nav-contents {
@@ -433,6 +434,10 @@ p, h1, h2, h3, h4, h5, h6 {
             align-items: left;
     padding: 0;
   }
+  .navbar-alt {
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
   .nav-contents .nav-header {
     display: none;
   }
@@ -572,7 +577,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .pattern-4 {
   width: 8vw;
   right: 14vw;
-  top: 74vh;
+  top: 40vh;
 }
 
 .pattern-4 img {
@@ -584,7 +589,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .pattern-5 {
   width: 7vw;
   left: 10vw;
-  top: 30vh;
+  top: 10vh;
 }
 
 .pattern-5 img {
@@ -631,12 +636,12 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .pattern-9 {
   width: 12vw;
-  right: 6vw;
-  top: 10vh;
+  right: 20vw;
+  top: 26vh;
 }
 
 .pattern-9 img {
-  opacity: .1;
+  opacity: .3;
   -webkit-filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
           filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
 }
@@ -673,6 +678,7 @@ p, h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  will-change: transform, opacity;
 }
 
 .video-wrapper {
@@ -702,9 +708,6 @@ p, h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: shrink;
-      -ms-flex-positive: shrink;
-          flex-grow: shrink;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -717,13 +720,11 @@ p, h1, h2, h3, h4, h5, h6 {
           align-items: center;
   width: 100vw;
   height: 60vh;
-  padding: 8rem;
   z-index: 2;
 }
 
 #typewriter {
   font-size: 3.6rem;
-  line-height: 110%;
 }
 
 #typewriter span {
@@ -776,38 +777,32 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 1000px) {
-  .hero-copy {
-    margin-top: 240px;
-  }
   .hero-copy h1 {
-    font-size: 90px !important;
+    font-size: 100px !important;
   }
   .hero-asset {
-    position: absolute;
-    margin: 0 0 270px 0;
-    opacity: .8;
-  }
-  .hero-asset img {
-    height: 300px;
-    margin-top: 70px;
+    display: none;
   }
 }
 
 @media (max-width: 768px) {
-  #typewriter {
-    font-size: 2.6rem;
-    margin-bottom: -30px;
+  .hero-section-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .hero-copy h1 {
-    font-size: 12vw !important;
-  }
-  .hero-asset img {
-    height: 280px;
+    font-size: 60px !important;
   }
 }
 
 .section-services {
   background: #dedde7;
+  will-change: transform, opacity;
 }
 
 .grid-parent {
@@ -1115,6 +1110,7 @@ p, h1, h2, h3, h4, h5, h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  will-change: transform;
 }
 
 .section-why-go-online h2 {
@@ -1295,6 +1291,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .section-portfolio {
   background: #1f1b3b;
   height: calc($slider-height+100px);
+  will-change: transform;
 }
 
 .portfolio-container {
@@ -1600,7 +1597,7 @@ textarea {
 
 h2 {
   color: #1EF1BF;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
 }
 
 h2 a {
@@ -1609,11 +1606,15 @@ h2 a {
 
 .contact2 p, .contact3 p {
   font-family: "Dela Gothic One", Times, serif;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
 }
 
-.contact2 p a, .contact3 p a {
+.contact2 a, .contact3 a {
   color: #dedde7;
+}
+
+.contact2 img, .contact3 img {
+  width: 260px;
 }
 
 @media (max-width: 1000px) {
@@ -1642,9 +1643,19 @@ h2 a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .contact2, .contact3 {
-    padding: 3rem;
-    height: 14rem;
+  .contact2 h2, .contact3 h2 {
+    font-size: 2rem;
+  }
+  .contact2 p, .contact3 p {
+    font-size: 2rem;
+  }
+  .contact2 a, .contact3 a {
+    color: #dedde7;
+    font-size: 2.2rem;
+  }
+  .contact2 img, .contact3 img {
+    width: 160px;
+    height: auto;
   }
 }
 

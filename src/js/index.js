@@ -51,9 +51,9 @@ function reportWindowSize() {
 
 //mobile view: open-close menu on burger button click
 function toggleMenu() {
-    if (!menuVisibility) {
+    if (!menuVisibility && window.innerWidth < 768) {
         showMenu();
-    } else if (menuVisibility) {
+    } else if (menuVisibility && window.innerWidth < 768) {
         hideMenu();
     }
 }
@@ -92,7 +92,6 @@ function hideModalOverlay() {
 //revert menu to defualt state on page load
 function resetMenuOnLoad() {
     if (intViewportWidth == 768 || intViewportWidth <= 768) {
-        
     }
 }
 
@@ -100,7 +99,7 @@ navToggle.addEventListener('click', toggleMenu); //mobile view: open-close menu 
 window.addEventListener('load', resetMenuOnLoad); //revert menu to defualt state on page load
 window.onresize = reportWindowSize; //watch for viewport change & adjust navbar accordingly
 modalOverlay.addEventListener('click', toggleMenu); //hide mobile menu on click outside the menu container
-
+navLinks.addEventListener('click', toggleMenu); //hide mobile menu after link click
 
 //------------------------
 // LOCOMOTIVE SCROLL
@@ -119,11 +118,11 @@ const scroll = new LocomotiveScroll({
     touchMultiplier: 2,
     smoothMobile: 0,
     smartphone: {
-        smooth: !0,
+        smooth: true,
         breakpoint: 767
     },
     tablet: {
-        smooth: !1,
+        smooth: false,
         breakpoint: 1024
     },
 });
@@ -135,7 +134,7 @@ function updateScrollStatus() {
     }, 500);
 };
 
-updateScrollStatus();
+window.addEventListener("load", updateScrollStatus);
 
 //apply blur effect to navbar on scroll beyond default position
 
@@ -279,12 +278,3 @@ function slide(wrapper, items, prev, next) {
 slide(slider, sliderItems, prev, next);
 
 });
-
-// var portfolio3 = document.getElementById("portfolio-3");
-// portfolio3.addEventListener('touchend', function(){
-//   // happens(e)
-//   console.log('touched');
-//   window.location = "http://localhost:1234/case-studies/car-rental/index.html";
-
-
-// });

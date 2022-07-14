@@ -4,7 +4,7 @@
     z-index: 10;
     padding: 6rem 3rem 3rem 6rem;
     transition: ease-in-out .5s;
-
+    will-change: transform, opacity;
 
     .nav-contents {
         display: flex;
@@ -241,7 +241,11 @@
         align-items: left;
         padding: 0;
     }
-    
+
+    .navbar-alt {
+        backdrop-filter: none;
+    }
+
     .nav-contents {
         .nav-header {
             display: none;
@@ -304,7 +308,6 @@
         }
     }
 }
-
 
 
 @media (min-width: 769px) {

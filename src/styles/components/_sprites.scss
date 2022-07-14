@@ -41,7 +41,7 @@
 .pattern-4 {
     width: 8vw;
     right: 14vw;
-    top: 74vh;
+    top: 40vh;
 
     img {
         opacity: .1;
@@ -52,7 +52,7 @@
 .pattern-5 {
     width: 7vw;
     left: 10vw;
-    top: 30vh;
+    top: 10vh;
 
     img {
         opacity: .2;
@@ -95,11 +95,11 @@
 
 .pattern-9 {
     width: 12vw;
-    right: 6vw;
-    top: 10vh;
+    right: 20vw;
+    top: 26vh;
 
     img {
-        opacity: .1;
+        opacity: .3;
         filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
     }
 }

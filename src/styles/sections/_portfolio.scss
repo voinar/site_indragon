@@ -4,6 +4,8 @@ $slider-height: 680px;
 .section-portfolio {
     background: $offBlack;
     height: calc($slider-height+100px);
+    will-change: transform;
+
 }
 
 .portfolio-container {
