@@ -49,6 +49,8 @@ function reportWindowSize() {
     }
   }
 
+
+
 //mobile view: open-close menu on burger button click
 function toggleMenu() {
     if (!menuVisibility && window.innerWidth < 768) {
@@ -91,12 +93,13 @@ function hideModalOverlay() {
 
 //revert menu to defualt state on page load
 function resetMenuOnLoad() {
-    if (intViewportWidth == 768 || intViewportWidth <= 768) {
+    if (intViewportWidth > 767) {
+      // showMenu()
     }
 }
 
 navToggle.addEventListener('click', toggleMenu); //mobile view: open-close menu on burger button click
-window.addEventListener('load', resetMenuOnLoad); //revert menu to defualt state on page load
+window.addEventListener('resize', resetMenuOnLoad); //revert menu to default state on page load
 window.onresize = reportWindowSize; //watch for viewport change & adjust navbar accordingly
 modalOverlay.addEventListener('click', toggleMenu); //hide mobile menu on click outside the menu container
 navLinks.addEventListener('click', toggleMenu); //hide mobile menu after link click

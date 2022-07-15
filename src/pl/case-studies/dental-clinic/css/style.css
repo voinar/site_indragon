@@ -25,6 +25,10 @@
     .portfolio-filler {
         height: 44rem;
     }
+
+    .case-study-title {
+        margin-left: 50%;
+    }
 }
 
 @media (min-width: 1400px) {

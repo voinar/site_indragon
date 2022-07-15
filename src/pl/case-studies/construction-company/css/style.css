@@ -6,7 +6,7 @@
 }
 
 .case-study-title {
-    margin-left: 40%;
+    /* margin-left: 40%; */
 }
 
 .color-palette-wrapper .color-palette-1 {
@@ -30,7 +30,7 @@
 @media (min-width: 1200px) {
 
     .case-study-title {
-            margin-left: 50%;
+            /* margin-left: 50%; */
     }
 
     .portfolio-filler {

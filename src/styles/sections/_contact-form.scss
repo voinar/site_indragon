@@ -82,7 +82,6 @@ h2 a {
 }
 
 .contact2, .contact3 {
-
     p {
         font-family: $headingFont;
         font-size: 2.8rem;
@@ -101,7 +100,7 @@ h2 a {
     .contact-methods { 
         display: flex;
         flex-direction: column;
-        max-width: 80vw;
+        // max-width: 80vw;
     }
 }
 
@@ -127,7 +126,7 @@ h2 a {
     
         a {
             color: $offWhite;
-            font-size: 2.2rem;
+            font-size: 2rem;
         }
     
         img {

@@ -37,19 +37,28 @@
             cursor: pointer;
         }
 
+        .nav-item {
+            list-style-type: none;
+        }
+
         .nav-item a {
             color: $offWhite;
-            padding: 0 40px 0 48px;
+            padding: 0 20px 0 28px;
             font-size: 2rem;
             text-decoration: none;
             animation: fadeIn 500ms ease-in-out forwards;
             transform-origin: top center;
             transition: 0.3s;
+            list-style-type: none;
         }
 
         .nav-item:hover a{
             color: $primaryColor;
-            padding: 0px 44px 0px 44px;
+            padding: 0px 24px 0px 24px;
+        }
+
+        .nav-item-phone {
+            margin: 5px 0 0;
         }
 
         .language-select {
@@ -231,6 +240,10 @@
                 padding: 0px 11px 0px 11px;
             }
         }
+    }
+
+    .nav-item-phone {
+        display: none;
     }
 }
 
