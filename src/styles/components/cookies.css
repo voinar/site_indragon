@@ -1,0 +1,12 @@
+.cookie-consent {
+  font-size: 1.4rem;
+  border: 1px solid red;
+  text-align: center;
+}
+
+.cookie-consent button {
+  background: black;
+  color: white;
+  border: 0;
+}
+/*# sourceMappingURL=cookies.css.map */

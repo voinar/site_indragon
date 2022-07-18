@@ -1,0 +1,20 @@
+.privacy-policy {
+    padding-top: 10vh;
+
+    h3 {
+        font-size: 2rem;
+        // font-weight: bold;
+        margin: 3rem 0 1rem 0;
+    }
+
+    p {
+        font-size: 1.8rem;
+        line-height: 120%;
+    }
+
+    input {
+        outline: 1px solid $primaryColor;
+        cursor: pointer;
+        margin: 5rem 0;
+    }
+}

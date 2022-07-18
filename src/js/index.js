@@ -3,7 +3,7 @@
 //---------------------
 // CONTENTS:
 // - navbar responsiveness & functionality
-// - navbar language selection
+// - cookie disclaimer functionality on accept
 // - hero section typewriter effect
 // - locomotive scroll
 // - navbar behavior
@@ -19,6 +19,7 @@ const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 const navHeader = document.querySelector('.nav-header');
 const modalOverlay = document.querySelector('.modal-overlay');
+const cookieAccept = document.querySelector('#cookie-accept');
 const bodyScroll = document.querySelector('body');
 var intViewportWidth = window.innerWidth;
 
@@ -98,11 +99,42 @@ function resetMenuOnLoad() {
     }
 }
 
+//------------------------
+// COOKIE DISCLAIMER
+//------------------------
+
+// hide cookie disclaimer
+function cookiesAccepted() {
+  // console.log('cookie accept clicked')
+  if (document.cookie){
+    document.cookie = "indragon=1; max-age="+60*60*24*30;
+    document.querySelector('.cookie-consent-container').classList.add('hide-container');
+    // console.log('cookie set')
+
+  } else {
+    // console.log('cookie declined');
+  }
+}
+
+function checkCookies() {
+  document.cookie.indexOf("indragon=1") > -1 
+  && 
+  // console.log('cookie exists')
+  document.querySelector('.cookie-consent-container').classList.add('hide-container')
+  // :
+  // console.log('no cookies set')
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  checkCookies()
+});
+
 navToggle.addEventListener('click', toggleMenu); //mobile view: open-close menu on burger button click
 window.addEventListener('resize', resetMenuOnLoad); //revert menu to default state on page load
 window.onresize = reportWindowSize; //watch for viewport change & adjust navbar accordingly
 modalOverlay.addEventListener('click', toggleMenu); //hide mobile menu on click outside the menu container
 navLinks.addEventListener('click', toggleMenu); //hide mobile menu after link click
+cookieAccept.addEventListener('click', cookiesAccepted); //hide cookie disclaimer
 
 //------------------------
 // LOCOMOTIVE SCROLL
@@ -140,7 +172,6 @@ function updateScrollStatus() {
 window.addEventListener("load", updateScrollStatus);
 
 //apply blur effect to navbar on scroll beyond default position
-
 scroll.on('scroll', (position) => {
     if ((position.scroll.y) > 60) {
         navbar.classList.remove('navbar-initial');

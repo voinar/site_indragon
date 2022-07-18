@@ -670,6 +670,39 @@ p, h1, h2, h3, h4, h5, h6 {
           filter: invert(40%) sepia(50%) saturate(4000%) hue-rotate(230deg) brightness(100%) contrast(100%);
 }
 
+.cookie-consent-container {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  padding: 8px;
+  font-size: 1.4rem;
+  margin: 0 auto;
+  width: 180px;
+  right: 20px;
+  bottom: 20px;
+  background: #1f1b3b;
+  border: 2px solid #7B61FF;
+  border-radius: 8px;
+}
+
+.cookie-consent-container .cookie-consent a {
+  background-color: rgba(12, 20, 164, 0.5);
+  color: white;
+  border: 1px solid #7B61FF;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.cookie-consent-container .cookie-consent .cookie-consent-buttons {
+  margin: 10px 0;
+}
+
+.cookie-consent-container .cookie-consent .cookie-consent-buttons .cookie-consent-buttons--details {
+  background-color: #ff000000;
+}
+
 .section-hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1789,6 +1822,26 @@ h2 a {
 
 .contact-thank-you {
   padding: 16vh 0;
+}
+
+.privacy-policy {
+  padding-top: 10vh;
+}
+
+.privacy-policy h3 {
+  font-size: 2rem;
+  margin: 3rem 0 1rem 0;
+}
+
+.privacy-policy p {
+  font-size: 1.8rem;
+  line-height: 120%;
+}
+
+.privacy-policy input {
+  outline: 1px solid #1EF1BF;
+  cursor: pointer;
+  margin: 5rem 0;
 }
 
 .case-studies {

@@ -1,0 +1,42 @@
+.cookie-consent-container {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    padding: 8px;
+    font-size: 1.4rem;
+    margin: 0 auto;
+    width: 180px;
+    right: 20px;
+    bottom: 20px;
+    // left: 50%;
+    // transform: translateX(-50%);
+    background: $offBlack;
+    border: 2px solid $secondaryColor;
+    border-radius: $border-radius;
+
+    .cookie-consent {
+        // text-align: justify;
+
+        span {
+        // border: 1px solid red;
+        }
+
+        a {
+            background-color: $gradientSecondaryEnd;
+            color: white;
+            border: 1px solid $secondaryColor;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        .cookie-consent-buttons {
+            margin: 10px 0;
+
+            .cookie-consent-buttons--details {
+                background-color: $transparentColor;
+            }
+        }
+}}
+    

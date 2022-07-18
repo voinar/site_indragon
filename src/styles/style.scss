@@ -9,6 +9,7 @@
 './components/intro.scss', // site preloader
 './components/navbar.scss', // navbar navigation
 './components/sprites.scss', // sprites rendered dynamically in main page's sides
+'./components/cookies.scss', //cookie consent info container
 
 // main page sections
 './sections/hero.scss',
@@ -23,6 +24,9 @@
 // thank you page (after submitting contact form)
 './sections/contact-thank-you.scss',
 
+// privacy policy
+'./components/privacy-policy',
+
 // case study page template
 './sections/case-studies.scss',
 
@@ -31,9 +35,9 @@
 '../../node_modules/locomotive-scroll/src/styles/_scrollbar.scss';
 
 * {
-    // outline: 1px solid magenta !important;
-    // visibility: visible !important;
-    // opacity: 1 !important;
+//     // outline: 1px solid magenta !important;
+//     // visibility: visible !important;
+//     // opacity: 1 !important;
 }
 
 html {
