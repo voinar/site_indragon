@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Modern web marketing. Websites, social media, ads. See more.">
+    <meta name="description" content="Modern web marketing. Website design, social media for business, online ads. See more.">
 
     <script type="module" src="../../../js/index.js"></script>
     <script type="module" src="./../../../js/intro.js"></script>
@@ -40,16 +40,19 @@
 </head>
 
 <body>
-<div class="intro-mask">
-    <div class="loading-wrapper">
-        <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-            <p>loading...</p>
+    <div class="modal-overlay hide-container"></div>
+
+    <div class="cookie-consent-container">
+        <div class="cookie-consent">
+            <span>This website uses cookies to ensure you get the best experience on our website.</span>
+            <div class="cookie-consent-buttons">
+                <a href="#" id="cookie-accept" class="cookie-consent-buttons--accept">Git it</a>
+                <a href="./../../../pl/polityka-prywatnosci.html" id="cookie-details" class="cookie-consent-buttons--details">Learn more</a>
+            </div>
+        </div>
     </div>
-</div>
 
-<div class="modal-overlay hide-container"></div>
-
-<div data-scroll-container>  
+<div data-scroll-container>
     <nav class="navbar navbar-solid" role="navigation">
 
         <div class="nav-contents">
@@ -59,7 +62,7 @@
                     <div class="logo-left">indr</div>
                     <div class="logo-right">agon</div></a>
             </div>
-    
+
             <ul class="nav-links">
                 <li class="nav-item">
                     <a href="../../index.html">services</a>
@@ -74,7 +77,7 @@
                     <a href="#contact" data-scroll-to>contact</a>
                 </li>
             </ul>
-            
+
             <div class="nav-lang-dropdown">
                 <button class="dropbtn">en
                   <i class="fa fa-caret-down"></i>
@@ -82,7 +85,7 @@
                 <div class="dropdown-content">
                   <a href="../../../pl/case-studies/construction-company/index.html">pl</a>
                 </div>
-            </div> 
+            </div>
 
             <button class="cta-btn"><a href="#contact" data-scroll-to>get a quote</a></button>
 
@@ -107,7 +110,7 @@
                     <div class="portfolio-nav-next">
                         <a href="../law-firm/index.html"><img src="../../../img/arrow.svg" alt=""></a>
                     </div>
-                </div> 
+                </div>
             </div>
 
             <div class="leading-text case-study-title" data-scroll data-scroll-speed=".9">
@@ -120,7 +123,7 @@
             </div>
         </div>
 
-        <div class="bright-section project-scope-section"> 
+        <div class="bright-section project-scope-section">
             <div class="case-study-description">
                 <div class="leading-text case-study-description-title" data-scroll data-scroll-speed=".9">
                     <div class="accent accent-secondary"></div>
@@ -145,7 +148,7 @@
             </div>
         </div>
 
-        <div class="project-visualization-mobile"> 
+        <div class="project-visualization-mobile">
             <div class="case-study-design">
                 <img src="./img/portfolio_2_construction_company_full.jpg" alt="">
             </div>
@@ -174,14 +177,14 @@
                     </div>
                     <p><br>Other tools involved in this project:
                         <br><i class="fa-solid fa-caret-right"></i> Parcel.js
-                        
+
                     </p>
                 </div>
                 </div>
 
         </div>
 
-        <div class="bright-section design-section"> 
+        <div class="bright-section design-section">
             <div class="case-study-description">
                 <div class="leading-text case-study-description-title" data-scroll data-scroll-speed=".9">
                     <div class="accent accent-secondary"></div>
@@ -254,7 +257,7 @@
                 <div class="portfolio-nav-next">
                     <a href=""><img src="../../../img/arrow.svg" alt=""></a>
                 </div>
-            </div> 
+            </div>
 
         </div>
     </div>
@@ -285,29 +288,20 @@
                 <br><br>
             </h1>
         </div>
-
-
-        <h2>Fill out this form...</h2>
+        <h2>Let's talk about your project:</h2>
+        <br>
         <div class="contact-methods custom-fade-in" data-scroll data-scroll-class="scroll-class">
             <form action="https://formsubmit.co/91a23d228b74f00ac6479cc0c9c50720" method="POST" class="contact1 background-glass rounded-corners" id="contactForm" name="contactForm">
-
             <input type="hidden" name="_captcha" value="false">
-                
             <input type="hidden" name="_next" value="http://indragon.eu/en/thankyou.html">
-
-                <input type="text" class="form-control" name="name" id="name" placeholder="your name / company" required>
-
-                <input type="email" class="form-control" name="email" id="email" placeholder="email / phone" required>
-
-                <textarea class="form-control" name="message" id="message" cols="10" rows="7" minlength="10" maxlength="3000" placeholder="write your message:" required></textarea>
-                
-                <input type="submit" value="Let's get started" class="send-btn">
-
-                <span class="submitting"></span>
-
+                <input type="text" class="form-control" name="name" id="name" placeholder="your name or company" required>
+                <input type="text" class="form-control" name="contact" id="contact" placeholder="email or phone number" required>
+                <textarea class="form-control" name="message" id="message" cols="10" rows="7" minlength="5" maxlength="3000" placeholder="enter your message:" required></textarea>
+                <input type="submit" value="send" class="send-btn">
+                <span class="sending..."></span>
             </form>
             <div class="contact2 background-glass rounded-corners">
-                <h2>...e-mail:</h2>
+                <h2>send e-mail:</h2>
                 <p><a href="mailto: hello@indragon.eu">hello@indragon.eu</a></p>
             </div>
         </div>

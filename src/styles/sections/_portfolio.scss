@@ -26,14 +26,14 @@ $slider-height: 680px;
         text-decoration: none;
     }
 }
-  
+
 .wrapper {
     overflow: hidden;
     position: relative;
     width: $slider-width;
     height: $slider-height;
 }
-  
+
 .slides {
     display: flex;
     position: relative;
@@ -41,11 +41,11 @@ $slider-height: 680px;
     left: -$slider-width;
     width: 10000px;
 }
-  
+
 .slides.shifting {
     transition: left .2s ease-out;
 }
-  
+
 .slide {
     width: $slider-width;
     height: $slider-height;
@@ -60,13 +60,12 @@ $slider-height: 680px;
         position: relative;
         bottom: 12rem;
         color: $offBlack;
-        font-size: 2.2rem;
+        font-size: 2.1rem;
         text-align: center;
         transition: all .7s;
-        padding: 0 30px;
-        text-shadow: 0px 1px 8px rgba(255, 255, 255, 0.4);
+        padding: 0 30px 0;
+        text-shadow: 0px 1px 8px rgba(255, 255, 255, 0.2);
     }
-    
 }
 
 .slide:hover {
@@ -94,7 +93,7 @@ $slider-height: 680px;
     height: 140px;
     z-index: 2;
 }
-  
+
 .prev,
 .next {
     background-position: center;
@@ -102,21 +101,21 @@ $slider-height: 680px;
     cursor: pointer;
     transition: $transition-default;
 }
-  
+
 .prev {
     background-image: url("../img/arrow.svg");
     background-size: contain;
     left: -130px;
     transform: rotate(90deg);
 }
-  
+
 .next {
     background-image: url("../img/arrow.svg");
     background-size: contain;
     right: -130px;
     transform: rotate(270deg);
 }
-  
+
 .prev:hover {
     left: -140px;
 }
@@ -143,11 +142,6 @@ $slider-height: 680px;
     .portfolio-container {
         width: 80vw;
     }
-
-    .control {
-        width: 20vh;
-        height: 20vw;
-    }
 }
 
 @media (max-width: 500px) {
@@ -156,32 +150,32 @@ $slider-height: 680px;
     }
 
     .slide {
-    
+
         h2 {
             font-size: 3rem;
             // bottom: 16rem;
         }
     }
 
-    .control {
-        width: 140px;
-        height: 140px;
-    }
+    // .control {
+    //     width: 140px;
+    //     height: 140px;
+    // }
 
     .prev {
         left: -10px;
         transform: rotate(90deg);
     }
-      
+
     .next {
         right: -10px;
         transform: rotate(270deg);
     }
-      
+
     .prev:hover {
         left: -16px;
     }
-    
+
     .next:hover {
         right: -16px;
     }

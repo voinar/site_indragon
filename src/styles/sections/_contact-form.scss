@@ -41,7 +41,7 @@ textarea {
 }
 
 ::placeholder {
-    color: rgba(100, 200, 160, 0.9);
+    color: rgba(100, 200, 160, 1);
     font-size: 1.3em;
 }
 
@@ -65,7 +65,7 @@ textarea {
 .contact3 { grid-area: 2 / 2 / 3 / 3; }
 
 .contact2, .contact3 {
-    padding: 4rem;
+    padding: 3rem;
 }
 
 .contact1, .contact2, .contact3 {
@@ -74,7 +74,7 @@ textarea {
 
 h2 {
     color: $primaryColor;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
 }
 
 h2 a {
@@ -94,10 +94,10 @@ h2 a {
     img {
         width: 260px
     }
-}    
+}
 
 @media (max-width: 1000px) {
-    .contact-methods { 
+    .contact-methods {
         display: flex;
         flex-direction: column;
         // max-width: 80vw;
@@ -107,31 +107,20 @@ h2 a {
 @media (max-width: 768px) {
     .section-contact-form {
         padding: 0 0 6rem 0;
-
     }
+
     .contact-methods {
         display: flex;
         flex-direction: column;
     }
 
     .contact2, .contact3 {
-
         h2 {
             font-size: 2rem;
         }
 
-        p {
-            font-size: 2rem;
+        p, a {
+            font-size: 2.4rem;
         }
-    
-        a {
-            color: $offWhite;
-            font-size: 2rem;
-        }
-    
-        img {
-            width: 160px;
-            height: auto;
-        }
-    }    
+    }
 }

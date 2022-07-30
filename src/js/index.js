@@ -30,7 +30,7 @@ function reportWindowSize() {
     var intViewportWidth = window.innerWidth;
     if (intViewportWidth == 768 || intViewportWidth > 768) {
         hideModalOverlay();
-        navLinks.style.display = 'flex';        
+        navLinks.style.display = 'flex';
         navHeader.style.visibility = 'visible';
         navToggle.style.visibility = 'hidden';
         navToggle.style.transition = '0s';
@@ -44,13 +44,11 @@ function reportWindowSize() {
     } else if (intViewportWidth < 768 && menuVisibility == true) {
         showModalOverlay();
         navLinks.style.display = 'flex';
-        navToggle.style.visibility = 'visible';        
+        navToggle.style.visibility = 'visible';
         navToggle.style.transition = '0.3s';
         navToggle.style.top = '2rem';
     }
   }
-
-
 
 //mobile view: open-close menu on burger button click
 function toggleMenu() {
@@ -65,7 +63,7 @@ function toggleMenu() {
 function showMenu(){
     navLinks.style.display = 'flex';
     navLinks.style.visibility = 'visible';
-    navHeader.style.visibility = 'hidden';    
+    navHeader.style.visibility = 'hidden';
     modalOverlay.classList.remove('hide-container');
     menuVisibility = true;
     bodyScroll.style.position = 'fixed';
@@ -117,8 +115,8 @@ function cookiesAccepted() {
 }
 
 function checkCookies() {
-  document.cookie.indexOf("indragon=1") > -1 
-  && 
+  document.cookie.indexOf("indragon=1") > -1
+  &&
   // console.log('cookie exists')
   document.querySelector('.cookie-consent-container').classList.add('hide-container')
   // :
@@ -142,7 +140,7 @@ cookieAccept.addEventListener('click', cookiesAccepted); //hide cookie disclaime
 
 import LocomotiveScroll from '/node_modules/locomotive-scroll/src/locomotive-scroll.js';
 
-window.addEventListener("load", function(){ 
+window.addEventListener("load", function(){
 
 const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
@@ -211,16 +209,16 @@ function slide(wrapper, items, prev, next) {
       cloneLast = lastSlide.cloneNode(true),
       index = 0,
       allowShift = true;
-  
+
   // Clone first and last slide
   items.appendChild(cloneFirst);
   items.insertBefore(cloneLast, firstSlide);
   wrapper.classList.add('loaded');
-  
+
   // Mouse events
   items.onmousedown = dragStart;
   items.onmouseup = dragEnd;
-  
+
   // // Touch events //touchstart events prevent anchor tag from working, disabling till a better fix is in
   // items.addEventListener('touchstart', dragStart);
   // items.addEventListener('touchend', dragEnd);
@@ -229,7 +227,7 @@ function slide(wrapper, items, prev, next) {
   // Click events
   prev.addEventListener('click', function () { shiftSlide(-1) });
   next.addEventListener('click', function () { shiftSlide(1) });
-  
+
   // Transition events
   items.addEventListener('transitionend', checkIndex);
 
@@ -237,7 +235,7 @@ function slide(wrapper, items, prev, next) {
     e = e || window.event;
     e.preventDefault();
     posInitial = items.offsetLeft;
-    
+
     if (e.type == 'touchstart') {
       posX1 = e.touches[0].clientX;
     } else {
@@ -249,7 +247,7 @@ function slide(wrapper, items, prev, next) {
 
   function dragAction (e) {
     e = e || window.event;
-    
+
     if (e.type == 'touchmove') {
       posX2 = posX1 - e.touches[0].clientX;
       posX1 = e.touches[0].clientX;
@@ -259,7 +257,7 @@ function slide(wrapper, items, prev, next) {
     }
     items.style.left = (items.offsetLeft - posX2) + "px";
   }
-  
+
   function dragEnd (e) {
     posFinal = items.offsetLeft;
     if (posFinal - posInitial < -threshold) {
@@ -273,25 +271,25 @@ function slide(wrapper, items, prev, next) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
-  
+
   function shiftSlide(dir, action) {
     items.classList.add('shifting');
-    
+
     if (allowShift) {
       if (!action) { posInitial = items.offsetLeft; }
 
       if (dir == 1) {
         items.style.left = (posInitial - slideSize) + "px";
-        index++;      
+        index++;
       } else if (dir == -1) {
         items.style.left = (posInitial + slideSize) + "px";
-        index--;      
+        index--;
       }
     };
-    
+
     allowShift = false;
   }
-    
+
   function checkIndex(){
     items.classList.remove('shifting');
 
@@ -304,7 +302,7 @@ function slide(wrapper, items, prev, next) {
       items.style.left = -(1 * slideSize) + "px";
       index = 0;
     }
-    
+
     allowShift = true;
   }
 }

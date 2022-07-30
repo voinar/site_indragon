@@ -2,7 +2,7 @@
 // main stylesheet
 // -------------------------- //
 
-@import 
+@import
 
 './components/css-reset.scss', // Josh's Custom CSS Reset: https://www.joshwcomeau.com/css/custom-css-reset/
 './components/variables.scss', // global style variables
@@ -35,7 +35,7 @@
 '../../node_modules/locomotive-scroll/src/styles/_scrollbar.scss';
 
 * {
-//     // outline: 1px solid magenta !important;
+    // outline: 1px solid magenta !important;
 //     // visibility: visible !important;
 //     // opacity: 1 !important;
 }
@@ -80,7 +80,7 @@ body {
 
 .heading-dark {
     color: $offBlack;
-    
+
     strong {
         color: $secondaryColor;
         font-weight: normal;
@@ -125,7 +125,6 @@ body {
 .scroll-class {
     opacity: 1;
 }
-
 
 @media (max-width: 1200px) {
     .section-container {

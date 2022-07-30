@@ -20,7 +20,7 @@
     // opacity: .2;
 
     video {
-        height: 100vh;    
+        height: 100vh;
         width: 100vw;
         object-fit: cover;
         transform: rotateY(180deg);
@@ -45,7 +45,7 @@
 }
 
 #typewriter {
-    font-size: 3.6rem;
+    font-size: 3rem;
     // line-height: 10%;
     // border: 1px solid red;
 
@@ -57,7 +57,7 @@
 .hero-copy {
     text-shadow: 0px 10px 30px #00000030;
     // border: 1px solid gold;
-    
+
 
     h1 {
         font-size: 110px !important;
@@ -93,7 +93,7 @@
     img:hover {
         margin-top: 4rem;
         transition: 0.3s;
-    
+
     }
 }
 
@@ -106,18 +106,18 @@
             font-size: 100px !important;
         }
     }
-    
+
     .hero-asset {
         display: none;
         // position: absolute;
         // margin: 0 0 300px 0;
         // opacity: 1;
-    
+
         img {
             // height: 300px;
             // margin-top: 30px;
         }
-    
+
     }
 }
 
@@ -130,7 +130,7 @@
 
     .hero-copy {
         h1 {
-            font-size: 60px !important;
+            font-size: 80px !important;
         }
     }
 
